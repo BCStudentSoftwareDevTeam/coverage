@@ -65,7 +65,7 @@
             <a id="nextFileLink" class="nav" href="d_074bda25efadd8bd_adminLogs_py.html">&#xbb; next</a>
             &nbsp; &nbsp; &nbsp;
             <a class="nav" href="https://coverage.readthedocs.io/en/7.2.5">coverage.py v7.2.5</a>,
-            created at 2023-06-15 13:45 +0000
+            created at 2023-06-15 14:32 +0000
         </p>
         <aside class="hidden">
             <button type="button" class="button_next_chunk" data-shortcut="j"/>
@@ -111,7 +111,7 @@
     <p class="pln"><span class="n"><a id="t29" href="#t29">29</a></span><span class="t">&nbsp;</span><span class="r"></span></p>
     <p class="mis show_mis"><span class="n"><a id="t30" href="#t30">30</a></span><span class="t">    <span class="nam">isRequestingForSelf</span> <span class="op">=</span> <span class="nam">g</span><span class="op">.</span><span class="nam">current_user</span> <span class="op">==</span> <span class="nam">user</span>&nbsp;</span><span class="r"></span></p>
     <p class="mis show_mis"><span class="n"><a id="t31" href="#t31">31</a></span><span class="t">    <span class="key">if</span> <span class="nam">g</span><span class="op">.</span><span class="nam">current_user</span><span class="op">.</span><span class="nam">isCeltsAdmin</span> <span class="key">or</span> <span class="op">(</span><span class="nam">g</span><span class="op">.</span><span class="nam">current_user</span><span class="op">.</span><span class="nam">isFaculty</span> <span class="key">and</span> <span class="nam">isRequestingForSelf</span><span class="op">)</span><span class="op">:</span>&nbsp;</span><span class="r"></span></p>
-    <p class="mis show_mis"><span class="n"><a id="t32" href="#t32">32</a></span><span class="t">        <span class="nam">setRedirectTarget</span><span class="op">(</span><span class="str">"/serviceLearning/courseManagement"</span><span class="op">)</span>&nbsp;</span><span class="r"></span></p>
+    <p class="mis show_mis"><span class="n"><a id="t32" href="#t32">32</a></span><span class="t">        <span class="nam">setRedirectTarget</span><span class="op">(</span><span class="nam">request</span><span class="op">.</span><span class="nam">full_path</span><span class="op">)</span>&nbsp;</span><span class="r"></span></p>
     <p class="mis show_mis"><span class="n"><a id="t33" href="#t33">33</a></span><span class="t">        <span class="nam">courseDict</span> <span class="op">=</span> <span class="nam">getServiceLearningCoursesData</span><span class="op">(</span><span class="nam">user</span><span class="op">)</span>&nbsp;</span><span class="r"></span></p>
     <p class="mis show_mis"><span class="n"><a id="t34" href="#t34">34</a></span><span class="t">        <span class="nam">termList</span> <span class="op">=</span> <span class="nam">selectSurroundingTerms</span><span class="op">(</span><span class="nam">g</span><span class="op">.</span><span class="nam">current_term</span><span class="op">,</span> <span class="nam">prevTerms</span><span class="op">=</span><span class="num">0</span><span class="op">)</span>&nbsp;</span><span class="r"></span></p>
     <p class="mis show_mis"><span class="n"><a id="t35" href="#t35">35</a></span><span class="t">        <span class="key">return</span> <span class="nam">render_template</span><span class="op">(</span><span class="str">'serviceLearning/slcManagement.html'</span><span class="op">,</span>&nbsp;</span><span class="r"></span></p>
@@ -370,7 +370,7 @@
             <a id="nextFileLink" class="nav" href="d_074bda25efadd8bd_adminLogs_py.html">&#xbb; next</a>
             &nbsp; &nbsp; &nbsp;
             <a class="nav" href="https://coverage.readthedocs.io/en/7.2.5">coverage.py v7.2.5</a>,
-            created at 2023-06-15 13:45 +0000
+            created at 2023-06-15 14:32 +0000
         </p>
     </div>
 </footer>
