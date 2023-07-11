@@ -54,8 +54,8 @@
             </div>
         </aside>
         <h2>
-            <span class="text">219 statements &nbsp;</span>
-            <button type="button" class="run button_toggle_run" value="run" data-shortcut="r" title="Toggle lines run">202<span class="text"> run</span></button>
+            <span class="text">221 statements &nbsp;</span>
+            <button type="button" class="run button_toggle_run" value="run" data-shortcut="r" title="Toggle lines run">204<span class="text"> run</span></button>
             <button type="button" class="mis show_mis button_toggle_mis" value="mis" data-shortcut="m" title="Toggle lines missing">17<span class="text"> missing</span></button>
             <button type="button" class="exc show_exc button_toggle_exc" value="exc" data-shortcut="x" title="Toggle lines excluded">0<span class="text"> excluded</span></button>
         </h2>
@@ -65,7 +65,7 @@
             <a id="nextFileLink" class="nav" href="d_074bda25efadd8bd_fileHandler_py.html">&#xbb; next</a>
             &nbsp; &nbsp; &nbsp;
             <a class="nav" href="https://coverage.readthedocs.io/en/7.2.5">coverage.py v7.2.5</a>,
-            created at 2023-07-10 20:57 +0000
+            created at 2023-07-11 17:09 +0000
         </p>
         <aside class="hidden">
             <button type="button" class="button_next_chunk" data-shortcut="j"/>
@@ -559,6 +559,12 @@
     <p class="run"><span class="n"><a id="t477" href="#t477">477</a></span><span class="t">    <span class="nam">amountAsDict</span> <span class="op">=</span> <span class="op">{</span><span class="nam">event</span><span class="op">.</span><span class="nam">id</span><span class="op">:</span> <span class="nam">event</span><span class="op">.</span><span class="nam">count</span> <span class="key">for</span> <span class="nam">event</span> <span class="key">in</span> <span class="nam">amount</span><span class="op">}</span>&nbsp;</span><span class="r"></span></p>
     <p class="pln"><span class="n"><a id="t478" href="#t478">478</a></span><span class="t">&nbsp;</span><span class="r"></span></p>
     <p class="run"><span class="n"><a id="t479" href="#t479">479</a></span><span class="t">    <span class="key">return</span> <span class="nam">amountAsDict</span>&nbsp;</span><span class="r"></span></p>
+    <p class="pln"><span class="n"><a id="t480" href="#t480">480</a></span><span class="t">&nbsp;</span><span class="r"></span></p>
+    <p class="run"><span class="n"><a id="t481" href="#t481">481</a></span><span class="t"><span class="key">def</span> <span class="nam">getEventRsvpCount</span><span class="op">(</span><span class="nam">eventId</span><span class="op">)</span><span class="op">:</span>&nbsp;</span><span class="r"></span></p>
+    <p class="pln"><span class="n"><a id="t482" href="#t482">482</a></span><span class="t">    <span class="str">"""</span>&nbsp;</span><span class="r"></span></p>
+    <p class="pln"><span class="n"><a id="t483" href="#t483">483</a></span><span class="t"><span class="str">        Returns the number of RSVP'd participants for a given eventId.</span>&nbsp;</span><span class="r"></span></p>
+    <p class="pln"><span class="n"><a id="t484" href="#t484">484</a></span><span class="t"><span class="str">    """</span>&nbsp;</span><span class="r"></span></p>
+    <p class="run"><span class="n"><a id="t485" href="#t485">485</a></span><span class="t">    <span class="key">return</span> <span class="nam">len</span><span class="op">(</span><span class="nam">EventRsvp</span><span class="op">.</span><span class="nam">select</span><span class="op">(</span><span class="op">)</span><span class="op">.</span><span class="nam">where</span><span class="op">(</span><span class="nam">EventRsvp</span><span class="op">.</span><span class="nam">event_id</span> <span class="op">==</span> <span class="nam">eventId</span><span class="op">)</span><span class="op">)</span>&nbsp;</span><span class="r"></span></p>
 </main>
 <footer>
     <div class="content">
@@ -568,7 +574,7 @@
             <a id="nextFileLink" class="nav" href="d_074bda25efadd8bd_fileHandler_py.html">&#xbb; next</a>
             &nbsp; &nbsp; &nbsp;
             <a class="nav" href="https://coverage.readthedocs.io/en/7.2.5">coverage.py v7.2.5</a>,
-            created at 2023-07-10 20:57 +0000
+            created at 2023-07-11 17:09 +0000
         </p>
     </div>
 </footer>
