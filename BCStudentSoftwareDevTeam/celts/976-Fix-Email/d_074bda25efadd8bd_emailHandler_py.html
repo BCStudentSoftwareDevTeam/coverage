@@ -65,7 +65,7 @@
             <a id="nextFileLink" class="nav" href="d_074bda25efadd8bd_events_py.html">&#xbb; next</a>
             &nbsp; &nbsp; &nbsp;
             <a class="nav" href="https://coverage.readthedocs.io/en/7.2.5">coverage.py v7.2.5</a>,
-            created at 2023-07-12 17:41 +0000
+            created at 2023-07-12 17:44 +0000
         </p>
         <aside class="hidden">
             <button type="button" class="button_next_chunk" data-shortcut="j"/>
@@ -196,10 +196,10 @@
     <p class="pln"><span class="n"><a id="t114" href="#t114">114</a></span><span class="t">&nbsp;</span><span class="r"></span></p>
     <p class="pln"><span class="n"><a id="t115" href="#t115">115</a></span><span class="t">&nbsp;</span><span class="r"></span></p>
     <p class="pln"><span class="n"><a id="t116" href="#t116">116</a></span><span class="t">&nbsp;</span><span class="r"></span></p>
-    <p class="run"><span class="n"><a id="t117" href="#t117">117</a></span><span class="t">    <span class="key">def</span> <span class="nam">replace_dynamic_placeholders</span><span class="op">(</span><span class="nam">self</span><span class="op">,</span> <span class="nam">body</span><span class="op">,</span> <span class="op">*</span><span class="op">,</span> <span class="nam">name</span><span class="op">)</span><span class="op">:</span>&nbsp;</span><span class="r"></span></p>
+    <p class="run"><span class="n"><a id="t117" href="#t117">117</a></span><span class="t">    <span class="key">def</span> <span class="nam">replaceDynamicPlaceholders</span><span class="op">(</span><span class="nam">self</span><span class="op">,</span> <span class="nam">email_body</span><span class="op">,</span> <span class="op">*</span><span class="op">,</span> <span class="nam">name</span><span class="op">)</span><span class="op">:</span>&nbsp;</span><span class="r"></span></p>
     <p class="pln"><span class="n"><a id="t118" href="#t118">118</a></span><span class="t">        <span class="str">""" Replaces placeholders that cannot be predetermined on the front-end """</span>&nbsp;</span><span class="r"></span></p>
     <p class="run"><span class="n"><a id="t119" href="#t119">119</a></span><span class="t">        <span class="nam">event_link</span> <span class="op">=</span> <span class="str">f"{self.url_domain}/event/{self.event.id}/view"</span>&nbsp;</span><span class="r"></span></p>
-    <p class="run"><span class="n"><a id="t120" href="#t120">120</a></span><span class="t">        <span class="nam">new_body</span> <span class="op">=</span> <span class="nam">body</span><span class="op">.</span><span class="nam">format</span><span class="op">(</span><span class="nam">name</span><span class="op">=</span><span class="nam">name</span><span class="op">,</span> <span class="nam">event_link</span><span class="op">=</span><span class="nam">event_link</span><span class="op">)</span>&nbsp;</span><span class="r"></span></p>
+    <p class="run"><span class="n"><a id="t120" href="#t120">120</a></span><span class="t">        <span class="nam">new_body</span> <span class="op">=</span> <span class="nam">email_body</span><span class="op">.</span><span class="nam">format</span><span class="op">(</span><span class="nam">name</span><span class="op">=</span><span class="nam">name</span><span class="op">,</span> <span class="nam">event_link</span><span class="op">=</span><span class="nam">event_link</span><span class="op">)</span>&nbsp;</span><span class="r"></span></p>
     <p class="run"><span class="n"><a id="t121" href="#t121">121</a></span><span class="t">        <span class="key">return</span> <span class="nam">new_body</span>&nbsp;</span><span class="r"></span></p>
     <p class="pln"><span class="n"><a id="t122" href="#t122">122</a></span><span class="t">&nbsp;</span><span class="r"></span></p>
     <p class="run"><span class="n"><a id="t123" href="#t123">123</a></span><span class="t">    <span class="key">def</span> <span class="nam">retrieve_and_modify_email_template</span><span class="op">(</span><span class="nam">self</span><span class="op">)</span><span class="op">:</span>&nbsp;</span><span class="r"></span></p>
@@ -282,7 +282,7 @@
     <p class="run"><span class="n"><a id="t200" href="#t200">200</a></span><span class="t">            <span class="key">with</span> <span class="nam">self</span><span class="op">.</span><span class="nam">mail</span><span class="op">.</span><span class="nam">connect</span><span class="op">(</span><span class="op">)</span> <span class="key">as</span> <span class="nam">conn</span><span class="op">:</span>&nbsp;</span><span class="r"></span></p>
     <p class="run"><span class="n"><a id="t201" href="#t201">201</a></span><span class="t">                <span class="key">for</span> <span class="nam">recipient</span> <span class="key">in</span> <span class="nam">self</span><span class="op">.</span><span class="nam">recipients</span><span class="op">:</span>&nbsp;</span><span class="r"></span></p>
     <p class="run"><span class="n"><a id="t202" href="#t202">202</a></span><span class="t">                    <span class="nam">full_name</span> <span class="op">=</span> <span class="str">f'{recipient.firstName} {recipient.lastName}'</span>&nbsp;</span><span class="r"></span></p>
-    <p class="run"><span class="n"><a id="t203" href="#t203">203</a></span><span class="t">                    <span class="nam">email_body</span> <span class="op">=</span> <span class="nam">self</span><span class="op">.</span><span class="nam">replace_dynamic_placeholders</span><span class="op">(</span><span class="nam">body</span><span class="op">,</span> <span class="nam">name</span><span class="op">=</span><span class="nam">full_name</span><span class="op">)</span>&nbsp;</span><span class="r"></span></p>
+    <p class="run"><span class="n"><a id="t203" href="#t203">203</a></span><span class="t">                    <span class="nam">email_body</span> <span class="op">=</span> <span class="nam">self</span><span class="op">.</span><span class="nam">replaceDynamicPlaceholders</span><span class="op">(</span><span class="nam">body</span><span class="op">,</span> <span class="nam">name</span><span class="op">=</span><span class="nam">full_name</span><span class="op">)</span>&nbsp;</span><span class="r"></span></p>
     <p class="pln"><span class="n"><a id="t204" href="#t204">204</a></span><span class="t">&nbsp;</span><span class="r"></span></p>
     <p class="run"><span class="n"><a id="t205" href="#t205">205</a></span><span class="t">                    <span class="nam">conn</span><span class="op">.</span><span class="nam">send</span><span class="op">(</span><span class="nam">Message</span><span class="op">(</span>&nbsp;</span><span class="r"></span></p>
     <p class="pln"><span class="n"><a id="t206" href="#t206">206</a></span><span class="t">                        <span class="nam">subject</span><span class="op">,</span>&nbsp;</span><span class="r"></span></p>
@@ -335,8 +335,8 @@
     <p class="pln"><span class="n"><a id="t253" href="#t253">253</a></span><span class="t">        <span class="op">]</span>&nbsp;</span><span class="r"></span></p>
     <p class="pln"><span class="n"><a id="t254" href="#t254">254</a></span><span class="t">&nbsp;</span><span class="r"></span></p>
     <p class="run"><span class="n"><a id="t255" href="#t255">255</a></span><span class="t">    <span class="op">@</span><span class="nam">staticmethod</span>&nbsp;</span><span class="r"></span></p>
-    <p class="run"><span class="n"><a id="t256" href="#t256">256</a></span><span class="t">    <span class="key">def</span> <span class="nam">replaceBodyPlaceholders</span><span class="op">(</span><span class="nam">eventId</span><span class="op">,</span> <span class="nam">email_body</span><span class="op">)</span><span class="op">:</span>&nbsp;</span><span class="r"></span></p>
-    <p class="pln"><span class="n"><a id="t257" href="#t257">257</a></span><span class="t">        <span class="str">""" Replaces all template placeholders except name and event_link """</span>&nbsp;</span><span class="r"></span></p>
+    <p class="run"><span class="n"><a id="t256" href="#t256">256</a></span><span class="t">    <span class="key">def</span> <span class="nam">replaceStaticPlaceholders</span><span class="op">(</span><span class="nam">eventId</span><span class="op">,</span> <span class="nam">email_body</span><span class="op">)</span><span class="op">:</span>&nbsp;</span><span class="r"></span></p>
+    <p class="pln"><span class="n"><a id="t257" href="#t257">257</a></span><span class="t">        <span class="str">""" Replaces all template placeholders except for those that can't be known until just before Send-time """</span>&nbsp;</span><span class="r"></span></p>
     <p class="mis show_mis"><span class="n"><a id="t258" href="#t258">258</a></span><span class="t">        <span class="nam">event</span> <span class="op">=</span> <span class="nam">Event</span><span class="op">.</span><span class="nam">get_by_id</span><span class="op">(</span><span class="nam">eventId</span><span class="op">)</span>&nbsp;</span><span class="r"></span></p>
     <p class="pln"><span class="n"><a id="t259" href="#t259">259</a></span><span class="t">&nbsp;</span><span class="r"></span></p>
     <p class="mis show_mis"><span class="n"><a id="t260" href="#t260">260</a></span><span class="t">        <span class="nam">new_body</span> <span class="op">=</span> <span class="nam">email_body</span><span class="op">.</span><span class="nam">format</span><span class="op">(</span><span class="nam">event_name</span><span class="op">=</span><span class="nam">event</span><span class="op">.</span><span class="nam">name</span><span class="op">,</span>&nbsp;</span><span class="r"></span></p>
@@ -357,7 +357,7 @@
             <a id="nextFileLink" class="nav" href="d_074bda25efadd8bd_events_py.html">&#xbb; next</a>
             &nbsp; &nbsp; &nbsp;
             <a class="nav" href="https://coverage.readthedocs.io/en/7.2.5">coverage.py v7.2.5</a>,
-            created at 2023-07-12 17:41 +0000
+            created at 2023-07-12 17:44 +0000
         </p>
     </div>
 </footer>
