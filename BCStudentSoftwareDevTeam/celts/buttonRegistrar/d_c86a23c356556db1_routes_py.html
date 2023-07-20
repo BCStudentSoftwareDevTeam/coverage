@@ -65,7 +65,7 @@
             <a id="nextFileLink" class="nav" href="d_c86a23c356556db1_userManagement_py.html">&#xbb; next</a>
             &nbsp; &nbsp; &nbsp;
             <a class="nav" href="https://coverage.readthedocs.io/en/7.2.5">coverage.py v7.2.5</a>,
-            created at 2023-07-20 19:00 +0000
+            created at 2023-07-20 20:18 +0000
         </p>
         <aside class="hidden">
             <button type="button" class="button_next_chunk" data-shortcut="j"/>
@@ -429,7 +429,7 @@
     <p class="pln"><span class="n"><a id="t347" href="#t347">347</a></span><span class="t">&nbsp;</span><span class="r"></span></p>
     <p class="run"><span class="n"><a id="t348" href="#t348">348</a></span><span class="t"><span class="op">@</span><span class="nam">admin_bp</span><span class="op">.</span><span class="nam">route</span><span class="op">(</span><span class="str">"/uploadCourseParticipant"</span><span class="op">,</span> <span class="nam">methods</span><span class="op">=</span> <span class="op">[</span><span class="str">"POST"</span><span class="op">]</span><span class="op">)</span>&nbsp;</span><span class="r"></span></p>
     <p class="run"><span class="n"><a id="t349" href="#t349">349</a></span><span class="t"><span class="key">def</span> <span class="nam">addCourseFile</span><span class="op">(</span><span class="op">)</span><span class="op">:</span>&nbsp;</span><span class="r"></span></p>
-    <p class="mis show_mis"><span class="n"><a id="t350" href="#t350">350</a></span><span class="t">    <span class="nam">fileData</span> <span class="op">=</span> <span class="nam">request</span><span class="op">.</span><span class="nam">files</span><span class="op">[</span><span class="str">'addCourseParticipant'</span><span class="op">]</span>&nbsp;</span><span class="r"></span></p>
+    <p class="mis show_mis"><span class="n"><a id="t350" href="#t350">350</a></span><span class="t">    <span class="nam">fileData</span> <span class="op">=</span> <span class="nam">request</span><span class="op">.</span><span class="nam">files</span><span class="op">[</span><span class="str">'addCourseParticipants'</span><span class="op">]</span>&nbsp;</span><span class="r"></span></p>
     <p class="mis show_mis"><span class="n"><a id="t351" href="#t351">351</a></span><span class="t">    <span class="nam">filePath</span> <span class="op">=</span> <span class="nam">os</span><span class="op">.</span><span class="nam">path</span><span class="op">.</span><span class="nam">join</span><span class="op">(</span><span class="nam">app</span><span class="op">.</span><span class="nam">config</span><span class="op">[</span><span class="str">"files"</span><span class="op">]</span><span class="op">[</span><span class="str">"base_path"</span><span class="op">]</span><span class="op">,</span> <span class="nam">fileData</span><span class="op">.</span><span class="nam">filename</span><span class="op">)</span>&nbsp;</span><span class="r"></span></p>
     <p class="mis show_mis"><span class="n"><a id="t352" href="#t352">352</a></span><span class="t">    <span class="nam">fileData</span><span class="op">.</span><span class="nam">save</span><span class="op">(</span><span class="nam">filePath</span><span class="op">)</span>&nbsp;</span><span class="r"></span></p>
     <p class="mis show_mis"><span class="n"><a id="t353" href="#t353">353</a></span><span class="t">    <span class="nam">listOfParticipants</span> <span class="op">=</span> <span class="nam">parseUploadedFile</span><span class="op">(</span><span class="nam">filePath</span><span class="op">)</span>&nbsp;</span><span class="r"></span></p>
@@ -506,7 +506,7 @@
             <a id="nextFileLink" class="nav" href="d_c86a23c356556db1_userManagement_py.html">&#xbb; next</a>
             &nbsp; &nbsp; &nbsp;
             <a class="nav" href="https://coverage.readthedocs.io/en/7.2.5">coverage.py v7.2.5</a>,
-            created at 2023-07-20 19:00 +0000
+            created at 2023-07-20 20:18 +0000
         </p>
     </div>
 </footer>
