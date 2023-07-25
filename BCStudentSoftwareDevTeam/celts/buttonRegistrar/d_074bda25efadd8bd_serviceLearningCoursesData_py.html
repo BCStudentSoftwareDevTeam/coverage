@@ -2,7 +2,7 @@
 <html>
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    <title>Coverage for app/logic/serviceLearningCoursesData.py: 87%</title>
+    <title>Coverage for app/logic/serviceLearningCoursesData.py: 88%</title>
     <link rel="icon" sizes="32x32" href="favicon_32.png">
     <link rel="stylesheet" href="style.css" type="text/css">
     <script type="text/javascript" src="coverage_html.js" defer></script>
@@ -12,7 +12,7 @@
     <div class="content">
         <h1>
             <span class="text">Coverage for </span><b>app/logic/serviceLearningCoursesData.py</b>:
-            <span class="pc_cov">87%</span>
+            <span class="pc_cov">88%</span>
         </h1>
         <aside id="help_panel_wrapper">
             <input id="help_panel_state" type="checkbox">
@@ -55,8 +55,8 @@
         </aside>
         <h2>
             <span class="text">128 statements &nbsp;</span>
-            <button type="button" class="run button_toggle_run" value="run" data-shortcut="r" title="Toggle lines run">111<span class="text"> run</span></button>
-            <button type="button" class="mis show_mis button_toggle_mis" value="mis" data-shortcut="m" title="Toggle lines missing">17<span class="text"> missing</span></button>
+            <button type="button" class="run button_toggle_run" value="run" data-shortcut="r" title="Toggle lines run">112<span class="text"> run</span></button>
+            <button type="button" class="mis show_mis button_toggle_mis" value="mis" data-shortcut="m" title="Toggle lines missing">16<span class="text"> missing</span></button>
             <button type="button" class="exc show_exc button_toggle_exc" value="exc" data-shortcut="x" title="Toggle lines excluded">0<span class="text"> excluded</span></button>
         </h2>
         <p class="text">
@@ -65,7 +65,7 @@
             <a id="nextFileLink" class="nav" href="d_074bda25efadd8bd_term_py.html">&#xbb; next</a>
             &nbsp; &nbsp; &nbsp;
             <a class="nav" href="https://coverage.readthedocs.io/en/7.2.5">coverage.py v7.2.5</a>,
-            created at 2023-07-25 13:20 +0000
+            created at 2023-07-25 13:53 +0000
         </p>
         <aside class="hidden">
             <button type="button" class="button_next_chunk" data-shortcut="j"/>
@@ -216,7 +216,7 @@
     <p class="run"><span class="n"><a id="t134" href="#t134">134</a></span><span class="t">            <span class="nam">hasCourse</span> <span class="op">=</span> <span class="nam">Course</span><span class="op">.</span><span class="nam">get_or_none</span><span class="op">(</span><span class="nam">Course</span><span class="op">.</span><span class="nam">courseAbbreviation</span> <span class="op">==</span> <span class="nam">cellVal</span><span class="op">)</span>&nbsp;</span><span class="r"></span></p>
     <p class="run"><span class="n"><a id="t135" href="#t135">135</a></span><span class="t">            <span class="nam">previewCourse</span> <span class="op">=</span> <span class="str">f'{cellVal} will be created'</span>&nbsp;</span><span class="r"></span></p>
     <p class="run"><span class="n"><a id="t136" href="#t136">136</a></span><span class="t">            <span class="key">if</span> <span class="nam">hasCourse</span> <span class="key">and</span> <span class="nam">hasCourse</span><span class="op">.</span><span class="nam">courseName</span><span class="op">:</span>&nbsp;</span><span class="r"></span></p>
-    <p class="mis show_mis"><span class="n"><a id="t137" href="#t137">137</a></span><span class="t">                <span class="nam">previewCourse</span> <span class="op">=</span> <span class="str">f"{cellVal} matched to the course {hasCourse.courseName}"</span>&nbsp;</span><span class="r"></span></p>
+    <p class="run"><span class="n"><a id="t137" href="#t137">137</a></span><span class="t">                <span class="nam">previewCourse</span> <span class="op">=</span> <span class="str">f"{cellVal} matched to the course {hasCourse.courseName}"</span>&nbsp;</span><span class="r"></span></p>
     <p class="run"><span class="n"><a id="t138" href="#t138">138</a></span><span class="t">            <span class="key">if</span> <span class="key">not</span> <span class="nam">courseParticipantPreview</span><span class="op">.</span><span class="nam">get</span><span class="op">(</span><span class="nam">previewTerm</span><span class="op">)</span><span class="op">:</span>&nbsp;</span><span class="r"></span></p>
     <p class="run"><span class="n"><a id="t139" href="#t139">139</a></span><span class="t">                <span class="nam">courseParticipantPreview</span><span class="op">[</span><span class="nam">previewTerm</span><span class="op">]</span><span class="op">=</span> <span class="op">{</span><span class="op">}</span>&nbsp;</span><span class="r"></span></p>
     <p class="run"><span class="n"><a id="t140" href="#t140">140</a></span><span class="t">            <span class="nam">courseParticipantPreview</span><span class="op">[</span><span class="nam">previewTerm</span><span class="op">]</span><span class="op">[</span><span class="nam">cellVal</span><span class="op">]</span><span class="op">=</span><span class="op">[</span><span class="op">]</span>&nbsp;</span><span class="r"></span></p>
@@ -285,7 +285,7 @@
             <a id="nextFileLink" class="nav" href="d_074bda25efadd8bd_term_py.html">&#xbb; next</a>
             &nbsp; &nbsp; &nbsp;
             <a class="nav" href="https://coverage.readthedocs.io/en/7.2.5">coverage.py v7.2.5</a>,
-            created at 2023-07-25 13:20 +0000
+            created at 2023-07-25 13:53 +0000
         </p>
     </div>
 </footer>
