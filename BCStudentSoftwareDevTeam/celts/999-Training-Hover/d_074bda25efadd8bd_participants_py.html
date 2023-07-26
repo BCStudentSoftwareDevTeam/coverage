@@ -65,7 +65,7 @@
             <a id="nextFileLink" class="nav" href="d_074bda25efadd8bd_searchUsers_py.html">&#xbb; next</a>
             &nbsp; &nbsp; &nbsp;
             <a class="nav" href="https://coverage.readthedocs.io/en/7.2.5">coverage.py v7.2.5</a>,
-            created at 2023-07-25 17:25 +0000
+            created at 2023-07-26 12:22 +0000
         </p>
         <aside class="hidden">
             <button type="button" class="button_next_chunk" data-shortcut="j"/>
@@ -241,13 +241,13 @@
     <p class="run"><span class="n"><a id="t159" href="#t159">159</a></span><span class="t">        <span class="key">except</span> <span class="nam">AttributeError</span><span class="op">:</span>&nbsp;</span><span class="r"></span></p>
     <p class="run"><span class="n"><a id="t160" href="#t160">160</a></span><span class="t">            <span class="nam">trainingData</span><span class="op">[</span><span class="nam">training</span><span class="op">]</span> <span class="op">=</span> <span class="nam">trainingData</span><span class="op">.</span><span class="nam">get</span><span class="op">(</span><span class="nam">training</span><span class="op">,</span> <span class="op">[</span><span class="op">]</span><span class="op">)</span>&nbsp;</span><span class="r"></span></p>
     <p class="pln"><span class="n"><a id="t161" href="#t161">161</a></span><span class="t">&nbsp;</span><span class="r"></span></p>
-    <p class="pln"><span class="n"><a id="t162" href="#t162">162</a></span><span class="t">    <span class="com"># Dict; key: username; value: tuple consisting of (trainingObj, didAttend/didRsvp, optional date str if event is in future)</span>&nbsp;</span><span class="r"></span></p>
-    <p class="run"><span class="n"><a id="t163" href="#t163">163</a></span><span class="t">    <span class="nam">result</span> <span class="op">=</span> <span class="op">{</span><span class="op">}</span>  <span class="com"># Beans- rename this dict</span>&nbsp;</span><span class="r"></span></p>
+    <p class="pln"><span class="n"><a id="t162" href="#t162">162</a></span><span class="t">    <span class="com"># Create a dictionary binding usernames to tuples. The tuples consist of the training (event object) and whether or not they attended it (bool)</span>&nbsp;</span><span class="r"></span></p>
+    <p class="run"><span class="n"><a id="t163" href="#t163">163</a></span><span class="t">    <span class="nam">userParticipationStatus</span> <span class="op">=</span> <span class="op">{</span><span class="op">}</span>&nbsp;</span><span class="r"></span></p>
     <p class="run"><span class="n"><a id="t164" href="#t164">164</a></span><span class="t">    <span class="key">for</span> <span class="nam">user</span> <span class="key">in</span> <span class="nam">userList</span><span class="op">:</span>&nbsp;</span><span class="r"></span></p>
     <p class="run"><span class="n"><a id="t165" href="#t165">165</a></span><span class="t">        <span class="key">for</span> <span class="nam">training</span><span class="op">,</span> <span class="nam">attendeeList</span> <span class="key">in</span> <span class="nam">trainingData</span><span class="op">.</span><span class="nam">items</span><span class="op">(</span><span class="op">)</span><span class="op">:</span>&nbsp;</span><span class="r"></span></p>
-    <p class="run"><span class="n"><a id="t166" href="#t166">166</a></span><span class="t">            <span class="nam">result</span><span class="op">[</span><span class="nam">user</span><span class="op">.</span><span class="nam">username</span><span class="op">]</span> <span class="op">=</span> <span class="nam">result</span><span class="op">.</span><span class="nam">get</span><span class="op">(</span><span class="nam">user</span><span class="op">.</span><span class="nam">username</span><span class="op">,</span> <span class="op">[</span><span class="op">]</span><span class="op">)</span> <span class="op">+</span> <span class="op">[</span><span class="op">(</span><span class="nam">training</span><span class="op">,</span> <span class="nam">user</span><span class="op">.</span><span class="nam">username</span> <span class="key">in</span> <span class="nam">attendeeList</span><span class="op">)</span><span class="op">]</span>&nbsp;</span><span class="r"></span></p>
+    <p class="run"><span class="n"><a id="t166" href="#t166">166</a></span><span class="t">            <span class="nam">userParticipationStatus</span><span class="op">[</span><span class="nam">user</span><span class="op">.</span><span class="nam">username</span><span class="op">]</span> <span class="op">=</span> <span class="nam">userParticipationStatus</span><span class="op">.</span><span class="nam">get</span><span class="op">(</span><span class="nam">user</span><span class="op">.</span><span class="nam">username</span><span class="op">,</span> <span class="op">[</span><span class="op">]</span><span class="op">)</span> <span class="op">+</span> <span class="op">[</span><span class="op">(</span><span class="nam">training</span><span class="op">,</span> <span class="nam">user</span><span class="op">.</span><span class="nam">username</span> <span class="key">in</span> <span class="nam">attendeeList</span><span class="op">)</span><span class="op">]</span>&nbsp;</span><span class="r"></span></p>
     <p class="pln"><span class="n"><a id="t167" href="#t167">167</a></span><span class="t">&nbsp;</span><span class="r"></span></p>
-    <p class="run"><span class="n"><a id="t168" href="#t168">168</a></span><span class="t">    <span class="key">return</span> <span class="nam">result</span>&nbsp;</span><span class="r"></span></p>
+    <p class="run"><span class="n"><a id="t168" href="#t168">168</a></span><span class="t">    <span class="key">return</span> <span class="nam">userParticipationStatus</span>&nbsp;</span><span class="r"></span></p>
 </main>
 <footer>
     <div class="content">
@@ -257,7 +257,7 @@
             <a id="nextFileLink" class="nav" href="d_074bda25efadd8bd_searchUsers_py.html">&#xbb; next</a>
             &nbsp; &nbsp; &nbsp;
             <a class="nav" href="https://coverage.readthedocs.io/en/7.2.5">coverage.py v7.2.5</a>,
-            created at 2023-07-25 17:25 +0000
+            created at 2023-07-26 12:22 +0000
         </p>
     </div>
 </footer>
