@@ -54,9 +54,9 @@
             </div>
         </aside>
         <h2>
-            <span class="text">344 statements &nbsp;</span>
+            <span class="text">345 statements &nbsp;</span>
             <button type="button" class="run button_toggle_run" value="run" data-shortcut="r" title="Toggle lines run">88<span class="text"> run</span></button>
-            <button type="button" class="mis show_mis button_toggle_mis" value="mis" data-shortcut="m" title="Toggle lines missing">256<span class="text"> missing</span></button>
+            <button type="button" class="mis show_mis button_toggle_mis" value="mis" data-shortcut="m" title="Toggle lines missing">257<span class="text"> missing</span></button>
             <button type="button" class="exc show_exc button_toggle_exc" value="exc" data-shortcut="x" title="Toggle lines excluded">0<span class="text"> excluded</span></button>
         </h2>
         <p class="text">
@@ -65,7 +65,7 @@
             <a id="nextFileLink" class="nav" href="d_0e098e07e81a8f2f___init___py.html">&#xbb; next</a>
             &nbsp; &nbsp; &nbsp;
             <a class="nav" href="https://coverage.readthedocs.io/en/7.2.5">coverage.py v7.2.5</a>,
-            created at 2023-08-17 18:46 +0000
+            created at 2023-08-17 20:07 +0000
         </p>
         <aside class="hidden">
             <button type="button" class="button_next_chunk" data-shortcut="j"/>
@@ -640,13 +640,14 @@
     <p class="pln"><span class="n"><a id="t558" href="#t558">558</a></span><span class="t">&nbsp;</span><span class="r"></span></p>
     <p class="mis show_mis"><span class="n"><a id="t559" href="#t559">559</a></span><span class="t">    <span class="key">if</span> <span class="op">(</span><span class="nam">g</span><span class="op">.</span><span class="nam">current_user</span><span class="op">.</span><span class="nam">username</span> <span class="op">==</span> <span class="nam">user</span><span class="op">)</span> <span class="key">or</span> <span class="nam">g</span><span class="op">.</span><span class="nam">current_user</span><span class="op">.</span><span class="nam">isAdmin</span><span class="op">:</span>&nbsp;</span><span class="r"></span></p>
     <p class="mis show_mis"><span class="n"><a id="t560" href="#t560">560</a></span><span class="t">        <span class="nam">updateDietInfo</span><span class="op">(</span><span class="nam">user</span><span class="op">,</span> <span class="nam">dietInfo</span><span class="op">)</span>&nbsp;</span><span class="r"></span></p>
-    <p class="mis show_mis"><span class="n"><a id="t561" href="#t561">561</a></span><span class="t">        <span class="key">if</span> <span class="nam">len</span><span class="op">(</span><span class="nam">dietInfo</span><span class="op">)</span> <span class="op">></span> <span class="num">0</span><span class="op">:</span>&nbsp;</span><span class="r"></span></p>
-    <p class="mis show_mis"><span class="n"><a id="t562" href="#t562">562</a></span><span class="t">            <span class="nam">createAdminLog</span><span class="op">(</span><span class="str">f"Updated his dietary restrictions to {dietInfo}."</span><span class="op">)</span> <span class="key">if</span> <span class="nam">dietInfo</span><span class="op">.</span><span class="nam">strip</span><span class="op">(</span><span class="op">)</span> <span class="key">else</span> <span class="key">None</span>&nbsp;</span><span class="r"></span></p>
-    <p class="pln"><span class="n"><a id="t563" href="#t563">563</a></span><span class="t">        <span class="key">else</span><span class="op">:</span>&nbsp;</span><span class="r"></span></p>
-    <p class="mis show_mis"><span class="n"><a id="t564" href="#t564">564</a></span><span class="t">            <span class="nam">createAdminLog</span><span class="op">(</span><span class="str">f"Deleted all his dietary restrictions."</span><span class="op">)</span>&nbsp;</span><span class="r"></span></p>
-    <p class="pln"><span class="n"><a id="t565" href="#t565">565</a></span><span class="t">&nbsp;</span><span class="r"></span></p>
+    <p class="mis show_mis"><span class="n"><a id="t561" href="#t561">561</a></span><span class="t">        <span class="nam">userInfo</span> <span class="op">=</span> <span class="nam">User</span><span class="op">.</span><span class="nam">get</span><span class="op">(</span><span class="nam">User</span><span class="op">.</span><span class="nam">username</span> <span class="op">==</span> <span class="nam">user</span><span class="op">)</span>&nbsp;</span><span class="r"></span></p>
+    <p class="mis show_mis"><span class="n"><a id="t562" href="#t562">562</a></span><span class="t">        <span class="key">if</span> <span class="nam">len</span><span class="op">(</span><span class="nam">dietInfo</span><span class="op">)</span> <span class="op">></span> <span class="num">0</span><span class="op">:</span>&nbsp;</span><span class="r"></span></p>
+    <p class="mis show_mis"><span class="n"><a id="t563" href="#t563">563</a></span><span class="t">            <span class="nam">createAdminLog</span><span class="op">(</span><span class="str">f"Updated {userInfo.fullName}'s dietary restrictions to {dietInfo}."</span><span class="op">)</span> <span class="key">if</span> <span class="nam">dietInfo</span><span class="op">.</span><span class="nam">strip</span><span class="op">(</span><span class="op">)</span> <span class="key">else</span> <span class="key">None</span>&nbsp;</span><span class="r"></span></p>
+    <p class="pln"><span class="n"><a id="t564" href="#t564">564</a></span><span class="t">        <span class="key">else</span><span class="op">:</span>&nbsp;</span><span class="r"></span></p>
+    <p class="mis show_mis"><span class="n"><a id="t565" href="#t565">565</a></span><span class="t">            <span class="nam">createAdminLog</span><span class="op">(</span><span class="str">f"Deleted all {userInfo.fullName}'s dietary restrictions dietary restrictions."</span><span class="op">)</span>&nbsp;</span><span class="r"></span></p>
     <p class="pln"><span class="n"><a id="t566" href="#t566">566</a></span><span class="t">&nbsp;</span><span class="r"></span></p>
-    <p class="mis show_mis"><span class="n"><a id="t567" href="#t567">567</a></span><span class="t">    <span class="key">return</span> <span class="str">" "</span>&nbsp;</span><span class="r"></span></p>
+    <p class="pln"><span class="n"><a id="t567" href="#t567">567</a></span><span class="t">&nbsp;</span><span class="r"></span></p>
+    <p class="mis show_mis"><span class="n"><a id="t568" href="#t568">568</a></span><span class="t">    <span class="key">return</span> <span class="str">" "</span>&nbsp;</span><span class="r"></span></p>
 </main>
 <footer>
     <div class="content">
@@ -656,7 +657,7 @@
             <a id="nextFileLink" class="nav" href="d_0e098e07e81a8f2f___init___py.html">&#xbb; next</a>
             &nbsp; &nbsp; &nbsp;
             <a class="nav" href="https://coverage.readthedocs.io/en/7.2.5">coverage.py v7.2.5</a>,
-            created at 2023-08-17 18:46 +0000
+            created at 2023-08-17 20:07 +0000
         </p>
     </div>
 </footer>
