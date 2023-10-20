@@ -54,9 +54,9 @@
             </div>
         </aside>
         <h2>
-            <span class="text">331 statements &nbsp;</span>
-            <button type="button" class="run button_toggle_run" value="run" data-shortcut="r" title="Toggle lines run">83<span class="text"> run</span></button>
-            <button type="button" class="mis show_mis button_toggle_mis" value="mis" data-shortcut="m" title="Toggle lines missing">248<span class="text"> missing</span></button>
+            <span class="text">337 statements &nbsp;</span>
+            <button type="button" class="run button_toggle_run" value="run" data-shortcut="r" title="Toggle lines run">85<span class="text"> run</span></button>
+            <button type="button" class="mis show_mis button_toggle_mis" value="mis" data-shortcut="m" title="Toggle lines missing">252<span class="text"> missing</span></button>
             <button type="button" class="exc show_exc button_toggle_exc" value="exc" data-shortcut="x" title="Toggle lines excluded">0<span class="text"> excluded</span></button>
         </h2>
         <p class="text">
@@ -65,7 +65,7 @@
             <a id="nextFileLink" class="nav" href="d_c86a23c356556db1_userManagement_py.html">&#xbb; next</a>
             &nbsp; &nbsp; &nbsp;
             <a class="nav" href="https://coverage.readthedocs.io/en/7.2.5">coverage.py v7.2.5</a>,
-            created at 2023-10-17 21:59 +0000
+            created at 2023-10-20 14:38 +0000
         </p>
         <aside class="hidden">
             <button type="button" class="button_next_chunk" data-shortcut="j"/>
@@ -324,7 +324,7 @@
     <p class="mis show_mis"><span class="n"><a id="t242" href="#t242">242</a></span><span class="t">    <span class="nam">picurestype</span> <span class="op">=</span> <span class="op">[</span><span class="str">".jpeg"</span><span class="op">,</span> <span class="str">".png"</span><span class="op">,</span> <span class="str">".gif"</span><span class="op">,</span> <span class="str">".jpg"</span><span class="op">,</span> <span class="str">".svg"</span><span class="op">,</span> <span class="str">".webp"</span><span class="op">]</span>&nbsp;</span><span class="r"></span></p>
     <p class="mis show_mis"><span class="n"><a id="t243" href="#t243">243</a></span><span class="t">    <span class="key">for</span> <span class="nam">attachment</span> <span class="key">in</span> <span class="nam">associatedAttachments</span><span class="op">:</span>&nbsp;</span><span class="r"></span></p>
     <p class="mis show_mis"><span class="n"><a id="t244" href="#t244">244</a></span><span class="t">        <span class="key">for</span> <span class="nam">extension</span> <span class="key">in</span> <span class="nam">picurestype</span><span class="op">:</span>&nbsp;</span><span class="r"></span></p>
-    <p class="mis show_mis"><span class="n"><a id="t245" href="#t245">245</a></span><span class="t">            <span class="key">if</span> <span class="op">(</span><span class="nam">attachment</span><span class="op">.</span><span class="nam">fileName</span><span class="op">.</span><span class="nam">endswith</span><span class="op">(</span><span class="nam">extension</span><span class="op">)</span><span class="op">)</span><span class="op">:</span>&nbsp;</span><span class="r"></span></p>
+    <p class="mis show_mis"><span class="n"><a id="t245" href="#t245">245</a></span><span class="t">            <span class="key">if</span> <span class="op">(</span><span class="nam">attachment</span><span class="op">.</span><span class="nam">fileName</span><span class="op">.</span><span class="nam">endswith</span><span class="op">(</span><span class="nam">extension</span><span class="op">)</span> <span class="key">and</span> <span class="nam">attachment</span><span class="op">.</span><span class="nam">isDisplayed</span> <span class="op">==</span> <span class="key">True</span><span class="op">)</span><span class="op">:</span>&nbsp;</span><span class="r"></span></p>
     <p class="mis show_mis"><span class="n"><a id="t246" href="#t246">246</a></span><span class="t">                <span class="nam">image</span> <span class="op">=</span> <span class="nam">filepaths</span><span class="op">[</span><span class="nam">attachment</span><span class="op">.</span><span class="nam">fileName</span><span class="op">]</span><span class="op">[</span><span class="num">0</span><span class="op">]</span>&nbsp;</span><span class="r"></span></p>
     <p class="mis show_mis"><span class="n"><a id="t247" href="#t247">247</a></span><span class="t">        <span class="key">if</span> <span class="nam">image</span><span class="op">:</span>&nbsp;</span><span class="r"></span></p>
     <p class="mis show_mis"><span class="n"><a id="t248" href="#t248">248</a></span><span class="t">            <span class="key">break</span>&nbsp;</span><span class="r"></span></p>
@@ -595,6 +595,14 @@
     <p class="mis show_mis"><span class="n"><a id="t513" href="#t513">513</a></span><span class="t">    <span class="nam">newRequirements</span> <span class="op">=</span> <span class="nam">updateCertRequirements</span><span class="op">(</span><span class="nam">certid</span><span class="op">,</span> <span class="nam">request</span><span class="op">.</span><span class="nam">get_json</span><span class="op">(</span><span class="op">)</span><span class="op">)</span>&nbsp;</span><span class="r"></span></p>
     <p class="pln"><span class="n"><a id="t514" href="#t514">514</a></span><span class="t">&nbsp;</span><span class="r"></span></p>
     <p class="mis show_mis"><span class="n"><a id="t515" href="#t515">515</a></span><span class="t">    <span class="key">return</span> <span class="nam">jsonify</span><span class="op">(</span><span class="op">[</span><span class="nam">requirement</span><span class="op">.</span><span class="nam">id</span> <span class="key">for</span> <span class="nam">requirement</span> <span class="key">in</span> <span class="nam">newRequirements</span><span class="op">]</span><span class="op">)</span>&nbsp;</span><span class="r"></span></p>
+    <p class="pln"><span class="n"><a id="t516" href="#t516">516</a></span><span class="t">&nbsp;</span><span class="r"></span></p>
+    <p class="pln"><span class="n"><a id="t517" href="#t517">517</a></span><span class="t">&nbsp;</span><span class="r"></span></p>
+    <p class="run"><span class="n"><a id="t518" href="#t518">518</a></span><span class="t"><span class="op">@</span><span class="nam">admin_bp</span><span class="op">.</span><span class="nam">route</span><span class="op">(</span><span class="str">"/displayEventFile"</span><span class="op">,</span> <span class="nam">methods</span><span class="op">=</span><span class="op">[</span><span class="str">"POST"</span><span class="op">]</span><span class="op">)</span>&nbsp;</span><span class="r"></span></p>
+    <p class="run"><span class="n"><a id="t519" href="#t519">519</a></span><span class="t"><span class="key">def</span> <span class="nam">displayEventFile</span><span class="op">(</span><span class="op">)</span><span class="op">:</span>&nbsp;</span><span class="r"></span></p>
+    <p class="mis show_mis"><span class="n"><a id="t520" href="#t520">520</a></span><span class="t">    <span class="nam">fileData</span><span class="op">=</span> <span class="nam">request</span><span class="op">.</span><span class="nam">form</span>&nbsp;</span><span class="r"></span></p>
+    <p class="mis show_mis"><span class="n"><a id="t521" href="#t521">521</a></span><span class="t">    <span class="nam">eventfile</span><span class="op">=</span><span class="nam">FileHandler</span><span class="op">(</span><span class="nam">eventId</span><span class="op">=</span><span class="nam">fileData</span><span class="op">[</span><span class="str">"id"</span><span class="op">]</span><span class="op">)</span>&nbsp;</span><span class="r"></span></p>
+    <p class="mis show_mis"><span class="n"><a id="t522" href="#t522">522</a></span><span class="t">    <span class="nam">eventfile</span><span class="op">.</span><span class="nam">changeDisplay</span><span class="op">(</span><span class="nam">fileData</span><span class="op">[</span><span class="str">'id'</span><span class="op">]</span><span class="op">)</span>&nbsp;</span><span class="r"></span></p>
+    <p class="mis show_mis"><span class="n"><a id="t523" href="#t523">523</a></span><span class="t">    <span class="key">return</span> <span class="str">""</span>&nbsp;</span><span class="r"></span></p>
 </main>
 <footer>
     <div class="content">
@@ -604,7 +612,7 @@
             <a id="nextFileLink" class="nav" href="d_c86a23c356556db1_userManagement_py.html">&#xbb; next</a>
             &nbsp; &nbsp; &nbsp;
             <a class="nav" href="https://coverage.readthedocs.io/en/7.2.5">coverage.py v7.2.5</a>,
-            created at 2023-10-17 21:59 +0000
+            created at 2023-10-20 14:38 +0000
         </p>
     </div>
 </footer>
