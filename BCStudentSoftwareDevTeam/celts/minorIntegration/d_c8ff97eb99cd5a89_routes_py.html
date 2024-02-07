@@ -2,7 +2,7 @@
 <html>
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    <title>Coverage for app/controllers/minor/routes.py: 36%</title>
+    <title>Coverage for app/controllers/minor/routes.py: 35%</title>
     <link rel="icon" sizes="32x32" href="favicon_32.png">
     <link rel="stylesheet" href="style.css" type="text/css">
     <script type="text/javascript" src="coverage_html.js" defer></script>
@@ -12,7 +12,7 @@
     <div class="content">
         <h1>
             <span class="text">Coverage for </span><b>app/controllers/minor/routes.py</b>:
-            <span class="pc_cov">36%</span>
+            <span class="pc_cov">35%</span>
         </h1>
         <aside id="help_panel_wrapper">
             <input id="help_panel_state" type="checkbox">
@@ -54,9 +54,9 @@
             </div>
         </aside>
         <h2>
-            <span class="text">75 statements &nbsp;</span>
-            <button type="button" class="run button_toggle_run" value="run" data-shortcut="r" title="Toggle lines run">27<span class="text"> run</span></button>
-            <button type="button" class="mis show_mis button_toggle_mis" value="mis" data-shortcut="m" title="Toggle lines missing">48<span class="text"> missing</span></button>
+            <span class="text">71 statements &nbsp;</span>
+            <button type="button" class="run button_toggle_run" value="run" data-shortcut="r" title="Toggle lines run">25<span class="text"> run</span></button>
+            <button type="button" class="mis show_mis button_toggle_mis" value="mis" data-shortcut="m" title="Toggle lines missing">46<span class="text"> missing</span></button>
             <button type="button" class="exc show_exc button_toggle_exc" value="exc" data-shortcut="x" title="Toggle lines excluded">0<span class="text"> excluded</span></button>
         </h2>
         <p class="text">
@@ -65,7 +65,7 @@
             <a id="nextFileLink" class="nav" href="d_0e098e07e81a8f2f___init___py.html">&#xbb; next</a>
             &nbsp; &nbsp; &nbsp;
             <a class="nav" href="https://coverage.readthedocs.io/en/7.2.7">coverage.py v7.2.7</a>,
-            created at 2024-02-06 21:09 +0000
+            created at 2024-02-07 18:27 +0000
         </p>
         <aside class="hidden">
             <button type="button" class="button_next_chunk" data-shortcut="j"/>
@@ -89,7 +89,7 @@
     <p class="run"><span class="n"><a id="t7" href="#t7">7</a></span><span class="t"><span class="key">from</span> <span class="nam">app</span><span class="op">.</span><span class="nam">logic</span><span class="op">.</span><span class="nam">fileHandler</span> <span class="key">import</span> <span class="nam">FileHandler</span>&nbsp;</span><span class="r"></span></p>
     <p class="run"><span class="n"><a id="t8" href="#t8">8</a></span><span class="t"><span class="key">from</span> <span class="nam">app</span><span class="op">.</span><span class="nam">models</span><span class="op">.</span><span class="nam">attachmentUpload</span> <span class="key">import</span> <span class="nam">AttachmentUpload</span>&nbsp;</span><span class="r"></span></p>
     <p class="run"><span class="n"><a id="t9" href="#t9">9</a></span><span class="t"><span class="key">from</span> <span class="nam">app</span><span class="op">.</span><span class="nam">logic</span><span class="op">.</span><span class="nam">utils</span> <span class="key">import</span> <span class="nam">getFilesFromRequest</span>&nbsp;</span><span class="r"></span></p>
-    <p class="run"><span class="n"><a id="t10" href="#t10">10</a></span><span class="t"><span class="key">from</span> <span class="nam">app</span><span class="op">.</span><span class="nam">logic</span><span class="op">.</span><span class="nam">minor</span> <span class="key">import</span> <span class="nam">toggleMinorInterest</span><span class="op">,</span> <span class="nam">getProgramEngagementHistory</span><span class="op">,</span> <span class="nam">getCourseInformation</span><span class="op">,</span> <span class="nam">getCommunityEngagementByTerm</span><span class="op">,</span> <span class="nam">removeSummerExperience</span>&nbsp;</span><span class="r"></span></p>
+    <p class="run"><span class="n"><a id="t10" href="#t10">10</a></span><span class="t"><span class="key">from</span> <span class="nam">app</span><span class="op">.</span><span class="nam">logic</span><span class="op">.</span><span class="nam">minor</span> <span class="key">import</span> <span class="nam">getProgramEngagementHistory</span><span class="op">,</span> <span class="nam">getCourseInformation</span><span class="op">,</span> <span class="nam">getCommunityEngagementByTerm</span><span class="op">,</span> <span class="nam">removeSummerExperience</span>&nbsp;</span><span class="r"></span></p>
     <p class="run"><span class="n"><a id="t11" href="#t11">11</a></span><span class="t"><span class="key">from</span> <span class="nam">app</span><span class="op">.</span><span class="nam">logic</span><span class="op">.</span><span class="nam">minor</span> <span class="key">import</span> <span class="nam">saveOtherEngagementRequest</span><span class="op">,</span> <span class="nam">setCommunityEngagementForUser</span><span class="op">,</span> <span class="nam">saveSummerExperience</span><span class="op">,</span> <span class="nam">getSummerTerms</span><span class="op">,</span> <span class="nam">getSummerExperience</span>&nbsp;</span><span class="r"></span></p>
     <p class="pln"><span class="n"><a id="t12" href="#t12">12</a></span><span class="t">&nbsp;</span><span class="r"></span></p>
     <p class="run"><span class="n"><a id="t13" href="#t13">13</a></span><span class="t"><span class="op">@</span><span class="nam">minor_bp</span><span class="op">.</span><span class="nam">route</span><span class="op">(</span><span class="str">'/profile/&lt;username>/cceMinor'</span><span class="op">,</span> <span class="nam">methods</span><span class="op">=</span><span class="op">[</span><span class="str">'GET'</span><span class="op">]</span><span class="op">)</span>&nbsp;</span><span class="r"></span></p>
@@ -182,23 +182,17 @@
     <p class="pln"><span class="n"><a id="t100" href="#t100">100</a></span><span class="t">&nbsp;</span><span class="r"></span></p>
     <p class="mis show_mis"><span class="n"><a id="t101" href="#t101">101</a></span><span class="t">    <span class="key">return</span> <span class="str">""</span>&nbsp;</span><span class="r"></span></p>
     <p class="pln"><span class="n"><a id="t102" href="#t102">102</a></span><span class="t">&nbsp;</span><span class="r"></span></p>
-    <p class="run"><span class="n"><a id="t103" href="#t103">103</a></span><span class="t"><span class="op">@</span><span class="nam">minor_bp</span><span class="op">.</span><span class="nam">route</span><span class="op">(</span><span class="str">'/cceMinor/&lt;username>/indicateInterest'</span><span class="op">,</span> <span class="nam">methods</span><span class="op">=</span><span class="op">[</span><span class="str">'POST'</span><span class="op">]</span><span class="op">)</span>&nbsp;</span><span class="r"></span></p>
-    <p class="run"><span class="n"><a id="t104" href="#t104">104</a></span><span class="t"><span class="key">def</span> <span class="nam">indicateMinorInterest</span><span class="op">(</span><span class="nam">username</span><span class="op">)</span><span class="op">:</span>&nbsp;</span><span class="r"></span></p>
-    <p class="mis show_mis"><span class="n"><a id="t105" href="#t105">105</a></span><span class="t">    <span class="nam">toggleMinorInterest</span><span class="op">(</span><span class="nam">username</span><span class="op">)</span>&nbsp;</span><span class="r"></span></p>
+    <p class="run"><span class="n"><a id="t103" href="#t103">103</a></span><span class="t"><span class="op">@</span><span class="nam">minor_bp</span><span class="op">.</span><span class="nam">route</span><span class="op">(</span><span class="str">'/cceMinor/&lt;username>/addSummerExperience'</span><span class="op">,</span> <span class="nam">methods</span><span class="op">=</span><span class="op">[</span><span class="str">'POST'</span><span class="op">]</span><span class="op">)</span>&nbsp;</span><span class="r"></span></p>
+    <p class="run"><span class="n"><a id="t104" href="#t104">104</a></span><span class="t"><span class="key">def</span> <span class="nam">addSummerExperience</span><span class="op">(</span><span class="nam">username</span><span class="op">)</span><span class="op">:</span>&nbsp;</span><span class="r"></span></p>
+    <p class="mis show_mis"><span class="n"><a id="t105" href="#t105">105</a></span><span class="t">    <span class="nam">saveSummerExperience</span><span class="op">(</span><span class="nam">username</span> <span class="op">,</span><span class="nam">request</span><span class="op">.</span><span class="nam">form</span><span class="op">,</span> <span class="nam">g</span><span class="op">.</span><span class="nam">current_user</span><span class="op">)</span>&nbsp;</span><span class="r"></span></p>
     <p class="pln"><span class="n"><a id="t106" href="#t106">106</a></span><span class="t">&nbsp;</span><span class="r"></span></p>
     <p class="mis show_mis"><span class="n"><a id="t107" href="#t107">107</a></span><span class="t">    <span class="key">return</span> <span class="str">""</span>&nbsp;</span><span class="r"></span></p>
     <p class="pln"><span class="n"><a id="t108" href="#t108">108</a></span><span class="t">&nbsp;</span><span class="r"></span></p>
-    <p class="run"><span class="n"><a id="t109" href="#t109">109</a></span><span class="t"><span class="op">@</span><span class="nam">minor_bp</span><span class="op">.</span><span class="nam">route</span><span class="op">(</span><span class="str">'/cceMinor/&lt;username>/addSummerExperience'</span><span class="op">,</span> <span class="nam">methods</span><span class="op">=</span><span class="op">[</span><span class="str">'POST'</span><span class="op">]</span><span class="op">)</span>&nbsp;</span><span class="r"></span></p>
-    <p class="run"><span class="n"><a id="t110" href="#t110">110</a></span><span class="t"><span class="key">def</span> <span class="nam">addSummerExperience</span><span class="op">(</span><span class="nam">username</span><span class="op">)</span><span class="op">:</span>&nbsp;</span><span class="r"></span></p>
-    <p class="mis show_mis"><span class="n"><a id="t111" href="#t111">111</a></span><span class="t">    <span class="nam">saveSummerExperience</span><span class="op">(</span><span class="nam">username</span> <span class="op">,</span><span class="nam">request</span><span class="op">.</span><span class="nam">form</span><span class="op">,</span> <span class="nam">g</span><span class="op">.</span><span class="nam">current_user</span><span class="op">)</span>&nbsp;</span><span class="r"></span></p>
+    <p class="run"><span class="n"><a id="t109" href="#t109">109</a></span><span class="t"><span class="op">@</span><span class="nam">minor_bp</span><span class="op">.</span><span class="nam">route</span><span class="op">(</span><span class="str">'/cceMinor/&lt;username>/deleteSummerExperience'</span><span class="op">,</span> <span class="nam">methods</span><span class="op">=</span><span class="op">[</span><span class="str">'POST'</span><span class="op">]</span><span class="op">)</span>&nbsp;</span><span class="r"></span></p>
+    <p class="run"><span class="n"><a id="t110" href="#t110">110</a></span><span class="t"><span class="key">def</span> <span class="nam">deleteSummerExperience</span><span class="op">(</span><span class="nam">username</span><span class="op">)</span><span class="op">:</span>&nbsp;</span><span class="r"></span></p>
+    <p class="mis show_mis"><span class="n"><a id="t111" href="#t111">111</a></span><span class="t">    <span class="nam">removeSummerExperience</span><span class="op">(</span><span class="nam">username</span><span class="op">)</span>&nbsp;</span><span class="r"></span></p>
     <p class="pln"><span class="n"><a id="t112" href="#t112">112</a></span><span class="t">&nbsp;</span><span class="r"></span></p>
     <p class="mis show_mis"><span class="n"><a id="t113" href="#t113">113</a></span><span class="t">    <span class="key">return</span> <span class="str">""</span>&nbsp;</span><span class="r"></span></p>
-    <p class="pln"><span class="n"><a id="t114" href="#t114">114</a></span><span class="t">&nbsp;</span><span class="r"></span></p>
-    <p class="run"><span class="n"><a id="t115" href="#t115">115</a></span><span class="t"><span class="op">@</span><span class="nam">minor_bp</span><span class="op">.</span><span class="nam">route</span><span class="op">(</span><span class="str">'/cceMinor/&lt;username>/deleteSummerExperience'</span><span class="op">,</span> <span class="nam">methods</span><span class="op">=</span><span class="op">[</span><span class="str">'POST'</span><span class="op">]</span><span class="op">)</span>&nbsp;</span><span class="r"></span></p>
-    <p class="run"><span class="n"><a id="t116" href="#t116">116</a></span><span class="t"><span class="key">def</span> <span class="nam">deleteSummerExperience</span><span class="op">(</span><span class="nam">username</span><span class="op">)</span><span class="op">:</span>&nbsp;</span><span class="r"></span></p>
-    <p class="mis show_mis"><span class="n"><a id="t117" href="#t117">117</a></span><span class="t">    <span class="nam">removeSummerExperience</span><span class="op">(</span><span class="nam">username</span><span class="op">)</span>&nbsp;</span><span class="r"></span></p>
-    <p class="pln"><span class="n"><a id="t118" href="#t118">118</a></span><span class="t">&nbsp;</span><span class="r"></span></p>
-    <p class="mis show_mis"><span class="n"><a id="t119" href="#t119">119</a></span><span class="t">    <span class="key">return</span> <span class="str">""</span>&nbsp;</span><span class="r"></span></p>
 </main>
 <footer>
     <div class="content">
@@ -208,7 +202,7 @@
             <a id="nextFileLink" class="nav" href="d_0e098e07e81a8f2f___init___py.html">&#xbb; next</a>
             &nbsp; &nbsp; &nbsp;
             <a class="nav" href="https://coverage.readthedocs.io/en/7.2.7">coverage.py v7.2.7</a>,
-            created at 2024-02-06 21:09 +0000
+            created at 2024-02-07 18:27 +0000
         </p>
     </div>
 </footer>
