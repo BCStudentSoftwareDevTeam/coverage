@@ -65,7 +65,7 @@
             <a id="nextFileLink" class="nav" href="d_c86a23c356556db1_userManagement_py.html">&#xbb; next</a>
             &nbsp; &nbsp; &nbsp;
             <a class="nav" href="https://coverage.readthedocs.io/en/7.2.7">coverage.py v7.2.7</a>,
-            created at 2024-02-14 16:34 +0000
+            created at 2024-02-14 20:34 +0000
         </p>
         <aside class="hidden">
             <button type="button" class="button_next_chunk" data-shortcut="j"/>
@@ -475,10 +475,10 @@
     <p class="mis show_mis"><span class="n"><a id="t393" href="#t393">393</a></span><span class="t">    <span class="nam">manageTerm</span> <span class="op">=</span> <span class="nam">Term</span><span class="op">.</span><span class="nam">get_or_none</span><span class="op">(</span><span class="nam">Term</span><span class="op">.</span><span class="nam">id</span> <span class="op">==</span> <span class="nam">term</span><span class="op">)</span> <span class="key">or</span> <span class="nam">g</span><span class="op">.</span><span class="nam">current_term</span>&nbsp;</span><span class="r"></span></p>
     <p class="pln"><span class="n"><a id="t394" href="#t394">394</a></span><span class="t">&nbsp;</span><span class="r"></span></p>
     <p class="mis show_mis"><span class="n"><a id="t395" href="#t395">395</a></span><span class="t">    <span class="nam">setRedirectTarget</span><span class="op">(</span><span class="nam">request</span><span class="op">.</span><span class="nam">full_path</span><span class="op">)</span>&nbsp;</span><span class="r"></span></p>
-    <p class="mis show_mis"><span class="n"><a id="t396" href="#t396">396</a></span><span class="t">    <span class="nam">courseID</span> <span class="op">=</span> <span class="nam">session</span><span class="op">.</span><span class="nam">get</span><span class="op">(</span><span class="str">"alterCourseId"</span><span class="op">)</span> <span class="com"># retrieve and store the courseID from session variable if it exists.</span>&nbsp;</span><span class="r"></span></p>
+    <p class="mis show_mis"><span class="n"><a id="t396" href="#t396">396</a></span><span class="t">    <span class="nam">courseID</span> <span class="op">=</span> <span class="nam">session</span><span class="op">.</span><span class="nam">get</span><span class="op">(</span><span class="str">"alterCourseId"</span><span class="op">)</span> <span class="com"># retrieve and store the courseID of the imported course from a session variable if it exists. This allows us to export the courseID in the html and use it. </span>&nbsp;</span><span class="r"></span></p>
     <p class="pln"><span class="n"><a id="t397" href="#t397">397</a></span><span class="t">&nbsp;</span><span class="r"></span></p>
     <p class="mis show_mis"><span class="n"><a id="t398" href="#t398">398</a></span><span class="t">    <span class="key">if</span> <span class="nam">courseID</span><span class="op">:</span>&nbsp;</span><span class="r"></span></p>
-    <p class="mis show_mis"><span class="n"><a id="t399" href="#t399">399</a></span><span class="t">        <span class="nam">session</span><span class="op">.</span><span class="nam">pop</span><span class="op">(</span><span class="str">"alterCourseId"</span><span class="op">)</span> <span class="com"># delete courseID from the session if it was retrieved.</span>&nbsp;</span><span class="r"></span></p>
+    <p class="mis show_mis"><span class="n"><a id="t399" href="#t399">399</a></span><span class="t">        <span class="nam">session</span><span class="op">.</span><span class="nam">pop</span><span class="op">(</span><span class="str">"alterCourseId"</span><span class="op">)</span> <span class="com"># delete courseID from the session if it was retrieved, for storage purposes. </span>&nbsp;</span><span class="r"></span></p>
     <p class="mis show_mis"><span class="n"><a id="t400" href="#t400">400</a></span><span class="t">        <span class="key">return</span> <span class="nam">render_template</span><span class="op">(</span><span class="str">'/admin/manageServiceLearningFaculty.html'</span><span class="op">,</span>&nbsp;</span><span class="r"></span></p>
     <p class="pln"><span class="n"><a id="t401" href="#t401">401</a></span><span class="t">                                <span class="nam">courseInstructors</span> <span class="op">=</span> <span class="nam">getInstructorCourses</span><span class="op">(</span><span class="op">)</span><span class="op">,</span>&nbsp;</span><span class="r"></span></p>
     <p class="pln"><span class="n"><a id="t402" href="#t402">402</a></span><span class="t">                                <span class="nam">unapprovedCourses</span> <span class="op">=</span> <span class="nam">unapprovedCourses</span><span class="op">(</span><span class="nam">term</span><span class="op">)</span><span class="op">,</span>&nbsp;</span><span class="r"></span></p>
@@ -621,7 +621,7 @@
             <a id="nextFileLink" class="nav" href="d_c86a23c356556db1_userManagement_py.html">&#xbb; next</a>
             &nbsp; &nbsp; &nbsp;
             <a class="nav" href="https://coverage.readthedocs.io/en/7.2.7">coverage.py v7.2.7</a>,
-            created at 2024-02-14 16:34 +0000
+            created at 2024-02-14 20:34 +0000
         </p>
     </div>
 </footer>
