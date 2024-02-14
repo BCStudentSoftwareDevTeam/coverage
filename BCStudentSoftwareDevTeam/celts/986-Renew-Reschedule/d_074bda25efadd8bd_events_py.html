@@ -54,8 +54,8 @@
             </div>
         </aside>
         <h2>
-            <span class="text">246 statements &nbsp;</span>
-            <button type="button" class="run button_toggle_run" value="run" data-shortcut="r" title="Toggle lines run">226<span class="text"> run</span></button>
+            <span class="text">245 statements &nbsp;</span>
+            <button type="button" class="run button_toggle_run" value="run" data-shortcut="r" title="Toggle lines run">225<span class="text"> run</span></button>
             <button type="button" class="mis show_mis button_toggle_mis" value="mis" data-shortcut="m" title="Toggle lines missing">20<span class="text"> missing</span></button>
             <button type="button" class="exc show_exc button_toggle_exc" value="exc" data-shortcut="x" title="Toggle lines excluded">0<span class="text"> excluded</span></button>
         </h2>
@@ -65,7 +65,7 @@
             <a id="nextFileLink" class="nav" href="d_074bda25efadd8bd_fileHandler_py.html">&#xbb; next</a>
             &nbsp; &nbsp; &nbsp;
             <a class="nav" href="https://coverage.readthedocs.io/en/7.2.7">coverage.py v7.2.7</a>,
-            created at 2024-02-08 18:01 +0000
+            created at 2024-02-14 16:42 +0000
         </p>
         <aside class="hidden">
             <button type="button" class="button_next_chunk" data-shortcut="j"/>
@@ -589,20 +589,22 @@
     <p class="pln"><span class="n"><a id="t507" href="#t507">507</a></span><span class="t"><span class="str">    """</span>&nbsp;</span><span class="r"></span></p>
     <p class="run"><span class="n"><a id="t508" href="#t508">508</a></span><span class="t">    <span class="key">return</span> <span class="nam">len</span><span class="op">(</span><span class="nam">EventRsvp</span><span class="op">.</span><span class="nam">select</span><span class="op">(</span><span class="op">)</span><span class="op">.</span><span class="nam">where</span><span class="op">(</span><span class="nam">EventRsvp</span><span class="op">.</span><span class="nam">event_id</span> <span class="op">==</span> <span class="nam">eventId</span><span class="op">)</span><span class="op">)</span>&nbsp;</span><span class="r"></span></p>
     <p class="pln"><span class="n"><a id="t509" href="#t509">509</a></span><span class="t">&nbsp;</span><span class="r"></span></p>
-    <p class="run"><span class="n"><a id="t510" href="#t510">510</a></span><span class="t"><span class="key">def</span> <span class="nam">copyRsvp</span><span class="op">(</span><span class="nam">priorEvent</span><span class="op">,</span> <span class="nam">newEvent</span><span class="op">)</span><span class="op">:</span>&nbsp;</span><span class="r"></span></p>
-    <p class="run"><span class="n"><a id="t511" href="#t511">511</a></span><span class="t">    <span class="nam">rsvpInfo</span> <span class="op">=</span> <span class="nam">list</span><span class="op">(</span><span class="nam">EventRsvp</span><span class="op">.</span><span class="nam">select</span><span class="op">(</span><span class="op">)</span><span class="op">.</span><span class="nam">where</span><span class="op">(</span><span class="nam">EventRsvp</span><span class="op">.</span><span class="nam">event</span> <span class="op">==</span> <span class="nam">priorEvent</span><span class="op">)</span><span class="op">.</span><span class="nam">execute</span><span class="op">(</span><span class="op">)</span><span class="op">)</span>&nbsp;</span><span class="r"></span></p>
-    <p class="run"><span class="n"><a id="t512" href="#t512">512</a></span><span class="t">    <span class="nam">rsvpCopies</span> <span class="op">=</span> <span class="num">0</span>&nbsp;</span><span class="r"></span></p>
-    <p class="run"><span class="n"><a id="t513" href="#t513">513</a></span><span class="t">    <span class="key">for</span> <span class="nam">student</span> <span class="key">in</span> <span class="nam">rsvpInfo</span><span class="op">:</span>&nbsp;</span><span class="r"></span></p>
-    <p class="run"><span class="n"><a id="t514" href="#t514">514</a></span><span class="t">        <span class="nam">newRsvp</span> <span class="op">=</span> <span class="nam">EventRsvp</span><span class="op">(</span>&nbsp;</span><span class="r"></span></p>
-    <p class="pln"><span class="n"><a id="t515" href="#t515">515</a></span><span class="t">                <span class="nam">user</span> <span class="op">=</span> <span class="nam">student</span><span class="op">.</span><span class="nam">user</span><span class="op">,</span>&nbsp;</span><span class="r"></span></p>
-    <p class="pln"><span class="n"><a id="t516" href="#t516">516</a></span><span class="t">                <span class="nam">event</span> <span class="op">=</span> <span class="nam">newEvent</span><span class="op">,</span>&nbsp;</span><span class="r"></span></p>
-    <p class="pln"><span class="n"><a id="t517" href="#t517">517</a></span><span class="t">                <span class="nam">rsvpWaitlist</span> <span class="op">=</span> <span class="nam">student</span><span class="op">.</span><span class="nam">rsvpWaitlist</span>&nbsp;</span><span class="r"></span></p>
-    <p class="pln"><span class="n"><a id="t518" href="#t518">518</a></span><span class="t">            <span class="op">)</span>&nbsp;</span><span class="r"></span></p>
-    <p class="run"><span class="n"><a id="t519" href="#t519">519</a></span><span class="t">        <span class="nam">newRsvp</span><span class="op">.</span><span class="nam">save</span><span class="op">(</span><span class="op">)</span>&nbsp;</span><span class="r"></span></p>
-    <p class="run"><span class="n"><a id="t520" href="#t520">520</a></span><span class="t">        <span class="nam">rsvpCopies</span><span class="op">=</span><span class="nam">len</span><span class="op">(</span><span class="nam">rsvpInfo</span><span class="op">)</span>&nbsp;</span><span class="r"></span></p>
-    <p class="pln"><span class="n"><a id="t521" href="#t521">521</a></span><span class="t">&nbsp;</span><span class="r"></span></p>
-    <p class="run"><span class="n"><a id="t522" href="#t522">522</a></span><span class="t">    <span class="key">if</span> <span class="nam">rsvpCopies</span><span class="op">:</span>&nbsp;</span><span class="r"></span></p>
-    <p class="run"><span class="n"><a id="t523" href="#t523">523</a></span><span class="t">        <span class="nam">createRsvpLog</span><span class="op">(</span><span class="nam">newEvent</span><span class="op">,</span> <span class="str">f"Copied {rsvpCopies} Rsvp's from {priorEvent.name} to &lt;a href='event/{newEvent.id}/view'>{newEvent.name}&lt;/a>"</span><span class="op">)</span>&nbsp;</span><span class="r"></span></p>
+    <p class="run"><span class="n"><a id="t510" href="#t510">510</a></span><span class="t"><span class="key">def</span> <span class="nam">copyRsvpToNewEvent</span><span class="op">(</span><span class="nam">priorEvent</span><span class="op">,</span> <span class="nam">newEvent</span><span class="op">)</span><span class="op">:</span>&nbsp;</span><span class="r"></span></p>
+    <p class="pln"><span class="n"><a id="t511" href="#t511">511</a></span><span class="t">    <span class="str">"""</span>&nbsp;</span><span class="r"></span></p>
+    <p class="pln"><span class="n"><a id="t512" href="#t512">512</a></span><span class="t"><span class="str">        Copies rvsps from priorEvent to newEvent</span>&nbsp;</span><span class="r"></span></p>
+    <p class="pln"><span class="n"><a id="t513" href="#t513">513</a></span><span class="t"><span class="str">    """</span>&nbsp;</span><span class="r"></span></p>
+    <p class="run"><span class="n"><a id="t514" href="#t514">514</a></span><span class="t">    <span class="nam">rsvpInfo</span> <span class="op">=</span> <span class="nam">list</span><span class="op">(</span><span class="nam">EventRsvp</span><span class="op">.</span><span class="nam">select</span><span class="op">(</span><span class="op">)</span><span class="op">.</span><span class="nam">where</span><span class="op">(</span><span class="nam">EventRsvp</span><span class="op">.</span><span class="nam">event</span> <span class="op">==</span> <span class="nam">priorEvent</span><span class="op">[</span><span class="str">'id'</span><span class="op">]</span><span class="op">)</span><span class="op">.</span><span class="nam">execute</span><span class="op">(</span><span class="op">)</span><span class="op">)</span>&nbsp;</span><span class="r"></span></p>
+    <p class="pln"><span class="n"><a id="t515" href="#t515">515</a></span><span class="t">&nbsp;</span><span class="r"></span></p>
+    <p class="run"><span class="n"><a id="t516" href="#t516">516</a></span><span class="t">    <span class="key">for</span> <span class="nam">student</span> <span class="key">in</span> <span class="nam">rsvpInfo</span><span class="op">:</span>&nbsp;</span><span class="r"></span></p>
+    <p class="run"><span class="n"><a id="t517" href="#t517">517</a></span><span class="t">        <span class="nam">newRsvp</span> <span class="op">=</span> <span class="nam">EventRsvp</span><span class="op">(</span>&nbsp;</span><span class="r"></span></p>
+    <p class="pln"><span class="n"><a id="t518" href="#t518">518</a></span><span class="t">                <span class="nam">user</span> <span class="op">=</span> <span class="nam">student</span><span class="op">.</span><span class="nam">user</span><span class="op">,</span>&nbsp;</span><span class="r"></span></p>
+    <p class="pln"><span class="n"><a id="t519" href="#t519">519</a></span><span class="t">                <span class="nam">event</span> <span class="op">=</span> <span class="nam">newEvent</span><span class="op">,</span>&nbsp;</span><span class="r"></span></p>
+    <p class="pln"><span class="n"><a id="t520" href="#t520">520</a></span><span class="t">                <span class="nam">rsvpWaitlist</span> <span class="op">=</span> <span class="nam">student</span><span class="op">.</span><span class="nam">rsvpWaitlist</span>&nbsp;</span><span class="r"></span></p>
+    <p class="pln"><span class="n"><a id="t521" href="#t521">521</a></span><span class="t">            <span class="op">)</span>&nbsp;</span><span class="r"></span></p>
+    <p class="run"><span class="n"><a id="t522" href="#t522">522</a></span><span class="t">        <span class="nam">newRsvp</span><span class="op">.</span><span class="nam">save</span><span class="op">(</span><span class="op">)</span>&nbsp;</span><span class="r"></span></p>
+    <p class="run"><span class="n"><a id="t523" href="#t523">523</a></span><span class="t">    <span class="nam">numRsvps</span> <span class="op">=</span> <span class="nam">len</span><span class="op">(</span><span class="nam">rsvpInfo</span><span class="op">)</span>&nbsp;</span><span class="r"></span></p>
+    <p class="run"><span class="n"><a id="t524" href="#t524">524</a></span><span class="t">    <span class="key">if</span> <span class="nam">numRsvps</span><span class="op">:</span>&nbsp;</span><span class="r"></span></p>
+    <p class="run"><span class="n"><a id="t525" href="#t525">525</a></span><span class="t">        <span class="nam">createRsvpLog</span><span class="op">(</span><span class="nam">newEvent</span><span class="op">,</span> <span class="str">f"Copied {numRsvps} Rsvp's from {priorEvent['name']} to {newEvent.name}"</span><span class="op">)</span>&nbsp;</span><span class="r"></span></p>
 </main>
 <footer>
     <div class="content">
@@ -612,7 +614,7 @@
             <a id="nextFileLink" class="nav" href="d_074bda25efadd8bd_fileHandler_py.html">&#xbb; next</a>
             &nbsp; &nbsp; &nbsp;
             <a class="nav" href="https://coverage.readthedocs.io/en/7.2.7">coverage.py v7.2.7</a>,
-            created at 2024-02-08 18:01 +0000
+            created at 2024-02-14 16:42 +0000
         </p>
     </div>
 </footer>
