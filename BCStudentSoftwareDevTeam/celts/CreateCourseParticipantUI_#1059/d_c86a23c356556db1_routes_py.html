@@ -65,7 +65,7 @@
             <a id="nextFileLink" class="nav" href="d_c86a23c356556db1_userManagement_py.html">&#xbb; next</a>
             &nbsp; &nbsp; &nbsp;
             <a class="nav" href="https://coverage.readthedocs.io/en/7.2.7">coverage.py v7.2.7</a>,
-            created at 2024-02-20 14:24 +0000
+            created at 2024-02-20 22:21 +0000
         </p>
         <aside class="hidden">
             <button type="button" class="button_next_chunk" data-shortcut="j"/>
@@ -539,9 +539,9 @@
     <p class="pln"><span class="n"><a id="t457" href="#t457">457</a></span><span class="t">&nbsp;</span><span class="r"></span></p>
     <p class="mis show_mis"><span class="n"><a id="t458" href="#t458">458</a></span><span class="t">            <span class="key">return</span> <span class="nam">jsonify</span><span class="op">(</span><span class="nam">courseData</span><span class="op">)</span>&nbsp;</span><span class="r"></span></p>
     <p class="pln"><span class="n"><a id="t459" href="#t459">459</a></span><span class="t">&nbsp;</span><span class="r"></span></p>
-    <p class="mis show_mis"><span class="n"><a id="t460" href="#t460">460</a></span><span class="t">        <span class="key">except</span> <span class="nam">Exception</span> <span class="key">as</span> <span class="nam">e</span><span class="op">:</span>&nbsp;</span><span class="r"></span></p>
-    <p class="mis show_mis"><span class="n"><a id="t461" href="#t461">461</a></span><span class="t">            <span class="nam">flash</span><span class="op">(</span><span class="str">"Course not found or something else went wrong"</span><span class="op">)</span>&nbsp;</span><span class="r"></span></p>
-    <p class="mis show_mis"><span class="n"><a id="t462" href="#t462">462</a></span><span class="t">            <span class="key">return</span> <span class="key">None</span>&nbsp;</span><span class="r"></span></p>
+    <p class="mis show_mis"><span class="n"><a id="t460" href="#t460">460</a></span><span class="t">        <span class="key">except</span> <span class="nam">DoesNotExist</span><span class="op">:</span>&nbsp;</span><span class="r"></span></p>
+    <p class="mis show_mis"><span class="n"><a id="t461" href="#t461">461</a></span><span class="t">            <span class="nam">flash</span><span class="op">(</span><span class="str">"Course not found"</span><span class="op">)</span>&nbsp;</span><span class="r"></span></p>
+    <p class="mis show_mis"><span class="n"><a id="t462" href="#t462">462</a></span><span class="t">            <span class="key">return</span> <span class="nam">jsonify</span><span class="op">(</span><span class="op">{</span><span class="str">"error"</span><span class="op">:</span> <span class="str">"Course not found"</span><span class="op">}</span><span class="op">)</span><span class="op">,</span> <span class="num">404</span>&nbsp;</span><span class="r"></span></p>
     <p class="pln"><span class="n"><a id="t463" href="#t463">463</a></span><span class="t">&nbsp;</span><span class="r"></span></p>
     <p class="mis show_mis"><span class="n"><a id="t464" href="#t464">464</a></span><span class="t">    <span class="key">if</span> <span class="nam">request</span><span class="op">.</span><span class="nam">method</span> <span class="op">==</span> <span class="str">'POST'</span><span class="op">:</span>&nbsp;</span><span class="r"></span></p>
     <p class="pln"><span class="n"><a id="t465" href="#t465">465</a></span><span class="t">        <span class="com"># Update course information in the database</span>&nbsp;</span><span class="r"></span></p>
@@ -623,7 +623,7 @@
             <a id="nextFileLink" class="nav" href="d_c86a23c356556db1_userManagement_py.html">&#xbb; next</a>
             &nbsp; &nbsp; &nbsp;
             <a class="nav" href="https://coverage.readthedocs.io/en/7.2.7">coverage.py v7.2.7</a>,
-            created at 2024-02-20 14:24 +0000
+            created at 2024-02-20 22:21 +0000
         </p>
     </div>
 </footer>
