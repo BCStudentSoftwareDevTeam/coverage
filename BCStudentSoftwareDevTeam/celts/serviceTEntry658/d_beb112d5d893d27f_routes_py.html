@@ -65,7 +65,7 @@
             <a id="nextFileLink" class="nav" href="d_c8ff97eb99cd5a89___init___py.html">&#xbb; next</a>
             &nbsp; &nbsp; &nbsp;
             <a class="nav" href="https://coverage.readthedocs.io/en/7.2.7">coverage.py v7.2.7</a>,
-            created at 2024-04-15 21:12 +0000
+            created at 2024-04-15 21:16 +0000
         </p>
         <aside class="hidden">
             <button type="button" class="button_next_chunk" data-shortcut="j"/>
@@ -564,9 +564,9 @@
     <p class="pln"><span class="n"><a id="t482" href="#t482">482</a></span><span class="t">&nbsp;</span><span class="r"></span></p>
     <p class="pln"><span class="n"><a id="t483" href="#t483">483</a></span><span class="t">    <span class="com"># Update the ProgramBan object matching the program_id and username</span>&nbsp;</span><span class="r"></span></p>
     <p class="mis show_mis"><span class="n"><a id="t484" href="#t484">484</a></span><span class="t">    <span class="key">try</span><span class="op">:</span>&nbsp;</span><span class="r"></span></p>
-    <p class="mis show_mis"><span class="n"><a id="t485" href="#t485">485</a></span><span class="t">        <span class="nam">program_ban</span> <span class="op">=</span> <span class="nam">ProgramBan</span><span class="op">.</span><span class="nam">get</span><span class="op">(</span><span class="op">(</span><span class="nam">ProgramBan</span><span class="op">.</span><span class="nam">program</span> <span class="op">==</span> <span class="nam">program_id</span><span class="op">)</span> <span class="op">&amp;</span> <span class="op">(</span><span class="nam">ProgramBan</span><span class="op">.</span><span class="nam">user</span> <span class="op">==</span> <span class="nam">user</span><span class="op">)</span><span class="op">)</span>&nbsp;</span><span class="r"></span></p>
-    <p class="mis show_mis"><span class="n"><a id="t486" href="#t486">486</a></span><span class="t">        <span class="nam">program_ban</span><span class="op">.</span><span class="nam">removeFromTranscript</span> <span class="op">=</span> <span class="nam">removeFromTranscript</span>&nbsp;</span><span class="r"></span></p>
-    <p class="mis show_mis"><span class="n"><a id="t487" href="#t487">487</a></span><span class="t">        <span class="nam">program_ban</span><span class="op">.</span><span class="nam">save</span><span class="op">(</span><span class="op">)</span>&nbsp;</span><span class="r"></span></p>
+    <p class="mis show_mis"><span class="n"><a id="t485" href="#t485">485</a></span><span class="t">        <span class="nam">bannedProgramsForUser</span> <span class="op">=</span> <span class="nam">ProgramBan</span><span class="op">.</span><span class="nam">get</span><span class="op">(</span><span class="op">(</span><span class="nam">ProgramBan</span><span class="op">.</span><span class="nam">program</span> <span class="op">==</span> <span class="nam">program_id</span><span class="op">)</span> <span class="op">&amp;</span> <span class="op">(</span><span class="nam">ProgramBan</span><span class="op">.</span><span class="nam">user</span> <span class="op">==</span> <span class="nam">user</span><span class="op">)</span><span class="op">)</span>&nbsp;</span><span class="r"></span></p>
+    <p class="mis show_mis"><span class="n"><a id="t486" href="#t486">486</a></span><span class="t">        <span class="nam">bannedProgramsForUser</span><span class="op">.</span><span class="nam">removeFromTranscript</span> <span class="op">=</span> <span class="nam">removeFromTranscript</span>&nbsp;</span><span class="r"></span></p>
+    <p class="mis show_mis"><span class="n"><a id="t487" href="#t487">487</a></span><span class="t">        <span class="nam">bannedProgramsForUser</span><span class="op">.</span><span class="nam">save</span><span class="op">(</span><span class="op">)</span>&nbsp;</span><span class="r"></span></p>
     <p class="mis show_mis"><span class="n"><a id="t488" href="#t488">488</a></span><span class="t">        <span class="key">return</span> <span class="nam">jsonify</span><span class="op">(</span><span class="op">{</span><span class="str">'status'</span><span class="op">:</span> <span class="str">'success'</span><span class="op">}</span><span class="op">)</span>&nbsp;</span><span class="r"></span></p>
     <p class="mis show_mis"><span class="n"><a id="t489" href="#t489">489</a></span><span class="t">    <span class="key">except</span> <span class="nam">ProgramBan</span><span class="op">.</span><span class="nam">DoesNotExist</span><span class="op">:</span>&nbsp;</span><span class="r"></span></p>
     <p class="mis show_mis"><span class="n"><a id="t490" href="#t490">490</a></span><span class="t">        <span class="key">return</span> <span class="nam">jsonify</span><span class="op">(</span><span class="op">{</span><span class="str">'status'</span><span class="op">:</span> <span class="str">'error'</span><span class="op">,</span> <span class="str">'message'</span><span class="op">:</span> <span class="str">'ProgramBan not found'</span><span class="op">}</span><span class="op">)</span>&nbsp;</span><span class="r"></span></p>
@@ -623,7 +623,7 @@
             <a id="nextFileLink" class="nav" href="d_c8ff97eb99cd5a89___init___py.html">&#xbb; next</a>
             &nbsp; &nbsp; &nbsp;
             <a class="nav" href="https://coverage.readthedocs.io/en/7.2.7">coverage.py v7.2.7</a>,
-            created at 2024-04-15 21:12 +0000
+            created at 2024-04-15 21:16 +0000
         </p>
     </div>
 </footer>
