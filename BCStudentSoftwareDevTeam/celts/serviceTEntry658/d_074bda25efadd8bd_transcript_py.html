@@ -65,7 +65,7 @@
             <a id="nextFileLink" class="nav" href="d_074bda25efadd8bd_userManagement_py.html">&#xbb; next</a>
             &nbsp; &nbsp; &nbsp;
             <a class="nav" href="https://coverage.readthedocs.io/en/7.2.7">coverage.py v7.2.7</a>,
-            created at 2024-04-15 21:16 +0000
+            created at 2024-04-15 21:23 +0000
         </p>
         <aside class="hidden">
             <button type="button" class="button_next_chunk" data-shortcut="j"/>
@@ -110,12 +110,12 @@
     <p class="run"><span class="n"><a id="t28" href="#t28">28</a></span><span class="t">    <span class="nam">BannedProgramsForParticipant</span> <span class="op">=</span> <span class="nam">ProgramBan</span><span class="op">.</span><span class="nam">select</span><span class="op">(</span><span class="op">)</span><span class="op">.</span><span class="nam">where</span><span class="op">(</span><span class="nam">ProgramBan</span><span class="op">.</span><span class="nam">user</span> <span class="op">==</span> <span class="nam">username</span><span class="op">)</span>&nbsp;</span><span class="r"></span></p>
     <p class="pln"><span class="n"><a id="t29" href="#t29">29</a></span><span class="t">&nbsp;</span><span class="r"></span></p>
     <p class="pln"><span class="n"><a id="t30" href="#t30">30</a></span><span class="t">    <span class="com"># Create a set of program IDs to remove from transcript</span>&nbsp;</span><span class="r"></span></p>
-    <p class="run"><span class="n"><a id="t31" href="#t31">31</a></span><span class="t">    <span class="nam">programsToremoveFromTranscript</span> <span class="op">=</span> <span class="op">{</span><span class="nam">bannedProgram</span><span class="op">.</span><span class="nam">program_id</span> <span class="key">for</span> <span class="nam">bannedProgram</span> <span class="key">in</span> <span class="nam">BannedProgramsForParticipant</span> <span class="key">if</span> <span class="nam">bannedProgram</span><span class="op">.</span><span class="nam">removeFromTranscript</span><span class="op">}</span>&nbsp;</span><span class="r"></span></p>
+    <p class="run"><span class="n"><a id="t31" href="#t31">31</a></span><span class="t">    <span class="nam">programsToRemoveFromTranscript</span> <span class="op">=</span> <span class="op">{</span><span class="nam">bannedProgram</span><span class="op">.</span><span class="nam">program_id</span> <span class="key">for</span> <span class="nam">bannedProgram</span> <span class="key">in</span> <span class="nam">BannedProgramsForParticipant</span> <span class="key">if</span> <span class="nam">bannedProgram</span><span class="op">.</span><span class="nam">removeFromTranscript</span><span class="op">}</span>&nbsp;</span><span class="r"></span></p>
     <p class="run"><span class="n"><a id="t32" href="#t32">32</a></span><span class="t">    <span class="nam">transcriptData</span> <span class="op">=</span> <span class="op">{</span><span class="op">}</span>&nbsp;</span><span class="r"></span></p>
     <p class="pln"><span class="n"><a id="t33" href="#t33">33</a></span><span class="t">&nbsp;</span><span class="r"></span></p>
     <p class="pln"><span class="n"><a id="t34" href="#t34">34</a></span><span class="t">    <span class="com"># Iterate through EventData and populate transcriptData</span>&nbsp;</span><span class="r"></span></p>
     <p class="run"><span class="n"><a id="t35" href="#t35">35</a></span><span class="t">    <span class="key">for</span> <span class="nam">event</span> <span class="key">in</span> <span class="nam">EventData</span><span class="op">:</span>&nbsp;</span><span class="r"></span></p>
-    <p class="run"><span class="n"><a id="t36" href="#t36">36</a></span><span class="t">        <span class="key">if</span> <span class="nam">event</span><span class="op">.</span><span class="nam">program</span><span class="op">.</span><span class="nam">id</span> <span class="key">not</span> <span class="key">in</span> <span class="nam">programsToremoveFromTranscript</span><span class="op">:</span>  <span class="com"># Check if program is not in programs to be removed from transcript</span>&nbsp;</span><span class="r"></span></p>
+    <p class="run"><span class="n"><a id="t36" href="#t36">36</a></span><span class="t">        <span class="key">if</span> <span class="nam">event</span><span class="op">.</span><span class="nam">program</span><span class="op">.</span><span class="nam">id</span> <span class="key">not</span> <span class="key">in</span> <span class="nam">programsToRemoveFromTranscript</span><span class="op">:</span>  <span class="com"># Check if program is not in programs to be removed from transcript</span>&nbsp;</span><span class="r"></span></p>
     <p class="run"><span class="n"><a id="t37" href="#t37">37</a></span><span class="t">            <span class="key">if</span> <span class="nam">event</span><span class="op">.</span><span class="nam">program</span> <span class="key">in</span> <span class="nam">transcriptData</span><span class="op">:</span>&nbsp;</span><span class="r"></span></p>
     <p class="mis show_mis"><span class="n"><a id="t38" href="#t38">38</a></span><span class="t">                <span class="nam">transcriptData</span><span class="op">[</span><span class="nam">event</span><span class="op">.</span><span class="nam">program</span><span class="op">]</span><span class="op">.</span><span class="nam">append</span><span class="op">(</span><span class="op">[</span><span class="nam">event</span><span class="op">.</span><span class="nam">term</span><span class="op">.</span><span class="nam">description</span><span class="op">,</span> <span class="nam">event</span><span class="op">.</span><span class="nam">hoursEarned</span><span class="op">]</span><span class="op">)</span>&nbsp;</span><span class="r"></span></p>
     <p class="pln"><span class="n"><a id="t39" href="#t39">39</a></span><span class="t">            <span class="key">else</span><span class="op">:</span>&nbsp;</span><span class="r"></span></p>
@@ -177,7 +177,7 @@
             <a id="nextFileLink" class="nav" href="d_074bda25efadd8bd_userManagement_py.html">&#xbb; next</a>
             &nbsp; &nbsp; &nbsp;
             <a class="nav" href="https://coverage.readthedocs.io/en/7.2.7">coverage.py v7.2.7</a>,
-            created at 2024-04-15 21:16 +0000
+            created at 2024-04-15 21:23 +0000
         </p>
     </div>
 </footer>
