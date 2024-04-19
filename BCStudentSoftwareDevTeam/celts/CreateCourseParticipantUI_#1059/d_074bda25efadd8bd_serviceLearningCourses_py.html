@@ -2,7 +2,7 @@
 <html>
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    <title>Coverage for app/logic/serviceLearningCourses.py: 81%</title>
+    <title>Coverage for app/logic/serviceLearningCourses.py: 84%</title>
     <link rel="icon" sizes="32x32" href="favicon_32.png">
     <link rel="stylesheet" href="style.css" type="text/css">
     <script type="text/javascript" src="coverage_html.js" defer></script>
@@ -12,7 +12,7 @@
     <div class="content">
         <h1>
             <span class="text">Coverage for </span><b>app/logic/serviceLearningCourses.py</b>:
-            <span class="pc_cov">81%</span>
+            <span class="pc_cov">84%</span>
         </h1>
         <aside id="help_panel_wrapper">
             <input id="help_panel_state" type="checkbox">
@@ -55,17 +55,17 @@
         </aside>
         <h2>
             <span class="text">194 statements &nbsp;</span>
-            <button type="button" class="run button_toggle_run" value="run" data-shortcut="r" title="Toggle lines run">158<span class="text"> run</span></button>
-            <button type="button" class="mis show_mis button_toggle_mis" value="mis" data-shortcut="m" title="Toggle lines missing">36<span class="text"> missing</span></button>
+            <button type="button" class="run button_toggle_run" value="run" data-shortcut="r" title="Toggle lines run">162<span class="text"> run</span></button>
+            <button type="button" class="mis show_mis button_toggle_mis" value="mis" data-shortcut="m" title="Toggle lines missing">32<span class="text"> missing</span></button>
             <button type="button" class="exc show_exc button_toggle_exc" value="exc" data-shortcut="x" title="Toggle lines excluded">0<span class="text"> excluded</span></button>
         </h2>
         <p class="text">
             <a id="prevFileLink" class="nav" href="d_074bda25efadd8bd_searchUsers_py.html">&#xab; prev</a> &nbsp; &nbsp;
             <a id="indexLink" class="nav" href="index.html">&Hat; index</a> &nbsp; &nbsp;
-            <a id="nextFileLink" class="nav" href="d_074bda25efadd8bd_term_py.html">&#xbb; next</a>
+            <a id="nextFileLink" class="nav" href="d_074bda25efadd8bd_spreadsheet_py.html">&#xbb; next</a>
             &nbsp; &nbsp; &nbsp;
             <a class="nav" href="https://coverage.readthedocs.io/en/7.2.7">coverage.py v7.2.7</a>,
-            created at 2024-04-18 01:31 +0000
+            created at 2024-04-19 15:31 +0000
         </p>
         <aside class="hidden">
             <button type="button" class="button_next_chunk" data-shortcut="j"/>
@@ -368,12 +368,12 @@
     <p class="run"><span class="n"><a id="t286" href="#t286">286</a></span><span class="t">            <span class="nam">CourseInstructor</span><span class="op">.</span><span class="nam">delete</span><span class="op">(</span><span class="op">)</span><span class="op">.</span><span class="nam">where</span><span class="op">(</span><span class="nam">CourseInstructor</span><span class="op">.</span><span class="nam">course</span> <span class="op">==</span> <span class="nam">course</span><span class="op">)</span><span class="op">.</span><span class="nam">execute</span><span class="op">(</span><span class="op">)</span>&nbsp;</span><span class="r"></span></p>
     <p class="pln"><span class="n"><a id="t287" href="#t287">287</a></span><span class="t">&nbsp;</span><span class="r"></span></p>
     <p class="run"><span class="n"><a id="t288" href="#t288">288</a></span><span class="t">            <span class="key">if</span> <span class="str">'instructor[]'</span> <span class="key">in</span> <span class="nam">courseData</span><span class="op">:</span>&nbsp;</span><span class="r"></span></p>
-    <p class="mis show_mis"><span class="n"><a id="t289" href="#t289">289</a></span><span class="t">                <span class="nam">instructorList</span> <span class="op">=</span> <span class="nam">courseData</span><span class="op">.</span><span class="nam">getlist</span><span class="op">(</span><span class="str">'instructor[]'</span><span class="op">)</span>&nbsp;</span><span class="r"></span></p>
+    <p class="run"><span class="n"><a id="t289" href="#t289">289</a></span><span class="t">                <span class="nam">instructorList</span> <span class="op">=</span> <span class="nam">courseData</span><span class="op">.</span><span class="nam">getlist</span><span class="op">(</span><span class="str">'instructor[]'</span><span class="op">)</span>&nbsp;</span><span class="r"></span></p>
     <p class="pln"><span class="n"><a id="t290" href="#t290">290</a></span><span class="t">&nbsp;</span><span class="r"></span></p>
-    <p class="mis show_mis"><span class="n"><a id="t291" href="#t291">291</a></span><span class="t">                <span class="key">for</span> <span class="nam">instructor</span> <span class="key">in</span> <span class="nam">instructorList</span><span class="op">:</span>&nbsp;</span><span class="r"></span></p>
+    <p class="run"><span class="n"><a id="t291" href="#t291">291</a></span><span class="t">                <span class="key">for</span> <span class="nam">instructor</span> <span class="key">in</span> <span class="nam">instructorList</span><span class="op">:</span>&nbsp;</span><span class="r"></span></p>
     <p class="pln"><span class="n"><a id="t292" href="#t292">292</a></span><span class="t">                    <span class="com"># Checks that empty string is not added as a course instructor because some keys in the dictionary are empty string.</span>&nbsp;</span><span class="r"></span></p>
-    <p class="mis show_mis"><span class="n"><a id="t293" href="#t293">293</a></span><span class="t">                    <span class="key">if</span> <span class="nam">instructor</span><span class="op">:</span>&nbsp;</span><span class="r"></span></p>
-    <p class="mis show_mis"><span class="n"><a id="t294" href="#t294">294</a></span><span class="t">                        <span class="nam">CourseInstructor</span><span class="op">.</span><span class="nam">create</span><span class="op">(</span><span class="nam">course</span><span class="op">=</span><span class="nam">course</span><span class="op">,</span> <span class="nam">user</span><span class="op">=</span><span class="nam">instructor</span><span class="op">)</span>&nbsp;</span><span class="r"></span></p>
+    <p class="run"><span class="n"><a id="t293" href="#t293">293</a></span><span class="t">                    <span class="key">if</span> <span class="nam">instructor</span><span class="op">:</span>&nbsp;</span><span class="r"></span></p>
+    <p class="run"><span class="n"><a id="t294" href="#t294">294</a></span><span class="t">                        <span class="nam">CourseInstructor</span><span class="op">.</span><span class="nam">create</span><span class="op">(</span><span class="nam">course</span><span class="op">=</span><span class="nam">course</span><span class="op">,</span> <span class="nam">user</span><span class="op">=</span><span class="nam">instructor</span><span class="op">)</span>&nbsp;</span><span class="r"></span></p>
     <p class="pln"><span class="n"><a id="t295" href="#t295">295</a></span><span class="t">&nbsp;</span><span class="r"></span></p>
     <p class="run"><span class="n"><a id="t296" href="#t296">296</a></span><span class="t">            <span class="key">return</span> <span class="nam">Course</span><span class="op">.</span><span class="nam">get_by_id</span><span class="op">(</span><span class="nam">course</span><span class="op">.</span><span class="nam">id</span><span class="op">)</span>&nbsp;</span><span class="r"></span></p>
     <p class="pln"><span class="n"><a id="t297" href="#t297">297</a></span><span class="t">&nbsp;</span><span class="r"></span></p>
@@ -526,10 +526,10 @@
         <p>
             <a id="prevFileLink" class="nav" href="d_074bda25efadd8bd_searchUsers_py.html">&#xab; prev</a> &nbsp; &nbsp;
             <a id="indexLink" class="nav" href="index.html">&Hat; index</a> &nbsp; &nbsp;
-            <a id="nextFileLink" class="nav" href="d_074bda25efadd8bd_term_py.html">&#xbb; next</a>
+            <a id="nextFileLink" class="nav" href="d_074bda25efadd8bd_spreadsheet_py.html">&#xbb; next</a>
             &nbsp; &nbsp; &nbsp;
             <a class="nav" href="https://coverage.readthedocs.io/en/7.2.7">coverage.py v7.2.7</a>,
-            created at 2024-04-18 01:31 +0000
+            created at 2024-04-19 15:31 +0000
         </p>
     </div>
 </footer>
