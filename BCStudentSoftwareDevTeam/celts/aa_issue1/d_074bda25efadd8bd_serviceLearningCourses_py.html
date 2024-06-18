@@ -65,7 +65,7 @@
             <a id="nextFileLink" class="nav" href="d_074bda25efadd8bd_spreadsheet_py.html">&#xbb; next</a>
             &nbsp; &nbsp; &nbsp;
             <a class="nav" href="https://coverage.readthedocs.io/en/7.2.7">coverage.py v7.2.7</a>,
-            created at 2024-06-18 17:33 +0000
+            created at 2024-06-18 19:55 +0000
         </p>
         <aside class="hidden">
             <button type="button" class="button_next_chunk" data-shortcut="j"/>
@@ -99,7 +99,7 @@
     <p class="run"><span class="n"><a id="t17" href="#t17">17</a></span><span class="t"><span class="key">from</span> <span class="nam">app</span><span class="op">.</span><span class="nam">models</span><span class="op">.</span><span class="nam">attachmentUpload</span> <span class="key">import</span> <span class="nam">AttachmentUpload</span>&nbsp;</span><span class="r"></span></p>
     <p class="run"><span class="n"><a id="t18" href="#t18">18</a></span><span class="t"><span class="key">from</span> <span class="nam">app</span><span class="op">.</span><span class="nam">models</span><span class="op">.</span><span class="nam">questionNote</span> <span class="key">import</span> <span class="nam">QuestionNote</span>&nbsp;</span><span class="r"></span></p>
     <p class="run"><span class="n"><a id="t19" href="#t19">19</a></span><span class="t"><span class="key">from</span> <span class="nam">app</span><span class="op">.</span><span class="nam">models</span><span class="op">.</span><span class="nam">note</span> <span class="key">import</span> <span class="nam">Note</span>&nbsp;</span><span class="r"></span></p>
-    <p class="run"><span class="n"><a id="t20" href="#t20">20</a></span><span class="t"><span class="key">from</span> <span class="nam">app</span><span class="op">.</span><span class="nam">logic</span><span class="op">.</span><span class="nam">createLogs</span> <span class="key">import</span> <span class="nam">createAdminLog</span>&nbsp;</span><span class="r"></span></p>
+    <p class="run"><span class="n"><a id="t20" href="#t20">20</a></span><span class="t"><span class="key">from</span> <span class="nam">app</span><span class="op">.</span><span class="nam">logic</span><span class="op">.</span><span class="nam">createLogs</span> <span class="key">import</span> <span class="nam">createActivityLog</span>&nbsp;</span><span class="r"></span></p>
     <p class="run"><span class="n"><a id="t21" href="#t21">21</a></span><span class="t"><span class="key">from</span> <span class="nam">app</span><span class="op">.</span><span class="nam">logic</span><span class="op">.</span><span class="nam">fileHandler</span> <span class="key">import</span> <span class="nam">FileHandler</span>&nbsp;</span><span class="r"></span></p>
     <p class="run"><span class="n"><a id="t22" href="#t22">22</a></span><span class="t"><span class="key">from</span> <span class="nam">app</span><span class="op">.</span><span class="nam">logic</span><span class="op">.</span><span class="nam">term</span> <span class="key">import</span> <span class="nam">addPastTerm</span>&nbsp;</span><span class="r"></span></p>
     <p class="pln"><span class="n"><a id="t23" href="#t23">23</a></span><span class="t">&nbsp;</span><span class="r"></span></p>
@@ -283,7 +283,7 @@
     <p class="run"><span class="n"><a id="t201" href="#t201">201</a></span><span class="t">    <span class="key">for</span> <span class="nam">note</span> <span class="key">in</span> <span class="nam">notes</span><span class="op">:</span>&nbsp;</span><span class="r"></span></p>
     <p class="run"><span class="n"><a id="t202" href="#t202">202</a></span><span class="t">        <span class="nam">note</span><span class="op">.</span><span class="nam">delete_instance</span><span class="op">(</span><span class="op">)</span>&nbsp;</span><span class="r"></span></p>
     <p class="pln"><span class="n"><a id="t203" href="#t203">203</a></span><span class="t">&nbsp;</span><span class="r"></span></p>
-    <p class="run"><span class="n"><a id="t204" href="#t204">204</a></span><span class="t">    <span class="nam">createAdminLog</span><span class="op">(</span><span class="str">f"Withdrew SLC proposal: {courseName}"</span><span class="op">)</span>&nbsp;</span><span class="r"></span></p>
+    <p class="run"><span class="n"><a id="t204" href="#t204">204</a></span><span class="t">    <span class="nam">createActivityLog</span><span class="op">(</span><span class="str">f"Withdrew SLC proposal: {courseName}"</span><span class="op">)</span>&nbsp;</span><span class="r"></span></p>
     <p class="pln"><span class="n"><a id="t205" href="#t205">205</a></span><span class="t">&nbsp;</span><span class="r"></span></p>
     <p class="run"><span class="n"><a id="t206" href="#t206">206</a></span><span class="t"><span class="key">def</span> <span class="nam">createCourse</span><span class="op">(</span><span class="nam">creator</span><span class="op">:</span> <span class="nam">str</span><span class="op">=</span><span class="str">"No user provided"</span><span class="op">)</span> <span class="op">-></span> <span class="nam">Course</span><span class="op">:</span>&nbsp;</span><span class="r"></span></p>
     <p class="pln"><span class="n"><a id="t207" href="#t207">207</a></span><span class="t">    <span class="str">"""</span>&nbsp;</span><span class="r"></span></p>
@@ -339,7 +339,7 @@
     <p class="mis show_mis"><span class="n"><a id="t257" href="#t257">257</a></span><span class="t">                <span class="nam">addFile</span><span class="op">:</span> <span class="nam">FileHandler</span> <span class="op">=</span> <span class="nam">FileHandler</span><span class="op">(</span><span class="nam">attachments</span><span class="op">,</span> <span class="nam">courseId</span><span class="op">=</span><span class="nam">course</span><span class="op">.</span><span class="nam">id</span><span class="op">)</span>&nbsp;</span><span class="r"></span></p>
     <p class="mis show_mis"><span class="n"><a id="t258" href="#t258">258</a></span><span class="t">                <span class="nam">addFile</span><span class="op">.</span><span class="nam">saveFiles</span><span class="op">(</span><span class="op">)</span>&nbsp;</span><span class="r"></span></p>
     <p class="pln"><span class="n"><a id="t259" href="#t259">259</a></span><span class="t">&nbsp;</span><span class="r"></span></p>
-    <p class="run"><span class="n"><a id="t260" href="#t260">260</a></span><span class="t">            <span class="nam">createAdminLog</span><span class="op">(</span><span class="str">f"Saved SLC proposal: {courseData['courseName']}"</span><span class="op">)</span>&nbsp;</span><span class="r"></span></p>
+    <p class="run"><span class="n"><a id="t260" href="#t260">260</a></span><span class="t">            <span class="nam">createActivityLog</span><span class="op">(</span><span class="str">f"Saved SLC proposal: {courseData['courseName']}"</span><span class="op">)</span>&nbsp;</span><span class="r"></span></p>
     <p class="pln"><span class="n"><a id="t261" href="#t261">261</a></span><span class="t">&nbsp;</span><span class="r"></span></p>
     <p class="run"><span class="n"><a id="t262" href="#t262">262</a></span><span class="t">            <span class="key">return</span> <span class="nam">Course</span><span class="op">.</span><span class="nam">get_by_id</span><span class="op">(</span><span class="nam">course</span><span class="op">.</span><span class="nam">id</span><span class="op">)</span>&nbsp;</span><span class="r"></span></p>
     <p class="pln"><span class="n"><a id="t263" href="#t263">263</a></span><span class="t">&nbsp;</span><span class="r"></span></p>
@@ -529,7 +529,7 @@
             <a id="nextFileLink" class="nav" href="d_074bda25efadd8bd_spreadsheet_py.html">&#xbb; next</a>
             &nbsp; &nbsp; &nbsp;
             <a class="nav" href="https://coverage.readthedocs.io/en/7.2.7">coverage.py v7.2.7</a>,
-            created at 2024-06-18 17:33 +0000
+            created at 2024-06-18 19:55 +0000
         </p>
     </div>
 </footer>
