@@ -65,7 +65,7 @@
             <a id="nextFileLink" class="nav" href="d_82713a9719f5b640___init___py.html">&#xbb; next</a>
             &nbsp; &nbsp; &nbsp;
             <a class="nav" href="https://coverage.readthedocs.io/en/7.2.7">coverage.py v7.2.7</a>,
-            created at 2024-06-13 20:17 +0000
+            created at 2024-06-20 17:50 +0000
         </p>
         <aside class="hidden">
             <button type="button" class="button_next_chunk" data-shortcut="j"/>
@@ -95,7 +95,7 @@
     <p class="run"><span class="n"><a id="t13" href="#t13">13</a></span><span class="t"><span class="key">from</span> <span class="nam">app</span><span class="op">.</span><span class="nam">logic</span><span class="op">.</span><span class="nam">events</span> <span class="key">import</span> <span class="nam">getPreviousRecurringEventData</span><span class="op">,</span> <span class="nam">getEventRsvpCount</span>&nbsp;</span><span class="r"></span></p>
     <p class="run"><span class="n"><a id="t14" href="#t14">14</a></span><span class="t"><span class="key">from</span> <span class="nam">app</span><span class="op">.</span><span class="nam">models</span><span class="op">.</span><span class="nam">eventRsvp</span> <span class="key">import</span> <span class="nam">EventRsvp</span>&nbsp;</span><span class="r"></span></p>
     <p class="run"><span class="n"><a id="t15" href="#t15">15</a></span><span class="t"><span class="key">from</span> <span class="nam">app</span><span class="op">.</span><span class="nam">models</span><span class="op">.</span><span class="nam">backgroundCheck</span> <span class="key">import</span> <span class="nam">BackgroundCheck</span>&nbsp;</span><span class="r"></span></p>
-    <p class="run"><span class="n"><a id="t16" href="#t16">16</a></span><span class="t"><span class="key">from</span> <span class="nam">app</span><span class="op">.</span><span class="nam">logic</span><span class="op">.</span><span class="nam">createLogs</span> <span class="key">import</span> <span class="nam">createAdminLog</span><span class="op">,</span> <span class="nam">createRsvpLog</span>&nbsp;</span><span class="r"></span></p>
+    <p class="run"><span class="n"><a id="t16" href="#t16">16</a></span><span class="t"><span class="key">from</span> <span class="nam">app</span><span class="op">.</span><span class="nam">logic</span><span class="op">.</span><span class="nam">createLogs</span> <span class="key">import</span> <span class="nam">createActivityLog</span><span class="op">,</span> <span class="nam">createRsvpLog</span>&nbsp;</span><span class="r"></span></p>
     <p class="run"><span class="n"><a id="t17" href="#t17">17</a></span><span class="t"><span class="key">from</span> <span class="nam">app</span><span class="op">.</span><span class="nam">logic</span><span class="op">.</span><span class="nam">users</span> <span class="key">import</span> <span class="nam">getBannedUsers</span><span class="op">,</span> <span class="nam">isBannedFromEvent</span>&nbsp;</span><span class="r"></span></p>
     <p class="pln"><span class="n"><a id="t18" href="#t18">18</a></span><span class="t">&nbsp;</span><span class="r"></span></p>
     <p class="pln"><span class="n"><a id="t19" href="#t19">19</a></span><span class="t">&nbsp;</span><span class="r"></span></p>
@@ -296,7 +296,7 @@
     <p class="mis show_mis"><span class="n"><a id="t214" href="#t214">214</a></span><span class="t">        <span class="nam">username</span> <span class="op">=</span> <span class="nam">User</span><span class="op">.</span><span class="nam">get</span><span class="op">(</span><span class="nam">User</span><span class="op">.</span><span class="nam">username</span> <span class="op">==</span> <span class="nam">data</span><span class="op">[</span><span class="str">"user_name"</span><span class="op">]</span><span class="op">)</span>&nbsp;</span><span class="r"></span></p>
     <p class="mis show_mis"><span class="n"><a id="t215" href="#t215">215</a></span><span class="t">        <span class="nam">program</span> <span class="op">=</span> <span class="nam">Program</span><span class="op">.</span><span class="nam">get_by_id</span><span class="op">(</span><span class="nam">data</span><span class="op">[</span><span class="str">'program_id'</span><span class="op">]</span><span class="op">)</span>&nbsp;</span><span class="r"></span></p>
     <p class="mis show_mis"><span class="n"><a id="t216" href="#t216">216</a></span><span class="t">        <span class="nam">setProgramManager</span><span class="op">(</span><span class="nam">data</span><span class="op">[</span><span class="str">"user_name"</span><span class="op">]</span><span class="op">,</span> <span class="nam">data</span><span class="op">[</span><span class="str">"program_id"</span><span class="op">]</span><span class="op">,</span> <span class="nam">data</span><span class="op">[</span><span class="str">"action"</span><span class="op">]</span><span class="op">)</span>&nbsp;</span><span class="r"></span></p>
-    <p class="mis show_mis"><span class="n"><a id="t217" href="#t217">217</a></span><span class="t">        <span class="nam">createAdminLog</span><span class="op">(</span><span class="str">f'{username.firstName} has been {data["action"]}ed as a Program Manager for {program.programName}'</span><span class="op">)</span>&nbsp;</span><span class="r"></span></p>
+    <p class="mis show_mis"><span class="n"><a id="t217" href="#t217">217</a></span><span class="t">        <span class="nam">createActivityLog</span><span class="op">(</span><span class="str">f'{username.firstName} has been {data["action"]}ed as a Program Manager for {program.programName}'</span><span class="op">)</span>&nbsp;</span><span class="r"></span></p>
     <p class="mis show_mis"><span class="n"><a id="t218" href="#t218">218</a></span><span class="t">        <span class="key">return</span> <span class="str">""</span>&nbsp;</span><span class="r"></span></p>
     <p class="pln"><span class="n"><a id="t219" href="#t219">219</a></span><span class="t">    <span class="key">else</span><span class="op">:</span>&nbsp;</span><span class="r"></span></p>
     <p class="mis show_mis"><span class="n"><a id="t220" href="#t220">220</a></span><span class="t">        <span class="nam">abort</span><span class="op">(</span><span class="num">403</span><span class="op">)</span>&nbsp;</span><span class="r"></span></p>
@@ -315,7 +315,7 @@
             <a id="nextFileLink" class="nav" href="d_82713a9719f5b640___init___py.html">&#xbb; next</a>
             &nbsp; &nbsp; &nbsp;
             <a class="nav" href="https://coverage.readthedocs.io/en/7.2.7">coverage.py v7.2.7</a>,
-            created at 2024-06-13 20:17 +0000
+            created at 2024-06-20 17:50 +0000
         </p>
     </div>
 </footer>
