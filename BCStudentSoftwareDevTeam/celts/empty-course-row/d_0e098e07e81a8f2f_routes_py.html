@@ -65,7 +65,7 @@
             <a id="nextFileLink" class="nav" href="d_074bda25efadd8bd_bonner_py.html">&#xbb; next</a>
             &nbsp; &nbsp; &nbsp;
             <a class="nav" href="https://coverage.readthedocs.io/en/7.2.7">coverage.py v7.2.7</a>,
-            created at 2024-07-01 15:04 +0000
+            created at 2024-07-01 15:34 +0000
         </p>
         <aside class="hidden">
             <button type="button" class="button_next_chunk" data-shortcut="j"/>
@@ -175,7 +175,7 @@
     <p class="mis show_mis"><span class="n"><a id="t93" href="#t93">93</a></span><span class="t">    <span class="nam">courseID</span> <span class="op">=</span> <span class="nam">request</span><span class="op">.</span><span class="nam">form</span><span class="op">.</span><span class="nam">get</span><span class="op">(</span><span class="str">'courseID'</span><span class="op">)</span>&nbsp;</span><span class="r"></span></p>
     <p class="mis show_mis"><span class="n"><a id="t94" href="#t94">94</a></span><span class="t">    <span class="nam">course</span> <span class="op">=</span> <span class="nam">Course</span><span class="op">.</span><span class="nam">get_by_id</span><span class="op">(</span><span class="nam">courseID</span><span class="op">)</span>&nbsp;</span><span class="r"></span></p>
     <p class="mis show_mis"><span class="n"><a id="t95" href="#t95">95</a></span><span class="t">    <span class="key">if</span> <span class="key">not</span> <span class="nam">course</span><span class="op">.</span><span class="nam">courseName</span> <span class="key">and</span> <span class="key">not</span> <span class="nam">course</span><span class="op">.</span><span class="nam">courseAbbreviation</span><span class="op">:</span>&nbsp;</span><span class="r"></span></p>
-    <p class="mis show_mis"><span class="n"><a id="t96" href="#t96">96</a></span><span class="t">        <span class="nam">CourseQuestion</span><span class="op">.</span><span class="nam">delete</span><span class="op">(</span><span class="op">)</span><span class="op">.</span><span class="nam">where</span><span class="op">(</span><span class="nam">CourseQuestion</span><span class="op">.</span><span class="nam">course_id</span> <span class="op">==</span> <span class="nam">courseID</span><span class="op">)</span><span class="op">.</span><span class="nam">execute</span><span class="op">(</span><span class="op">)</span>&nbsp;</span><span class="r"></span></p>
+    <p class="mis show_mis"><span class="n"><a id="t96" href="#t96">96</a></span><span class="t">        <span class="nam">CourseQuestion</span><span class="op">.</span><span class="nam">delete</span><span class="op">(</span><span class="op">)</span><span class="op">.</span><span class="nam">where</span><span class="op">(</span><span class="nam">CourseQuestion</span><span class="op">.</span><span class="nam">course</span> <span class="op">==</span> <span class="nam">course</span><span class="op">)</span><span class="op">.</span><span class="nam">execute</span><span class="op">(</span><span class="op">)</span>&nbsp;</span><span class="r"></span></p>
     <p class="mis show_mis"><span class="n"><a id="t97" href="#t97">97</a></span><span class="t">        <span class="nam">course</span><span class="op">.</span><span class="nam">delete_instance</span><span class="op">(</span><span class="op">)</span>&nbsp;</span><span class="r"></span></p>
     <p class="mis show_mis"><span class="n"><a id="t98" href="#t98">98</a></span><span class="t">    <span class="key">return</span> <span class="str">"Proposal Canceled"</span>&nbsp;</span><span class="r"></span></p>
     <p class="pln"><span class="n"><a id="t99" href="#t99">99</a></span><span class="t">&nbsp;</span><span class="r"></span></p>
@@ -403,7 +403,7 @@
             <a id="nextFileLink" class="nav" href="d_074bda25efadd8bd_bonner_py.html">&#xbb; next</a>
             &nbsp; &nbsp; &nbsp;
             <a class="nav" href="https://coverage.readthedocs.io/en/7.2.7">coverage.py v7.2.7</a>,
-            created at 2024-07-01 15:04 +0000
+            created at 2024-07-01 15:34 +0000
         </p>
     </div>
 </footer>
