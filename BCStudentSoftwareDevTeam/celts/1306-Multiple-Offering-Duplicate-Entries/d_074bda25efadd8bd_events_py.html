@@ -65,7 +65,7 @@
             <a id="nextFileLink" class="nav" href="d_074bda25efadd8bd_fileHandler_py.html">&#xbb; next</a>
             &nbsp; &nbsp; &nbsp;
             <a class="nav" href="https://coverage.readthedocs.io/en/7.2.7">coverage.py v7.2.7</a>,
-            created at 2024-09-06 22:33 +0000
+            created at 2024-09-09 17:46 +0000
         </p>
         <aside class="hidden">
             <button type="button" class="button_next_chunk" data-shortcut="j"/>
@@ -187,13 +187,13 @@
     <p class="pln"><span class="n"><a id="t105" href="#t105">105</a></span><span class="t"><span class="str">    If any data is not valid it will return a validation error.</span>&nbsp;</span><span class="r"></span></p>
     <p class="pln"><span class="n"><a id="t106" href="#t106">106</a></span><span class="t">&nbsp;</span><span class="r"></span></p>
     <p class="pln"><span class="n"><a id="t107" href="#t107">107</a></span><span class="t"><span class="str">    Returns:</span>&nbsp;</span><span class="r"></span></p>
-    <p class="pln"><span class="n"><a id="t108" href="#t108">108</a></span><span class="t"><span class="str">    allSavesSucceeded : bool | Whether or not all offering saves were successful</span>&nbsp;</span><span class="r"></span></p>
-    <p class="pln"><span class="n"><a id="t109" href="#t109">109</a></span><span class="t"><span class="str">    savedOfferings : List[event] | A list of event objects holding all offerings that were saved. If allSavesSucceeded is False then this list will be empty.</span>&nbsp;</span><span class="r"></span></p>
-    <p class="pln"><span class="n"><a id="t110" href="#t110">110</a></span><span class="t"><span class="str">    failedSavedOfferings : dict | Maps the indicies of failed saved offerings to the associated validation error message. </span>&nbsp;</span><span class="r"></span></p>
+    <p class="pln"><span class="n"><a id="t108" href="#t108">108</a></span><span class="t"><span class="str">    allSavesWereSuccessful : bool | Whether or not all offering saves were successful</span>&nbsp;</span><span class="r"></span></p>
+    <p class="pln"><span class="n"><a id="t109" href="#t109">109</a></span><span class="t"><span class="str">    savedOfferings : List[event] | A list of event objects holding all offerings that were saved. If allSavesWereSuccessful is False then this list will be empty.</span>&nbsp;</span><span class="r"></span></p>
+    <p class="pln"><span class="n"><a id="t110" href="#t110">110</a></span><span class="t"><span class="str">    failedSavedOfferings : List[(int, str), ...] | Tuples containing the indicies of failed saved offerings and the associated validation error message. </span>&nbsp;</span><span class="r"></span></p>
     <p class="pln"><span class="n"><a id="t111" href="#t111">111</a></span><span class="t"><span class="str">    """</span>&nbsp;</span><span class="r"></span></p>
     <p class="mis show_mis"><span class="n"><a id="t112" href="#t112">112</a></span><span class="t">    <span class="nam">savedOfferings</span> <span class="op">=</span> <span class="op">[</span><span class="op">]</span>&nbsp;</span><span class="r"></span></p>
-    <p class="mis show_mis"><span class="n"><a id="t113" href="#t113">113</a></span><span class="t">    <span class="nam">failedSavedOfferings</span> <span class="op">=</span> <span class="op">{</span><span class="op">}</span>&nbsp;</span><span class="r"></span></p>
-    <p class="mis show_mis"><span class="n"><a id="t114" href="#t114">114</a></span><span class="t">    <span class="nam">allSavesSucceeded</span> <span class="op">=</span> <span class="key">True</span>&nbsp;</span><span class="r"></span></p>
+    <p class="mis show_mis"><span class="n"><a id="t113" href="#t113">113</a></span><span class="t">    <span class="nam">failedSavedOfferings</span> <span class="op">=</span> <span class="op">[</span><span class="op">]</span>&nbsp;</span><span class="r"></span></p>
+    <p class="mis show_mis"><span class="n"><a id="t114" href="#t114">114</a></span><span class="t">    <span class="nam">allSavesWereSuccessful</span> <span class="op">=</span> <span class="key">True</span>&nbsp;</span><span class="r"></span></p>
     <p class="pln"><span class="n"><a id="t115" href="#t115">115</a></span><span class="t">&nbsp;</span><span class="r"></span></p>
     <p class="pln"><span class="n"><a id="t116" href="#t116">116</a></span><span class="t">    <span class="com"># Creates a shared multipleOfferingId for all offerings to have</span>&nbsp;</span><span class="r"></span></p>
     <p class="mis show_mis"><span class="n"><a id="t117" href="#t117">117</a></span><span class="t">    <span class="nam">multipleOfferingId</span> <span class="op">=</span> <span class="nam">calculateNewMultipleOfferingId</span><span class="op">(</span><span class="op">)</span>&nbsp;</span><span class="r"></span></p>
@@ -213,16 +213,16 @@
     <p class="pln"><span class="n"><a id="t131" href="#t131">131</a></span><span class="t">            <span class="com"># Try to save each offering</span>&nbsp;</span><span class="r"></span></p>
     <p class="mis show_mis"><span class="n"><a id="t132" href="#t132">132</a></span><span class="t">            <span class="nam">savedEvents</span><span class="op">,</span> <span class="nam">validationErrorMessage</span> <span class="op">=</span> <span class="nam">attemptSaveEvent</span><span class="op">(</span><span class="nam">multipleOfferingDict</span><span class="op">,</span> <span class="nam">attachmentFiles</span><span class="op">)</span>&nbsp;</span><span class="r"></span></p>
     <p class="mis show_mis"><span class="n"><a id="t133" href="#t133">133</a></span><span class="t">            <span class="key">if</span> <span class="nam">validationErrorMessage</span><span class="op">:</span>&nbsp;</span><span class="r"></span></p>
-    <p class="mis show_mis"><span class="n"><a id="t134" href="#t134">134</a></span><span class="t">                <span class="nam">failedSavedOfferings</span><span class="op">[</span><span class="nam">i</span><span class="op">]</span> <span class="op">=</span> <span class="nam">validationErrorMessage</span>&nbsp;</span><span class="r"></span></p>
-    <p class="mis show_mis"><span class="n"><a id="t135" href="#t135">135</a></span><span class="t">                <span class="nam">allSavesSucceeded</span> <span class="op">=</span> <span class="key">False</span>&nbsp;</span><span class="r"></span></p>
+    <p class="mis show_mis"><span class="n"><a id="t134" href="#t134">134</a></span><span class="t">                <span class="nam">failedSavedOfferings</span><span class="op">.</span><span class="nam">append</span><span class="op">(</span><span class="op">(</span><span class="nam">i</span><span class="op">,</span> <span class="nam">validationErrorMessage</span><span class="op">)</span><span class="op">)</span>&nbsp;</span><span class="r"></span></p>
+    <p class="mis show_mis"><span class="n"><a id="t135" href="#t135">135</a></span><span class="t">                <span class="nam">allSavesWereSuccessful</span> <span class="op">=</span> <span class="key">False</span>&nbsp;</span><span class="r"></span></p>
     <p class="mis show_mis"><span class="n"><a id="t136" href="#t136">136</a></span><span class="t">                <span class="nam">print</span><span class="op">(</span><span class="str">f"Failed saving multi event {i}:"</span><span class="op">,</span> <span class="nam">validationErrorMessage</span><span class="op">)</span>&nbsp;</span><span class="r"></span></p>
     <p class="pln"><span class="n"><a id="t137" href="#t137">137</a></span><span class="t">            <span class="key">else</span><span class="op">:</span>&nbsp;</span><span class="r"></span></p>
     <p class="mis show_mis"><span class="n"><a id="t138" href="#t138">138</a></span><span class="t">                <span class="nam">savedEvent</span> <span class="op">=</span> <span class="nam">savedEvents</span><span class="op">[</span><span class="num">0</span><span class="op">]</span>&nbsp;</span><span class="r"></span></p>
     <p class="mis show_mis"><span class="n"><a id="t139" href="#t139">139</a></span><span class="t">                <span class="nam">savedOfferings</span><span class="op">.</span><span class="nam">append</span><span class="op">(</span><span class="nam">savedEvent</span><span class="op">)</span>&nbsp;</span><span class="r"></span></p>
-    <p class="mis show_mis"><span class="n"><a id="t140" href="#t140">140</a></span><span class="t">        <span class="key">if</span> <span class="key">not</span> <span class="nam">allSavesSucceeded</span><span class="op">:</span>&nbsp;</span><span class="r"></span></p>
+    <p class="mis show_mis"><span class="n"><a id="t140" href="#t140">140</a></span><span class="t">        <span class="key">if</span> <span class="key">not</span> <span class="nam">allSavesWereSuccessful</span><span class="op">:</span>&nbsp;</span><span class="r"></span></p>
     <p class="mis show_mis"><span class="n"><a id="t141" href="#t141">141</a></span><span class="t">            <span class="nam">savedOfferings</span> <span class="op">=</span> <span class="op">[</span><span class="op">]</span>&nbsp;</span><span class="r"></span></p>
     <p class="mis show_mis"><span class="n"><a id="t142" href="#t142">142</a></span><span class="t">            <span class="nam">transaction</span><span class="op">.</span><span class="nam">rollback</span><span class="op">(</span><span class="op">)</span>&nbsp;</span><span class="r"></span></p>
-    <p class="mis show_mis"><span class="n"><a id="t143" href="#t143">143</a></span><span class="t">    <span class="key">return</span> <span class="nam">allSavesSucceeded</span><span class="op">,</span> <span class="nam">savedOfferings</span><span class="op">,</span> <span class="nam">failedSavedOfferings</span>&nbsp;</span><span class="r"></span></p>
+    <p class="mis show_mis"><span class="n"><a id="t143" href="#t143">143</a></span><span class="t">    <span class="key">return</span> <span class="nam">allSavesWereSuccessful</span><span class="op">,</span> <span class="nam">savedOfferings</span><span class="op">,</span> <span class="nam">failedSavedOfferings</span>&nbsp;</span><span class="r"></span></p>
     <p class="pln"><span class="n"><a id="t144" href="#t144">144</a></span><span class="t">&nbsp;</span><span class="r"></span></p>
     <p class="pln"><span class="n"><a id="t145" href="#t145">145</a></span><span class="t">&nbsp;</span><span class="r"></span></p>
     <p class="run"><span class="n"><a id="t146" href="#t146">146</a></span><span class="t"><span class="key">def</span> <span class="nam">attemptSaveEvent</span><span class="op">(</span><span class="nam">eventData</span><span class="op">,</span> <span class="nam">attachmentFiles</span> <span class="op">=</span> <span class="key">None</span><span class="op">,</span> <span class="nam">renewedEvent</span> <span class="op">=</span> <span class="key">False</span><span class="op">)</span><span class="op">:</span>&nbsp;</span><span class="r"></span></p>
@@ -773,7 +773,7 @@
             <a id="nextFileLink" class="nav" href="d_074bda25efadd8bd_fileHandler_py.html">&#xbb; next</a>
             &nbsp; &nbsp; &nbsp;
             <a class="nav" href="https://coverage.readthedocs.io/en/7.2.7">coverage.py v7.2.7</a>,
-            created at 2024-09-06 22:33 +0000
+            created at 2024-09-09 17:46 +0000
         </p>
     </div>
 </footer>
