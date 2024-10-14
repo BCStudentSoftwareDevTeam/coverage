@@ -54,9 +54,9 @@
             </div>
         </aside>
         <h2>
-            <span class="text">360 statements &nbsp;</span>
+            <span class="text">361 statements &nbsp;</span>
             <button type="button" class="run button_toggle_run" value="run" data-shortcut="r" title="Toggle lines run">86<span class="text"> run</span></button>
-            <button type="button" class="mis show_mis button_toggle_mis" value="mis" data-shortcut="m" title="Toggle lines missing">274<span class="text"> missing</span></button>
+            <button type="button" class="mis show_mis button_toggle_mis" value="mis" data-shortcut="m" title="Toggle lines missing">275<span class="text"> missing</span></button>
             <button type="button" class="exc show_exc button_toggle_exc" value="exc" data-shortcut="x" title="Toggle lines excluded">0<span class="text"> excluded</span></button>
         </h2>
         <p class="text">
@@ -65,7 +65,7 @@
             <a id="nextFileLink" class="nav" href="d_c8ff97eb99cd5a89___init___py.html">&#xbb; next</a>
             &nbsp; &nbsp; &nbsp;
             <a class="nav" href="https://coverage.readthedocs.io/en/7.2.7">coverage.py v7.2.7</a>,
-            created at 2024-10-11 18:13 +0000
+            created at 2024-10-14 19:31 +0000
         </p>
         <aside class="hidden">
             <button type="button" class="button_next_chunk" data-shortcut="j"/>
@@ -164,7 +164,7 @@
     <p class="mis show_mis"><span class="n"><a id="t82" href="#t82">82</a></span><span class="t">    <span class="nam">participantRSVP</span> <span class="op">=</span> <span class="nam">EventRsvp</span><span class="op">.</span><span class="nam">select</span><span class="op">(</span><span class="nam">EventRsvp</span><span class="op">,</span> <span class="nam">Event</span><span class="op">)</span><span class="op">.</span><span class="nam">join</span><span class="op">(</span><span class="nam">Event</span><span class="op">)</span><span class="op">.</span><span class="nam">where</span><span class="op">(</span><span class="nam">EventRsvp</span><span class="op">.</span><span class="nam">user</span> <span class="op">==</span> <span class="nam">g</span><span class="op">.</span><span class="nam">current_user</span><span class="op">)</span>&nbsp;</span><span class="r"></span></p>
     <p class="mis show_mis"><span class="n"><a id="t83" href="#t83">83</a></span><span class="t">    <span class="nam">rsvpedEventsID</span> <span class="op">=</span> <span class="op">[</span><span class="nam">event</span><span class="op">.</span><span class="nam">event</span><span class="op">.</span><span class="nam">id</span> <span class="key">for</span> <span class="nam">event</span> <span class="key">in</span> <span class="nam">participantRSVP</span><span class="op">]</span>&nbsp;</span><span class="r"></span></p>
     <p class="pln"><span class="n"><a id="t84" href="#t84">84</a></span><span class="t">&nbsp;</span><span class="r"></span></p>
-    <p class="pln"><span class="n"><a id="t85" href="#t85">85</a></span><span class="t">    <span class="nam">term</span><span class="op">:</span> <span class="nam">Term</span><span class="op">.</span><span class="nam">get_by_id</span><span class="op">(</span><span class="nam">currentTerm</span><span class="op">)</span>&nbsp;</span><span class="r"></span></p>
+    <p class="mis show_mis"><span class="n"><a id="t85" href="#t85">85</a></span><span class="t">    <span class="nam">term</span><span class="op">:</span> <span class="nam">Term</span> <span class="op">=</span> <span class="nam">Term</span><span class="op">.</span><span class="nam">get_by_id</span><span class="op">(</span><span class="nam">currentTerm</span><span class="op">)</span>&nbsp;</span><span class="r"></span></p>
     <p class="pln"><span class="n"><a id="t86" href="#t86">86</a></span><span class="t">&nbsp;</span><span class="r"></span></p>
     <p class="mis show_mis"><span class="n"><a id="t87" href="#t87">87</a></span><span class="t">    <span class="nam">currentEventRsvpAmount</span> <span class="op">=</span> <span class="nam">getEventRsvpCountsForTerm</span><span class="op">(</span><span class="nam">term</span><span class="op">)</span>&nbsp;</span><span class="r"></span></p>
     <p class="mis show_mis"><span class="n"><a id="t88" href="#t88">88</a></span><span class="t">    <span class="nam">studentLedEvents</span> <span class="op">=</span> <span class="nam">getStudentLedEvents</span><span class="op">(</span><span class="nam">term</span><span class="op">)</span>&nbsp;</span><span class="r"></span></p>
@@ -675,7 +675,7 @@
             <a id="nextFileLink" class="nav" href="d_c8ff97eb99cd5a89___init___py.html">&#xbb; next</a>
             &nbsp; &nbsp; &nbsp;
             <a class="nav" href="https://coverage.readthedocs.io/en/7.2.7">coverage.py v7.2.7</a>,
-            created at 2024-10-11 18:13 +0000
+            created at 2024-10-14 19:31 +0000
         </p>
     </div>
 </footer>
