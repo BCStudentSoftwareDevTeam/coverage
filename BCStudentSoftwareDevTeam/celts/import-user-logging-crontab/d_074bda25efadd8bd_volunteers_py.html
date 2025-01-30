@@ -54,8 +54,8 @@
             </div>
         </aside>
         <h2>
-            <span class="text">49 statements &nbsp;</span>
-            <button type="button" class="run button_toggle_run" value="run" data-shortcut="r" title="Toggle lines run">47<span class="text"> run</span></button>
+            <span class="text">53 statements &nbsp;</span>
+            <button type="button" class="run button_toggle_run" value="run" data-shortcut="r" title="Toggle lines run">51<span class="text"> run</span></button>
             <button type="button" class="mis show_mis button_toggle_mis" value="mis" data-shortcut="m" title="Toggle lines missing">2<span class="text"> missing</span></button>
             <button type="button" class="exc show_exc button_toggle_exc" value="exc" data-shortcut="x" title="Toggle lines excluded">0<span class="text"> excluded</span></button>
         </h2>
@@ -65,7 +65,7 @@
             <a id="nextFileLink" class="nav" href="d_6c0e4b930745278b___init___py.html">&#xbb; next</a>
             &nbsp; &nbsp; &nbsp;
             <a class="nav" href="https://coverage.readthedocs.io/en/7.2.7">coverage.py v7.2.7</a>,
-            created at 2025-01-17 20:29 +0000
+            created at 2025-01-30 21:04 +0000
         </p>
         <aside class="hidden">
             <button type="button" class="button_next_chunk" data-shortcut="j"/>
@@ -156,20 +156,31 @@
     <p class="pln"><span class="n"><a id="t74" href="#t74">74</a></span><span class="t">        <span class="key">else</span><span class="op">:</span>&nbsp;</span><span class="r"></span></p>
     <p class="run"><span class="n"><a id="t75" href="#t75">75</a></span><span class="t">            <span class="nam">createActivityLog</span><span class="op">(</span><span class="str">f"Marked {user.firstName} {user.lastName}'s background check for {bgType} as failed."</span><span class="op">)</span>&nbsp;</span><span class="r"></span></p>
     <p class="pln"><span class="n"><a id="t76" href="#t76">76</a></span><span class="t">&nbsp;</span><span class="r"></span></p>
-    <p class="run"><span class="n"><a id="t77" href="#t77">77</a></span><span class="t"><span class="key">def</span> <span class="nam">setProgramManager</span><span class="op">(</span><span class="nam">username</span><span class="op">,</span> <span class="nam">program_id</span><span class="op">,</span> <span class="nam">action</span><span class="op">)</span><span class="op">:</span>&nbsp;</span><span class="r"></span></p>
-    <p class="pln"><span class="n"><a id="t78" href="#t78">78</a></span><span class="t">    <span class="str">'''</span>&nbsp;</span><span class="r"></span></p>
-    <p class="pln"><span class="n"><a id="t79" href="#t79">79</a></span><span class="t"><span class="str">    adds and removes the studentstaff from program that makes them student manager.</span>&nbsp;</span><span class="r"></span></p>
-    <p class="pln"><span class="n"><a id="t80" href="#t80">80</a></span><span class="t">&nbsp;</span><span class="r"></span></p>
-    <p class="pln"><span class="n"><a id="t81" href="#t81">81</a></span><span class="t"><span class="str">    param: uername - a string</span>&nbsp;</span><span class="r"></span></p>
-    <p class="pln"><span class="n"><a id="t82" href="#t82">82</a></span><span class="t"><span class="str">           program_id - id</span>&nbsp;</span><span class="r"></span></p>
-    <p class="pln"><span class="n"><a id="t83" href="#t83">83</a></span><span class="t"><span class="str">           action: add, remove</span>&nbsp;</span><span class="r"></span></p>
-    <p class="pln"><span class="n"><a id="t84" href="#t84">84</a></span><span class="t">&nbsp;</span><span class="r"></span></p>
-    <p class="pln"><span class="n"><a id="t85" href="#t85">85</a></span><span class="t"><span class="str">    '''</span>&nbsp;</span><span class="r"></span></p>
-    <p class="run"><span class="n"><a id="t86" href="#t86">86</a></span><span class="t">    <span class="nam">studentstaff</span><span class="op">=</span><span class="nam">User</span><span class="op">.</span><span class="nam">get</span><span class="op">(</span><span class="nam">User</span><span class="op">.</span><span class="nam">username</span><span class="op">==</span><span class="nam">username</span><span class="op">)</span>&nbsp;</span><span class="r"></span></p>
-    <p class="run"><span class="n"><a id="t87" href="#t87">87</a></span><span class="t">    <span class="key">if</span> <span class="nam">action</span> <span class="op">==</span> <span class="str">"add"</span> <span class="key">and</span> <span class="nam">studentstaff</span><span class="op">.</span><span class="nam">isCeltsStudentStaff</span><span class="op">==</span><span class="key">True</span><span class="op">:</span>&nbsp;</span><span class="r"></span></p>
-    <p class="run"><span class="n"><a id="t88" href="#t88">88</a></span><span class="t">        <span class="nam">studentstaff</span><span class="op">.</span><span class="nam">addProgramManager</span><span class="op">(</span><span class="nam">program_id</span><span class="op">)</span>&nbsp;</span><span class="r"></span></p>
-    <p class="run"><span class="n"><a id="t89" href="#t89">89</a></span><span class="t">    <span class="key">elif</span> <span class="nam">action</span> <span class="op">==</span> <span class="str">"remove"</span><span class="op">:</span>&nbsp;</span><span class="r"></span></p>
-    <p class="run"><span class="n"><a id="t90" href="#t90">90</a></span><span class="t">        <span class="nam">studentstaff</span><span class="op">.</span><span class="nam">removeProgramManager</span><span class="op">(</span><span class="nam">program_id</span><span class="op">)</span>&nbsp;</span><span class="r"></span></p>
+    <p class="run"><span class="n"><a id="t77" href="#t77">77</a></span><span class="t"><span class="key">def</span> <span class="nam">deleteUserBackgroundCheck</span><span class="op">(</span><span class="nam">bgCheckId</span><span class="op">,</span> <span class="nam">user</span><span class="op">)</span><span class="op">:</span>&nbsp;</span><span class="r"></span></p>
+    <p class="pln"><span class="n"><a id="t78" href="#t78">78</a></span><span class="t">    <span class="str">"""</span>&nbsp;</span><span class="r"></span></p>
+    <p class="pln"><span class="n"><a id="t79" href="#t79">79</a></span><span class="t"><span class="str">    Deletes the user's background check by marking it as deleted with a timestamp and user information.</span>&nbsp;</span><span class="r"></span></p>
+    <p class="pln"><span class="n"><a id="t80" href="#t80">80</a></span><span class="t"><span class="str">    """</span>&nbsp;</span><span class="r"></span></p>
+    <p class="run"><span class="n"><a id="t81" href="#t81">81</a></span><span class="t">    <span class="nam">bgCheck</span> <span class="op">=</span> <span class="nam">BackgroundCheck</span><span class="op">.</span><span class="nam">get_or_none</span><span class="op">(</span><span class="nam">BackgroundCheck</span><span class="op">.</span><span class="nam">id</span> <span class="op">==</span> <span class="nam">bgCheckId</span><span class="op">)</span>&nbsp;</span><span class="r"></span></p>
+    <p class="pln"><span class="n"><a id="t82" href="#t82">82</a></span><span class="t">&nbsp;</span><span class="r"></span></p>
+    <p class="run"><span class="n"><a id="t83" href="#t83">83</a></span><span class="t">    <span class="key">if</span> <span class="nam">bgCheck</span><span class="op">:</span>&nbsp;</span><span class="r"></span></p>
+    <p class="run"><span class="n"><a id="t84" href="#t84">84</a></span><span class="t">        <span class="op">(</span><span class="nam">BackgroundCheck</span><span class="op">.</span><span class="nam">update</span><span class="op">(</span><span class="op">{</span><span class="nam">BackgroundCheck</span><span class="op">.</span><span class="nam">deletionDate</span><span class="op">:</span> <span class="nam">datetime</span><span class="op">.</span><span class="nam">now</span><span class="op">(</span><span class="op">)</span><span class="op">,</span> <span class="nam">BackgroundCheck</span><span class="op">.</span><span class="nam">deletedBy</span><span class="op">:</span> <span class="nam">user</span><span class="op">}</span><span class="op">)</span>&nbsp;</span><span class="r"></span></p>
+    <p class="pln"><span class="n"><a id="t85" href="#t85">85</a></span><span class="t">                         <span class="op">.</span><span class="nam">where</span><span class="op">(</span><span class="nam">BackgroundCheck</span><span class="op">.</span><span class="nam">id</span> <span class="op">==</span> <span class="nam">bgCheck</span><span class="op">.</span><span class="nam">id</span><span class="op">)</span>&nbsp;</span><span class="r"></span></p>
+    <p class="pln"><span class="n"><a id="t86" href="#t86">86</a></span><span class="t">                         <span class="op">.</span><span class="nam">execute</span><span class="op">(</span><span class="op">)</span><span class="op">)</span>&nbsp;</span><span class="r"></span></p>
+    <p class="pln"><span class="n"><a id="t87" href="#t87">87</a></span><span class="t">&nbsp;</span><span class="r"></span></p>
+    <p class="run"><span class="n"><a id="t88" href="#t88">88</a></span><span class="t"><span class="key">def</span> <span class="nam">setProgramManager</span><span class="op">(</span><span class="nam">username</span><span class="op">,</span> <span class="nam">program_id</span><span class="op">,</span> <span class="nam">action</span><span class="op">)</span><span class="op">:</span>&nbsp;</span><span class="r"></span></p>
+    <p class="pln"><span class="n"><a id="t89" href="#t89">89</a></span><span class="t">    <span class="str">'''</span>&nbsp;</span><span class="r"></span></p>
+    <p class="pln"><span class="n"><a id="t90" href="#t90">90</a></span><span class="t"><span class="str">    adds and removes the studentstaff from program that makes them student manager.</span>&nbsp;</span><span class="r"></span></p>
+    <p class="pln"><span class="n"><a id="t91" href="#t91">91</a></span><span class="t">&nbsp;</span><span class="r"></span></p>
+    <p class="pln"><span class="n"><a id="t92" href="#t92">92</a></span><span class="t"><span class="str">    param: uername - a string</span>&nbsp;</span><span class="r"></span></p>
+    <p class="pln"><span class="n"><a id="t93" href="#t93">93</a></span><span class="t"><span class="str">           program_id - id</span>&nbsp;</span><span class="r"></span></p>
+    <p class="pln"><span class="n"><a id="t94" href="#t94">94</a></span><span class="t"><span class="str">           action: add, remove</span>&nbsp;</span><span class="r"></span></p>
+    <p class="pln"><span class="n"><a id="t95" href="#t95">95</a></span><span class="t">&nbsp;</span><span class="r"></span></p>
+    <p class="pln"><span class="n"><a id="t96" href="#t96">96</a></span><span class="t"><span class="str">    '''</span>&nbsp;</span><span class="r"></span></p>
+    <p class="run"><span class="n"><a id="t97" href="#t97">97</a></span><span class="t">    <span class="nam">studentstaff</span><span class="op">=</span><span class="nam">User</span><span class="op">.</span><span class="nam">get</span><span class="op">(</span><span class="nam">User</span><span class="op">.</span><span class="nam">username</span><span class="op">==</span><span class="nam">username</span><span class="op">)</span>&nbsp;</span><span class="r"></span></p>
+    <p class="run"><span class="n"><a id="t98" href="#t98">98</a></span><span class="t">    <span class="key">if</span> <span class="nam">action</span> <span class="op">==</span> <span class="str">"add"</span> <span class="key">and</span> <span class="nam">studentstaff</span><span class="op">.</span><span class="nam">isCeltsStudentStaff</span><span class="op">==</span><span class="key">True</span><span class="op">:</span>&nbsp;</span><span class="r"></span></p>
+    <p class="run"><span class="n"><a id="t99" href="#t99">99</a></span><span class="t">        <span class="nam">studentstaff</span><span class="op">.</span><span class="nam">addProgramManager</span><span class="op">(</span><span class="nam">program_id</span><span class="op">)</span>&nbsp;</span><span class="r"></span></p>
+    <p class="run"><span class="n"><a id="t100" href="#t100">100</a></span><span class="t">    <span class="key">elif</span> <span class="nam">action</span> <span class="op">==</span> <span class="str">"remove"</span><span class="op">:</span>&nbsp;</span><span class="r"></span></p>
+    <p class="run"><span class="n"><a id="t101" href="#t101">101</a></span><span class="t">        <span class="nam">studentstaff</span><span class="op">.</span><span class="nam">removeProgramManager</span><span class="op">(</span><span class="nam">program_id</span><span class="op">)</span>&nbsp;</span><span class="r"></span></p>
 </main>
 <footer>
     <div class="content">
@@ -179,7 +190,7 @@
             <a id="nextFileLink" class="nav" href="d_6c0e4b930745278b___init___py.html">&#xbb; next</a>
             &nbsp; &nbsp; &nbsp;
             <a class="nav" href="https://coverage.readthedocs.io/en/7.2.7">coverage.py v7.2.7</a>,
-            created at 2025-01-17 20:29 +0000
+            created at 2025-01-30 21:04 +0000
         </p>
     </div>
 </footer>
