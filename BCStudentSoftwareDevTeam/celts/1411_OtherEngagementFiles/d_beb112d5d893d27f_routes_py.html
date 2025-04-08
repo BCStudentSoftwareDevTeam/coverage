@@ -2,7 +2,7 @@
 <html>
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    <title>Coverage for app/controllers/main/routes.py: 24%</title>
+    <title>Coverage for app/controllers/main/routes.py: 23%</title>
     <link rel="icon" sizes="32x32" href="favicon_32.png">
     <link rel="stylesheet" href="style.css" type="text/css">
     <script type="text/javascript" src="coverage_html.js" defer></script>
@@ -12,7 +12,7 @@
     <div class="content">
         <h1>
             <span class="text">Coverage for </span><b>app/controllers/main/routes.py</b>:
-            <span class="pc_cov">24%</span>
+            <span class="pc_cov">23%</span>
         </h1>
         <aside id="help_panel_wrapper">
             <input id="help_panel_state" type="checkbox">
@@ -54,9 +54,9 @@
             </div>
         </aside>
         <h2>
-            <span class="text">356 statements &nbsp;</span>
-            <button type="button" class="run button_toggle_run" value="run" data-shortcut="r" title="Toggle lines run">84<span class="text"> run</span></button>
-            <button type="button" class="mis show_mis button_toggle_mis" value="mis" data-shortcut="m" title="Toggle lines missing">272<span class="text"> missing</span></button>
+            <span class="text">367 statements &nbsp;</span>
+            <button type="button" class="run button_toggle_run" value="run" data-shortcut="r" title="Toggle lines run">86<span class="text"> run</span></button>
+            <button type="button" class="mis show_mis button_toggle_mis" value="mis" data-shortcut="m" title="Toggle lines missing">281<span class="text"> missing</span></button>
             <button type="button" class="exc show_exc button_toggle_exc" value="exc" data-shortcut="x" title="Toggle lines excluded">0<span class="text"> excluded</span></button>
         </h2>
         <p class="text">
@@ -65,7 +65,7 @@
             <a id="nextFileLink" class="nav" href="d_c8ff97eb99cd5a89___init___py.html">&#xbb; next</a>
             &nbsp; &nbsp; &nbsp;
             <a class="nav" href="https://coverage.readthedocs.io/en/7.2.7">coverage.py v7.2.7</a>,
-            created at 2025-03-14 18:14 +0000
+            created at 2025-04-08 19:13 +0000
         </p>
         <aside class="hidden">
             <button type="button" class="button_next_chunk" data-shortcut="j"/>
@@ -117,7 +117,7 @@
     <p class="run"><span class="n"><a id="t35" href="#t35">35</a></span><span class="t"><span class="key">from</span> <span class="nam">app</span><span class="op">.</span><span class="nam">logic</span><span class="op">.</span><span class="nam">createLogs</span> <span class="key">import</span> <span class="nam">createRsvpLog</span><span class="op">,</span> <span class="nam">createActivityLog</span>&nbsp;</span><span class="r"></span></p>
     <p class="run"><span class="n"><a id="t36" href="#t36">36</a></span><span class="t"><span class="key">from</span> <span class="nam">app</span><span class="op">.</span><span class="nam">logic</span><span class="op">.</span><span class="nam">certification</span> <span class="key">import</span> <span class="nam">getCertRequirementsWithCompletion</span>&nbsp;</span><span class="r"></span></p>
     <p class="run"><span class="n"><a id="t37" href="#t37">37</a></span><span class="t"><span class="key">from</span> <span class="nam">app</span><span class="op">.</span><span class="nam">logic</span><span class="op">.</span><span class="nam">landingPage</span> <span class="key">import</span> <span class="nam">getManagerProgramDict</span><span class="op">,</span> <span class="nam">getActiveEventTab</span>&nbsp;</span><span class="r"></span></p>
-    <p class="run"><span class="n"><a id="t38" href="#t38">38</a></span><span class="t"><span class="key">from</span> <span class="nam">app</span><span class="op">.</span><span class="nam">logic</span><span class="op">.</span><span class="nam">minor</span> <span class="key">import</span> <span class="nam">toggleMinorInterest</span><span class="op">,</span> <span class="nam">getCommunityEngagementByTerm</span><span class="op">,</span> <span class="nam">getEngagementTotal</span>&nbsp;</span><span class="r"></span></p>
+    <p class="run"><span class="n"><a id="t38" href="#t38">38</a></span><span class="t"><span class="key">from</span> <span class="nam">app</span><span class="op">.</span><span class="nam">logic</span><span class="op">.</span><span class="nam">minor</span> <span class="key">import</span> <span class="nam">toggleMinorInterest</span><span class="op">,</span> <span class="nam">declareMinorInterest</span><span class="op">,</span> <span class="nam">getCommunityEngagementByTerm</span><span class="op">,</span> <span class="nam">getEngagementTotal</span>&nbsp;</span><span class="r"></span></p>
     <p class="run"><span class="n"><a id="t39" href="#t39">39</a></span><span class="t"><span class="key">from</span> <span class="nam">app</span><span class="op">.</span><span class="nam">logic</span><span class="op">.</span><span class="nam">participants</span> <span class="key">import</span> <span class="nam">unattendedRequiredEvents</span><span class="op">,</span> <span class="nam">trainedParticipants</span><span class="op">,</span> <span class="nam">getParticipationStatusForTrainings</span><span class="op">,</span> <span class="nam">checkUserRsvp</span><span class="op">,</span> <span class="nam">addPersonToEvent</span>&nbsp;</span><span class="r"></span></p>
     <p class="run"><span class="n"><a id="t40" href="#t40">40</a></span><span class="t"><span class="key">from</span> <span class="nam">app</span><span class="op">.</span><span class="nam">logic</span><span class="op">.</span><span class="nam">users</span> <span class="key">import</span> <span class="nam">addUserInterest</span><span class="op">,</span> <span class="nam">removeUserInterest</span><span class="op">,</span> <span class="nam">banUser</span><span class="op">,</span> <span class="nam">unbanUser</span><span class="op">,</span> <span class="nam">isEligibleForProgram</span><span class="op">,</span> <span class="nam">getUserBGCheckHistory</span><span class="op">,</span> <span class="nam">addProfileNote</span><span class="op">,</span> <span class="nam">deleteProfileNote</span><span class="op">,</span> <span class="nam">updateDietInfo</span>&nbsp;</span><span class="r"></span></p>
     <p class="pln"><span class="n"><a id="t41" href="#t41">41</a></span><span class="t">&nbsp;</span><span class="r"></span></p>
@@ -663,12 +663,28 @@
     <p class="run"><span class="n"><a id="t581" href="#t581">581</a></span><span class="t"><span class="op">@</span><span class="nam">main_bp</span><span class="op">.</span><span class="nam">route</span><span class="op">(</span><span class="str">'/profile/&lt;username>/indicateInterest'</span><span class="op">,</span> <span class="nam">methods</span><span class="op">=</span><span class="op">[</span><span class="str">'POST'</span><span class="op">]</span><span class="op">)</span>&nbsp;</span><span class="r"></span></p>
     <p class="run"><span class="n"><a id="t582" href="#t582">582</a></span><span class="t"><span class="key">def</span> <span class="nam">indicateMinorInterest</span><span class="op">(</span><span class="nam">username</span><span class="op">)</span><span class="op">:</span>&nbsp;</span><span class="r"></span></p>
     <p class="mis show_mis"><span class="n"><a id="t583" href="#t583">583</a></span><span class="t">    <span class="key">if</span> <span class="nam">g</span><span class="op">.</span><span class="nam">current_user</span><span class="op">.</span><span class="nam">isCeltsAdmin</span> <span class="key">or</span> <span class="nam">g</span><span class="op">.</span><span class="nam">current_user</span><span class="op">.</span><span class="nam">username</span> <span class="op">==</span> <span class="nam">username</span><span class="op">:</span>&nbsp;</span><span class="r"></span></p>
-    <p class="mis show_mis"><span class="n"><a id="t584" href="#t584">584</a></span><span class="t">        <span class="nam">toggleMinorInterest</span><span class="op">(</span><span class="nam">username</span><span class="op">)</span>&nbsp;</span><span class="r"></span></p>
-    <p class="pln"><span class="n"><a id="t585" href="#t585">585</a></span><span class="t">&nbsp;</span><span class="r"></span></p>
-    <p class="pln"><span class="n"><a id="t586" href="#t586">586</a></span><span class="t">    <span class="key">else</span><span class="op">:</span>&nbsp;</span><span class="r"></span></p>
-    <p class="mis show_mis"><span class="n"><a id="t587" href="#t587">587</a></span><span class="t">        <span class="nam">abort</span><span class="op">(</span><span class="num">403</span><span class="op">)</span>&nbsp;</span><span class="r"></span></p>
+    <p class="mis show_mis"><span class="n"><a id="t584" href="#t584">584</a></span><span class="t">        <span class="nam">data</span> <span class="op">=</span> <span class="nam">request</span><span class="op">.</span><span class="nam">get_json</span><span class="op">(</span><span class="op">)</span>&nbsp;</span><span class="r"></span></p>
+    <p class="mis show_mis"><span class="n"><a id="t585" href="#t585">585</a></span><span class="t">        <span class="nam">isAdding</span> <span class="op">=</span> <span class="nam">data</span><span class="op">.</span><span class="nam">get</span><span class="op">(</span><span class="str">"isAdding"</span><span class="op">,</span> <span class="key">False</span><span class="op">)</span>&nbsp;</span><span class="r"></span></p>
+    <p class="pln"><span class="n"><a id="t586" href="#t586">586</a></span><span class="t">&nbsp;</span><span class="r"></span></p>
+    <p class="mis show_mis"><span class="n"><a id="t587" href="#t587">587</a></span><span class="t">        <span class="nam">toggleMinorInterest</span><span class="op">(</span><span class="nam">username</span><span class="op">,</span> <span class="nam">isAdding</span><span class="op">)</span>&nbsp;</span><span class="r"></span></p>
     <p class="pln"><span class="n"><a id="t588" href="#t588">588</a></span><span class="t">&nbsp;</span><span class="r"></span></p>
-    <p class="mis show_mis"><span class="n"><a id="t589" href="#t589">589</a></span><span class="t">    <span class="key">return</span> <span class="str">""</span>&nbsp;</span><span class="r"></span></p>
+    <p class="pln"><span class="n"><a id="t589" href="#t589">589</a></span><span class="t">    <span class="key">else</span><span class="op">:</span>&nbsp;</span><span class="r"></span></p>
+    <p class="mis show_mis"><span class="n"><a id="t590" href="#t590">590</a></span><span class="t">        <span class="nam">abort</span><span class="op">(</span><span class="num">403</span><span class="op">)</span>&nbsp;</span><span class="r"></span></p>
+    <p class="pln"><span class="n"><a id="t591" href="#t591">591</a></span><span class="t">&nbsp;</span><span class="r"></span></p>
+    <p class="mis show_mis"><span class="n"><a id="t592" href="#t592">592</a></span><span class="t">    <span class="key">return</span> <span class="str">""</span>&nbsp;</span><span class="r"></span></p>
+    <p class="pln"><span class="n"><a id="t593" href="#t593">593</a></span><span class="t">&nbsp;</span><span class="r"></span></p>
+    <p class="run"><span class="n"><a id="t594" href="#t594">594</a></span><span class="t"><span class="op">@</span><span class="nam">main_bp</span><span class="op">.</span><span class="nam">route</span><span class="op">(</span><span class="str">'/profile/&lt;username>/updateMinorDeclaration'</span><span class="op">,</span> <span class="nam">methods</span><span class="op">=</span><span class="op">[</span><span class="str">"POST"</span><span class="op">]</span><span class="op">)</span>&nbsp;</span><span class="r"></span></p>
+    <p class="run"><span class="n"><a id="t595" href="#t595">595</a></span><span class="t"><span class="key">def</span> <span class="nam">updateMinorDeclaration</span><span class="op">(</span><span class="nam">username</span><span class="op">)</span><span class="op">:</span>&nbsp;</span><span class="r"></span></p>
+    <p class="mis show_mis"><span class="n"><a id="t596" href="#t596">596</a></span><span class="t">    <span class="key">if</span> <span class="nam">g</span><span class="op">.</span><span class="nam">current_user</span><span class="op">.</span><span class="nam">isCeltsAdmin</span> <span class="key">or</span> <span class="nam">g</span><span class="op">.</span><span class="nam">current_user</span><span class="op">.</span><span class="nam">username</span> <span class="op">==</span> <span class="nam">username</span><span class="op">:</span>&nbsp;</span><span class="r"></span></p>
+    <p class="mis show_mis"><span class="n"><a id="t597" href="#t597">597</a></span><span class="t">        <span class="nam">declareMinorInterest</span><span class="op">(</span><span class="nam">username</span><span class="op">)</span>&nbsp;</span><span class="r"></span></p>
+    <p class="mis show_mis"><span class="n"><a id="t598" href="#t598">598</a></span><span class="t">        <span class="nam">flash</span><span class="op">(</span><span class="str">"Candidate minor successfully updated"</span><span class="op">,</span> <span class="str">"success"</span><span class="op">)</span>&nbsp;</span><span class="r"></span></p>
+    <p class="pln"><span class="n"><a id="t599" href="#t599">599</a></span><span class="t">    <span class="key">else</span><span class="op">:</span>&nbsp;</span><span class="r"></span></p>
+    <p class="mis show_mis"><span class="n"><a id="t600" href="#t600">600</a></span><span class="t">        <span class="nam">flash</span><span class="op">(</span><span class="str">"Error updating candidate minor status"</span><span class="op">,</span> <span class="str">"danger"</span><span class="op">)</span>&nbsp;</span><span class="r"></span></p>
+    <p class="mis show_mis"><span class="n"><a id="t601" href="#t601">601</a></span><span class="t">        <span class="nam">abort</span><span class="op">(</span><span class="num">403</span><span class="op">)</span>&nbsp;</span><span class="r"></span></p>
+    <p class="pln"><span class="n"><a id="t602" href="#t602">602</a></span><span class="t">&nbsp;</span><span class="r"></span></p>
+    <p class="mis show_mis"><span class="n"><a id="t603" href="#t603">603</a></span><span class="t">    <span class="nam">tab</span> <span class="op">=</span> <span class="nam">request</span><span class="op">.</span><span class="nam">args</span><span class="op">.</span><span class="nam">get</span><span class="op">(</span><span class="str">"tab"</span><span class="op">,</span> <span class="str">"interested"</span><span class="op">)</span>&nbsp;</span><span class="r"></span></p>
+    <p class="mis show_mis"><span class="n"><a id="t604" href="#t604">604</a></span><span class="t">    <span class="key">return</span> <span class="nam">redirect</span><span class="op">(</span><span class="nam">url_for</span><span class="op">(</span><span class="str">'admin.manageMinor'</span><span class="op">,</span> <span class="nam">tab</span><span class="op">=</span><span class="nam">tab</span><span class="op">)</span><span class="op">)</span>&nbsp;</span><span class="r"></span></p>
+    <p class="pln"><span class="n"><a id="t605" href="#t605">605</a></span><span class="t">&nbsp;</span><span class="r"></span></p>
 </main>
 <footer>
     <div class="content">
@@ -678,7 +694,7 @@
             <a id="nextFileLink" class="nav" href="d_c8ff97eb99cd5a89___init___py.html">&#xbb; next</a>
             &nbsp; &nbsp; &nbsp;
             <a class="nav" href="https://coverage.readthedocs.io/en/7.2.7">coverage.py v7.2.7</a>,
-            created at 2025-03-14 18:14 +0000
+            created at 2025-04-08 19:13 +0000
         </p>
     </div>
 </footer>
