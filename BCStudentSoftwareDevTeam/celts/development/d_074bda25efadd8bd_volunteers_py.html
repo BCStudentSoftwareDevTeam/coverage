@@ -65,7 +65,7 @@
             <a id="nextFileLink" class="nav" href="d_6c0e4b930745278b___init___py.html">&#xbb; next</a>
             &nbsp; &nbsp; &nbsp;
             <a class="nav" href="https://coverage.readthedocs.io/en/7.2.7">coverage.py v7.2.7</a>,
-            created at 2025-02-05 21:27 +0000
+            created at 2025-04-15 13:26 +0000
         </p>
         <aside class="hidden">
             <button type="button" class="button_next_chunk" data-shortcut="j"/>
@@ -169,18 +169,18 @@
     <p class="pln"><span class="n"><a id="t87" href="#t87">87</a></span><span class="t">&nbsp;</span><span class="r"></span></p>
     <p class="run"><span class="n"><a id="t88" href="#t88">88</a></span><span class="t"><span class="key">def</span> <span class="nam">setProgramManager</span><span class="op">(</span><span class="nam">username</span><span class="op">,</span> <span class="nam">program_id</span><span class="op">,</span> <span class="nam">action</span><span class="op">)</span><span class="op">:</span>&nbsp;</span><span class="r"></span></p>
     <p class="pln"><span class="n"><a id="t89" href="#t89">89</a></span><span class="t">    <span class="str">'''</span>&nbsp;</span><span class="r"></span></p>
-    <p class="pln"><span class="n"><a id="t90" href="#t90">90</a></span><span class="t"><span class="str">    adds and removes the studentstaff from program that makes them student manager.</span>&nbsp;</span><span class="r"></span></p>
+    <p class="pln"><span class="n"><a id="t90" href="#t90">90</a></span><span class="t"><span class="str">    Assigns or removes a user as a student manager for a program.</span>&nbsp;</span><span class="r"></span></p>
     <p class="pln"><span class="n"><a id="t91" href="#t91">91</a></span><span class="t">&nbsp;</span><span class="r"></span></p>
-    <p class="pln"><span class="n"><a id="t92" href="#t92">92</a></span><span class="t"><span class="str">    param: uername - a string</span>&nbsp;</span><span class="r"></span></p>
+    <p class="pln"><span class="n"><a id="t92" href="#t92">92</a></span><span class="t"><span class="str">    param: username - a string</span>&nbsp;</span><span class="r"></span></p>
     <p class="pln"><span class="n"><a id="t93" href="#t93">93</a></span><span class="t"><span class="str">           program_id - id</span>&nbsp;</span><span class="r"></span></p>
     <p class="pln"><span class="n"><a id="t94" href="#t94">94</a></span><span class="t"><span class="str">           action: add, remove</span>&nbsp;</span><span class="r"></span></p>
     <p class="pln"><span class="n"><a id="t95" href="#t95">95</a></span><span class="t">&nbsp;</span><span class="r"></span></p>
     <p class="pln"><span class="n"><a id="t96" href="#t96">96</a></span><span class="t"><span class="str">    '''</span>&nbsp;</span><span class="r"></span></p>
-    <p class="run"><span class="n"><a id="t97" href="#t97">97</a></span><span class="t">    <span class="nam">studentstaff</span><span class="op">=</span><span class="nam">User</span><span class="op">.</span><span class="nam">get</span><span class="op">(</span><span class="nam">User</span><span class="op">.</span><span class="nam">username</span><span class="op">==</span><span class="nam">username</span><span class="op">)</span>&nbsp;</span><span class="r"></span></p>
-    <p class="run"><span class="n"><a id="t98" href="#t98">98</a></span><span class="t">    <span class="key">if</span> <span class="nam">action</span> <span class="op">==</span> <span class="str">"add"</span> <span class="key">and</span> <span class="nam">studentstaff</span><span class="op">.</span><span class="nam">isCeltsStudentStaff</span><span class="op">==</span><span class="key">True</span><span class="op">:</span>&nbsp;</span><span class="r"></span></p>
-    <p class="run"><span class="n"><a id="t99" href="#t99">99</a></span><span class="t">        <span class="nam">studentstaff</span><span class="op">.</span><span class="nam">addProgramManager</span><span class="op">(</span><span class="nam">program_id</span><span class="op">)</span>&nbsp;</span><span class="r"></span></p>
+    <p class="run"><span class="n"><a id="t97" href="#t97">97</a></span><span class="t">    <span class="nam">programManager</span> <span class="op">=</span> <span class="nam">User</span><span class="op">.</span><span class="nam">get</span><span class="op">(</span><span class="nam">User</span><span class="op">.</span><span class="nam">username</span><span class="op">==</span><span class="nam">username</span><span class="op">)</span>&nbsp;</span><span class="r"></span></p>
+    <p class="run"><span class="n"><a id="t98" href="#t98">98</a></span><span class="t">    <span class="key">if</span> <span class="nam">action</span> <span class="op">==</span> <span class="str">"add"</span><span class="op">:</span>&nbsp;</span><span class="r"></span></p>
+    <p class="run"><span class="n"><a id="t99" href="#t99">99</a></span><span class="t">        <span class="nam">programManager</span><span class="op">.</span><span class="nam">addProgramManager</span><span class="op">(</span><span class="nam">program_id</span><span class="op">)</span>&nbsp;</span><span class="r"></span></p>
     <p class="run"><span class="n"><a id="t100" href="#t100">100</a></span><span class="t">    <span class="key">elif</span> <span class="nam">action</span> <span class="op">==</span> <span class="str">"remove"</span><span class="op">:</span>&nbsp;</span><span class="r"></span></p>
-    <p class="run"><span class="n"><a id="t101" href="#t101">101</a></span><span class="t">        <span class="nam">studentstaff</span><span class="op">.</span><span class="nam">removeProgramManager</span><span class="op">(</span><span class="nam">program_id</span><span class="op">)</span>&nbsp;</span><span class="r"></span></p>
+    <p class="run"><span class="n"><a id="t101" href="#t101">101</a></span><span class="t">        <span class="nam">programManager</span><span class="op">.</span><span class="nam">removeProgramManager</span><span class="op">(</span><span class="nam">program_id</span><span class="op">)</span>&nbsp;</span><span class="r"></span></p>
 </main>
 <footer>
     <div class="content">
@@ -190,7 +190,7 @@
             <a id="nextFileLink" class="nav" href="d_6c0e4b930745278b___init___py.html">&#xbb; next</a>
             &nbsp; &nbsp; &nbsp;
             <a class="nav" href="https://coverage.readthedocs.io/en/7.2.7">coverage.py v7.2.7</a>,
-            created at 2025-02-05 21:27 +0000
+            created at 2025-04-15 13:26 +0000
         </p>
     </div>
 </footer>
