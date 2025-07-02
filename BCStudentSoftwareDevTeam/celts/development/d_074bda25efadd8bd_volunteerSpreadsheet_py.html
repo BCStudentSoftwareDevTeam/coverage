@@ -2,7 +2,7 @@
 <html>
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    <title>Coverage for app/logic/spreadsheet.py: 100%</title>
+    <title>Coverage for app/logic/volunteerSpreadsheet.py: 100%</title>
     <link rel="icon" sizes="32x32" href="favicon_32.png">
     <link rel="stylesheet" href="style.css" type="text/css">
     <script type="text/javascript" src="coverage_html.js" defer></script>
@@ -11,7 +11,7 @@
 <header>
     <div class="content">
         <h1>
-            <span class="text">Coverage for </span><b>app/logic/spreadsheet.py</b>:
+            <span class="text">Coverage for </span><b>app/logic/volunteerSpreadsheet.py</b>:
             <span class="pc_cov">100%</span>
         </h1>
         <aside id="help_panel_wrapper">
@@ -60,12 +60,12 @@
             <button type="button" class="exc show_exc button_toggle_exc" value="exc" data-shortcut="x" title="Toggle lines excluded">0<span class="text"> excluded</span></button>
         </h2>
         <p class="text">
-            <a id="prevFileLink" class="nav" href="d_074bda25efadd8bd_serviceLearningCourses_py.html">&#xab; prev</a> &nbsp; &nbsp;
+            <a id="prevFileLink" class="nav" href="d_074bda25efadd8bd_utils_py.html">&#xab; prev</a> &nbsp; &nbsp;
             <a id="indexLink" class="nav" href="index.html">&Hat; index</a> &nbsp; &nbsp;
-            <a id="nextFileLink" class="nav" href="d_074bda25efadd8bd_term_py.html">&#xbb; next</a>
+            <a id="nextFileLink" class="nav" href="d_074bda25efadd8bd_volunteers_py.html">&#xbb; next</a>
             &nbsp; &nbsp; &nbsp;
             <a class="nav" href="https://coverage.readthedocs.io/en/7.2.7">coverage.py v7.2.7</a>,
-            created at 2025-04-16 15:37 +0000
+            created at 2025-07-02 12:23 +0000
         </p>
         <aside class="hidden">
             <button type="button" class="button_next_chunk" data-shortcut="j"/>
@@ -301,7 +301,7 @@
     <p class="pln"><span class="n"><a id="t219" href="#t219">219</a></span><span class="t">&nbsp;</span><span class="r"></span></p>
     <p class="run"><span class="n"><a id="t220" href="#t220">220</a></span><span class="t">    <span class="nam">makeDataXls</span><span class="op">(</span><span class="nam">volunteerHoursByProgram</span><span class="op">(</span><span class="nam">academicYear</span><span class="op">)</span><span class="op">,</span> <span class="nam">hoursByProgramColumns</span><span class="op">,</span> <span class="str">"Total Hours By Program"</span><span class="op">,</span> <span class="nam">workbook</span><span class="op">)</span>&nbsp;</span><span class="r"></span></p>
     <p class="run"><span class="n"><a id="t221" href="#t221">221</a></span><span class="t">    <span class="nam">makeDataXls</span><span class="op">(</span><span class="nam">volunteerMajorAndClass</span><span class="op">(</span><span class="nam">academicYear</span><span class="op">,</span> <span class="nam">User</span><span class="op">.</span><span class="nam">major</span><span class="op">)</span><span class="op">,</span> <span class="nam">volunteerMajorColumns</span><span class="op">,</span> <span class="str">"Volunteers By Major"</span><span class="op">,</span> <span class="nam">workbook</span><span class="op">)</span>&nbsp;</span><span class="r"></span></p>
-    <p class="run"><span class="n"><a id="t222" href="#t222">222</a></span><span class="t">    <span class="nam">makeDataXls</span><span class="op">(</span><span class="nam">volunteerMajorAndClass</span><span class="op">(</span><span class="nam">academicYear</span><span class="op">,</span> <span class="nam">User</span><span class="op">.</span><span class="nam">classLevel</span><span class="op">,</span> <span class="nam">reorderClassLevel</span><span class="op">=</span><span class="key">True</span><span class="op">)</span><span class="op">,</span> <span class="nam">volunteerClassColumns</span><span class="op">,</span> <span class="str">"Volunteers By Class Level"</span><span class="op">,</span> <span class="nam">workbook</span><span class="op">)</span>&nbsp;</span><span class="r"></span></p>
+    <p class="run"><span class="n"><a id="t222" href="#t222">222</a></span><span class="t">    <span class="nam">makeDataXls</span><span class="op">(</span><span class="nam">volunteerMajorAndClass</span><span class="op">(</span><span class="nam">academicYear</span><span class="op">,</span> <span class="nam">User</span><span class="op">.</span><span class="nam">rawClassLevel</span><span class="op">,</span> <span class="nam">reorderClassLevel</span><span class="op">=</span><span class="key">True</span><span class="op">)</span><span class="op">,</span> <span class="nam">volunteerClassColumns</span><span class="op">,</span> <span class="str">"Volunteers By Class Level"</span><span class="op">,</span> <span class="nam">workbook</span><span class="op">)</span>&nbsp;</span><span class="r"></span></p>
     <p class="run"><span class="n"><a id="t223" href="#t223">223</a></span><span class="t">    <span class="nam">makeDataXls</span><span class="op">(</span><span class="nam">repeatVolunteersPerProgram</span><span class="op">(</span><span class="nam">academicYear</span><span class="op">)</span><span class="op">,</span> <span class="nam">repeatProgramEventVolunteerColumns</span><span class="op">,</span> <span class="str">"Repeat Volunteers Per Program"</span><span class="op">,</span> <span class="nam">workbook</span><span class="op">)</span>&nbsp;</span><span class="r"></span></p>
     <p class="run"><span class="n"><a id="t224" href="#t224">224</a></span><span class="t">    <span class="nam">makeDataXls</span><span class="op">(</span><span class="nam">repeatVolunteers</span><span class="op">(</span><span class="nam">academicYear</span><span class="op">)</span><span class="op">,</span> <span class="nam">repeatAllProgramVolunteerColumns</span><span class="op">,</span> <span class="str">"Repeat Volunteers All Programs"</span><span class="op">,</span> <span class="nam">workbook</span><span class="op">)</span>&nbsp;</span><span class="r"></span></p>
     <p class="run"><span class="n"><a id="t225" href="#t225">225</a></span><span class="t">    <span class="nam">makeDataXls</span><span class="op">(</span><span class="nam">getRetentionRate</span><span class="op">(</span><span class="nam">academicYear</span><span class="op">)</span><span class="op">,</span> <span class="nam">volunteerProgramRetentionRateAcrossTermColumns</span><span class="op">,</span> <span class="str">"Retention Rate By Semester"</span><span class="op">,</span> <span class="nam">workbook</span><span class="op">)</span>&nbsp;</span><span class="r"></span></p>
@@ -318,12 +318,12 @@
 <footer>
     <div class="content">
         <p>
-            <a id="prevFileLink" class="nav" href="d_074bda25efadd8bd_serviceLearningCourses_py.html">&#xab; prev</a> &nbsp; &nbsp;
+            <a id="prevFileLink" class="nav" href="d_074bda25efadd8bd_utils_py.html">&#xab; prev</a> &nbsp; &nbsp;
             <a id="indexLink" class="nav" href="index.html">&Hat; index</a> &nbsp; &nbsp;
-            <a id="nextFileLink" class="nav" href="d_074bda25efadd8bd_term_py.html">&#xbb; next</a>
+            <a id="nextFileLink" class="nav" href="d_074bda25efadd8bd_volunteers_py.html">&#xbb; next</a>
             &nbsp; &nbsp; &nbsp;
             <a class="nav" href="https://coverage.readthedocs.io/en/7.2.7">coverage.py v7.2.7</a>,
-            created at 2025-04-16 15:37 +0000
+            created at 2025-07-02 12:23 +0000
         </p>
     </div>
 </footer>
