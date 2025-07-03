@@ -54,9 +54,9 @@
             </div>
         </aside>
         <h2>
-            <span class="text">533 statements &nbsp;</span>
-            <button type="button" class="run button_toggle_run" value="run" data-shortcut="r" title="Toggle lines run">121<span class="text"> run</span></button>
-            <button type="button" class="mis show_mis button_toggle_mis" value="mis" data-shortcut="m" title="Toggle lines missing">412<span class="text"> missing</span></button>
+            <span class="text">543 statements &nbsp;</span>
+            <button type="button" class="run button_toggle_run" value="run" data-shortcut="r" title="Toggle lines run">123<span class="text"> run</span></button>
+            <button type="button" class="mis show_mis button_toggle_mis" value="mis" data-shortcut="m" title="Toggle lines missing">420<span class="text"> missing</span></button>
             <button type="button" class="exc show_exc button_toggle_exc" value="exc" data-shortcut="x" title="Toggle lines excluded">0<span class="text"> excluded</span></button>
         </h2>
         <p class="text">
@@ -65,7 +65,7 @@
             <a id="nextFileLink" class="nav" href="d_c86a23c356556db1_userManagement_py.html">&#xbb; next</a>
             &nbsp; &nbsp; &nbsp;
             <a class="nav" href="https://coverage.readthedocs.io/en/7.2.7">coverage.py v7.2.7</a>,
-            created at 2025-07-02 20:10 +0000
+            created at 2025-07-03 20:01 +0000
         </p>
         <aside class="hidden">
             <button type="button" class="button_next_chunk" data-shortcut="j"/>
@@ -879,6 +879,19 @@
     <p class="mis show_mis"><span class="n"><a id="t797" href="#t797">797</a></span><span class="t">        <span class="key">return</span> <span class="str">''</span>&nbsp;</span><span class="r"></span></p>
     <p class="pln"><span class="n"><a id="t798" href="#t798">798</a></span><span class="t">&nbsp;</span><span class="r"></span></p>
     <p class="mis show_mis"><span class="n"><a id="t799" href="#t799">799</a></span><span class="t">    <span class="key">return</span> <span class="nam">redirect</span><span class="op">(</span><span class="nam">url_for</span><span class="op">(</span><span class="str">'admin.manageLaborPage'</span><span class="op">,</span> <span class="nam">eventID</span> <span class="op">=</span> <span class="nam">eventId</span><span class="op">)</span><span class="op">)</span>&nbsp;</span><span class="r"></span></p>
+    <p class="pln"><span class="n"><a id="t800" href="#t800">800</a></span><span class="t">&nbsp;</span><span class="r"></span></p>
+    <p class="run"><span class="n"><a id="t801" href="#t801">801</a></span><span class="t"><span class="op">@</span><span class="nam">admin_bp</span><span class="op">.</span><span class="nam">route</span><span class="op">(</span><span class="str">"/event/&lt;int:event_id>/scannerentry"</span><span class="op">,</span> <span class="nam">methods</span><span class="op">=</span><span class="op">[</span><span class="str">"GET"</span><span class="op">,</span> <span class="str">"POST"</span><span class="op">]</span><span class="op">)</span>&nbsp;</span><span class="r"></span></p>
+    <p class="run"><span class="n"><a id="t802" href="#t802">802</a></span><span class="t"><span class="key">def</span> <span class="nam">eventKioskStatus</span><span class="op">(</span><span class="nam">event_id</span><span class="op">)</span><span class="op">:</span>&nbsp;</span><span class="r"></span></p>
+    <p class="mis show_mis"><span class="n"><a id="t803" href="#t803">803</a></span><span class="t">    <span class="nam">referer</span> <span class="op">=</span> <span class="nam">request</span><span class="op">.</span><span class="nam">referrer</span>&nbsp;</span><span class="r"></span></p>
+    <p class="mis show_mis"><span class="n"><a id="t804" href="#t804">804</a></span><span class="t">    <span class="nam">is_labor</span> <span class="op">=</span> <span class="key">False</span>&nbsp;</span><span class="r"></span></p>
+    <p class="pln"><span class="n"><a id="t805" href="#t805">805</a></span><span class="t">&nbsp;</span><span class="r"></span></p>
+    <p class="mis show_mis"><span class="n"><a id="t806" href="#t806">806</a></span><span class="t">    <span class="key">if</span> <span class="nam">referer</span> <span class="key">and</span> <span class="str">"manage_labor"</span> <span class="key">in</span> <span class="nam">referer</span><span class="op">:</span>&nbsp;</span><span class="r"></span></p>
+    <p class="mis show_mis"><span class="n"><a id="t807" href="#t807">807</a></span><span class="t">        <span class="nam">is_labor</span> <span class="op">=</span> <span class="key">True</span>&nbsp;</span><span class="r"></span></p>
+    <p class="mis show_mis"><span class="n"><a id="t808" href="#t808">808</a></span><span class="t">    <span class="key">elif</span> <span class="nam">referer</span> <span class="key">and</span> <span class="str">"manage_volunteers"</span> <span class="key">in</span> <span class="nam">referer</span><span class="op">:</span>&nbsp;</span><span class="r"></span></p>
+    <p class="mis show_mis"><span class="n"><a id="t809" href="#t809">809</a></span><span class="t">        <span class="nam">is_labor</span> <span class="op">=</span> <span class="key">False</span>&nbsp;</span><span class="r"></span></p>
+    <p class="pln"><span class="n"><a id="t810" href="#t810">810</a></span><span class="t">&nbsp;</span><span class="r"></span></p>
+    <p class="mis show_mis"><span class="n"><a id="t811" href="#t811">811</a></span><span class="t">    <span class="nam">event</span> <span class="op">=</span> <span class="nam">Event</span><span class="op">.</span><span class="nam">get_by_id</span><span class="op">(</span><span class="nam">event_id</span><span class="op">)</span>&nbsp;</span><span class="r"></span></p>
+    <p class="mis show_mis"><span class="n"><a id="t812" href="#t812">812</a></span><span class="t">    <span class="key">return</span> <span class="nam">render_template</span><span class="op">(</span><span class="str">"/events/eventKiosk.html"</span><span class="op">,</span> <span class="nam">is_labor</span><span class="op">=</span><span class="nam">is_labor</span><span class="op">,</span> <span class="nam">event</span><span class="op">=</span><span class="nam">event</span><span class="op">)</span>&nbsp;</span><span class="r"></span></p>
 </main>
 <footer>
     <div class="content">
@@ -888,7 +901,7 @@
             <a id="nextFileLink" class="nav" href="d_c86a23c356556db1_userManagement_py.html">&#xbb; next</a>
             &nbsp; &nbsp; &nbsp;
             <a class="nav" href="https://coverage.readthedocs.io/en/7.2.7">coverage.py v7.2.7</a>,
-            created at 2025-07-02 20:10 +0000
+            created at 2025-07-03 20:01 +0000
         </p>
     </div>
 </footer>
