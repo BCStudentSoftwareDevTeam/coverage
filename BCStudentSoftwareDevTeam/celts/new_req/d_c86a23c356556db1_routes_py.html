@@ -65,7 +65,7 @@
             <a id="nextFileLink" class="nav" href="d_c86a23c356556db1_userManagement_py.html">&#xbb; next</a>
             &nbsp; &nbsp; &nbsp;
             <a class="nav" href="https://coverage.readthedocs.io/en/7.2.7">coverage.py v7.2.7</a>,
-            created at 2025-07-09 18:32 +0000
+            created at 2025-07-10 14:33 +0000
         </p>
         <aside class="hidden">
             <button type="button" class="button_next_chunk" data-shortcut="j"/>
@@ -772,22 +772,13 @@
     <p class="pln"><span class="n"><a id="t690" href="#t690">690</a></span><span class="t">    <span class="key">else</span><span class="op">:</span>&nbsp;</span><span class="r"></span></p>
     <p class="mis show_mis"><span class="n"><a id="t691" href="#t691">691</a></span><span class="t">        <span class="key">return</span> <span class="nam">jsonify</span><span class="op">(</span><span class="op">{</span><span class="str">"success"</span><span class="op">:</span> <span class="key">False</span><span class="op">,</span> <span class="str">"message"</span><span class="op">:</span> <span class="str">"Failed to delete requirement."</span><span class="op">}</span><span class="op">)</span>&nbsp;</span><span class="r"></span></p>
     <p class="pln"><span class="n"><a id="t692" href="#t692">692</a></span><span class="t">&nbsp;</span><span class="r"></span></p>
-    <p class="pln"><span class="n"><a id="t693" href="#t693">693</a></span><span class="t">&nbsp;</span><span class="r"></span></p>
-    <p class="pln"><span class="n"><a id="t694" href="#t694">694</a></span><span class="t">&nbsp;</span><span class="r"></span></p>
-    <p class="pln"><span class="n"><a id="t695" href="#t695">695</a></span><span class="t">&nbsp;</span><span class="r"></span></p>
-    <p class="pln"><span class="n"><a id="t696" href="#t696">696</a></span><span class="t">&nbsp;</span><span class="r"></span></p>
-    <p class="pln"><span class="n"><a id="t697" href="#t697">697</a></span><span class="t">&nbsp;</span><span class="r"></span></p>
-    <p class="pln"><span class="n"><a id="t698" href="#t698">698</a></span><span class="t">&nbsp;</span><span class="r"></span></p>
-    <p class="pln"><span class="n"><a id="t699" href="#t699">699</a></span><span class="t">&nbsp;</span><span class="r"></span></p>
-    <p class="pln"><span class="n"><a id="t700" href="#t700">700</a></span><span class="t">&nbsp;</span><span class="r"></span></p>
-    <p class="pln"><span class="n"><a id="t701" href="#t701">701</a></span><span class="t">&nbsp;</span><span class="r"></span></p>
-    <p class="run"><span class="n"><a id="t702" href="#t702">702</a></span><span class="t"><span class="op">@</span><span class="nam">admin_bp</span><span class="op">.</span><span class="nam">route</span><span class="op">(</span><span class="str">"/displayEventFile"</span><span class="op">,</span> <span class="nam">methods</span><span class="op">=</span><span class="op">[</span><span class="str">"POST"</span><span class="op">]</span><span class="op">)</span>&nbsp;</span><span class="r"></span></p>
-    <p class="run"><span class="n"><a id="t703" href="#t703">703</a></span><span class="t"><span class="key">def</span> <span class="nam">displayEventFile</span><span class="op">(</span><span class="op">)</span><span class="op">:</span>&nbsp;</span><span class="r"></span></p>
-    <p class="mis show_mis"><span class="n"><a id="t704" href="#t704">704</a></span><span class="t">    <span class="nam">fileData</span> <span class="op">=</span> <span class="nam">request</span><span class="op">.</span><span class="nam">form</span>&nbsp;</span><span class="r"></span></p>
-    <p class="mis show_mis"><span class="n"><a id="t705" href="#t705">705</a></span><span class="t">    <span class="nam">eventfile</span> <span class="op">=</span> <span class="nam">FileHandler</span><span class="op">(</span><span class="nam">eventId</span><span class="op">=</span><span class="nam">fileData</span><span class="op">[</span><span class="str">"id"</span><span class="op">]</span><span class="op">)</span>&nbsp;</span><span class="r"></span></p>
-    <p class="mis show_mis"><span class="n"><a id="t706" href="#t706">706</a></span><span class="t">    <span class="nam">isChecked</span> <span class="op">=</span> <span class="nam">fileData</span><span class="op">.</span><span class="nam">get</span><span class="op">(</span><span class="str">'checked'</span><span class="op">)</span> <span class="op">==</span> <span class="str">'true'</span>&nbsp;</span><span class="r"></span></p>
-    <p class="mis show_mis"><span class="n"><a id="t707" href="#t707">707</a></span><span class="t">    <span class="nam">eventfile</span><span class="op">.</span><span class="nam">changeDisplay</span><span class="op">(</span><span class="nam">fileData</span><span class="op">[</span><span class="str">'id'</span><span class="op">]</span><span class="op">,</span> <span class="nam">isChecked</span><span class="op">)</span>&nbsp;</span><span class="r"></span></p>
-    <p class="mis show_mis"><span class="n"><a id="t708" href="#t708">708</a></span><span class="t">    <span class="key">return</span> <span class="str">""</span>&nbsp;</span><span class="r"></span></p>
+    <p class="run"><span class="n"><a id="t693" href="#t693">693</a></span><span class="t"><span class="op">@</span><span class="nam">admin_bp</span><span class="op">.</span><span class="nam">route</span><span class="op">(</span><span class="str">"/displayEventFile"</span><span class="op">,</span> <span class="nam">methods</span><span class="op">=</span><span class="op">[</span><span class="str">"POST"</span><span class="op">]</span><span class="op">)</span>&nbsp;</span><span class="r"></span></p>
+    <p class="run"><span class="n"><a id="t694" href="#t694">694</a></span><span class="t"><span class="key">def</span> <span class="nam">displayEventFile</span><span class="op">(</span><span class="op">)</span><span class="op">:</span>&nbsp;</span><span class="r"></span></p>
+    <p class="mis show_mis"><span class="n"><a id="t695" href="#t695">695</a></span><span class="t">    <span class="nam">fileData</span> <span class="op">=</span> <span class="nam">request</span><span class="op">.</span><span class="nam">form</span>&nbsp;</span><span class="r"></span></p>
+    <p class="mis show_mis"><span class="n"><a id="t696" href="#t696">696</a></span><span class="t">    <span class="nam">eventfile</span> <span class="op">=</span> <span class="nam">FileHandler</span><span class="op">(</span><span class="nam">eventId</span><span class="op">=</span><span class="nam">fileData</span><span class="op">[</span><span class="str">"id"</span><span class="op">]</span><span class="op">)</span>&nbsp;</span><span class="r"></span></p>
+    <p class="mis show_mis"><span class="n"><a id="t697" href="#t697">697</a></span><span class="t">    <span class="nam">isChecked</span> <span class="op">=</span> <span class="nam">fileData</span><span class="op">.</span><span class="nam">get</span><span class="op">(</span><span class="str">'checked'</span><span class="op">)</span> <span class="op">==</span> <span class="str">'true'</span>&nbsp;</span><span class="r"></span></p>
+    <p class="mis show_mis"><span class="n"><a id="t698" href="#t698">698</a></span><span class="t">    <span class="nam">eventfile</span><span class="op">.</span><span class="nam">changeDisplay</span><span class="op">(</span><span class="nam">fileData</span><span class="op">[</span><span class="str">'id'</span><span class="op">]</span><span class="op">,</span> <span class="nam">isChecked</span><span class="op">)</span>&nbsp;</span><span class="r"></span></p>
+    <p class="mis show_mis"><span class="n"><a id="t699" href="#t699">699</a></span><span class="t">    <span class="key">return</span> <span class="str">""</span>&nbsp;</span><span class="r"></span></p>
 </main>
 <footer>
     <div class="content">
@@ -797,7 +788,7 @@
             <a id="nextFileLink" class="nav" href="d_c86a23c356556db1_userManagement_py.html">&#xbb; next</a>
             &nbsp; &nbsp; &nbsp;
             <a class="nav" href="https://coverage.readthedocs.io/en/7.2.7">coverage.py v7.2.7</a>,
-            created at 2025-07-09 18:32 +0000
+            created at 2025-07-10 14:33 +0000
         </p>
     </div>
 </footer>
