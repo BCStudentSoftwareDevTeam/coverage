@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    <title>Coverage for app/logic/events.py: 92%</title>
+    <title>Coverage for app/logic/events.py: 94%</title>
     <link rel="icon" sizes="32x32" href="favicon_32_cb_58284776.png">
     <link rel="stylesheet" href="style_cb_6b508a39.css" type="text/css">
     <script src="coverage_html_cb_6fb7b396.js" defer></script>
@@ -12,7 +12,7 @@
     <div class="content">
         <h1>
             <span class="text">Coverage for </span><b>app/logic/events.py</b>:
-            <span class="pc_cov">92%</span>
+            <span class="pc_cov">94%</span>
         </h1>
         <aside id="help_panel_wrapper">
             <input id="help_panel_state" type="checkbox">
@@ -55,8 +55,8 @@
         </aside>
         <h2>
             <span class="text">339 statements &nbsp;</span>
-            <button type="button" class="run button_toggle_run" value="run" data-shortcut="r" title="Toggle lines run">312<span class="text"> run</span></button>
-            <button type="button" class="mis show_mis button_toggle_mis" value="mis" data-shortcut="m" title="Toggle lines missing">27<span class="text"> missing</span></button>
+            <button type="button" class="run button_toggle_run" value="run" data-shortcut="r" title="Toggle lines run">317<span class="text"> run</span></button>
+            <button type="button" class="mis show_mis button_toggle_mis" value="mis" data-shortcut="m" title="Toggle lines missing">22<span class="text"> missing</span></button>
             <button type="button" class="exc show_exc button_toggle_exc" value="exc" data-shortcut="x" title="Toggle lines excluded">0<span class="text"> excluded</span></button>
         </h2>
         <p class="text">
@@ -65,7 +65,7 @@
             <a id="nextFileLink" class="nav" href="z_074bda25efadd8bd_fileHandler_py.html">&#xbb; next</a>
             &nbsp; &nbsp; &nbsp;
             <a class="nav" href="https://coverage.readthedocs.io/en/7.10.2">coverage.py v7.10.2</a>,
-            created at 2025-12-24 17:49 +0000
+            created at 2025-12-24 18:40 +0000
         </p>
         <aside class="hidden">
             <button type="button" class="button_next_chunk" data-shortcut="j"></button>
@@ -364,26 +364,26 @@
     <p class="pln"><span class="n"><a id="t282" href="#t282">282</a></span><span class="t"><span class="str">        Return a count of all past events for each volunteer opportunities program.</span>&nbsp;</span><span class="r"></span></p>
     <p class="pln"><span class="n"><a id="t283" href="#t283">283</a></span><span class="t"><span class="str">    """</span>&nbsp;</span><span class="r"></span></p>
     <p class="pln"><span class="n"><a id="t284" href="#t284">284</a></span><span class="t">&nbsp;</span><span class="r"></span></p>
-    <p class="mis show_mis"><span class="n"><a id="t285" href="#t285">285</a></span><span class="t">    <span class="nam">pastCount</span> <span class="op">=</span> <span class="op">(</span>&nbsp;</span><span class="r"></span></p>
-    <p class="mis mis2 show_mis"><span class="n"><a id="t286" href="#t286">286</a></span><span class="t">        <span class="nam">Program</span>&nbsp;</span><span class="r"></span></p>
-    <p class="mis mis2 show_mis"><span class="n"><a id="t287" href="#t287">287</a></span><span class="t">        <span class="op">.</span><span class="nam">select</span><span class="op">(</span><span class="nam">Program</span><span class="op">.</span><span class="nam">id</span><span class="op">,</span> <span class="nam">fn</span><span class="op">.</span><span class="nam">COUNT</span><span class="op">(</span><span class="nam">Event</span><span class="op">.</span><span class="nam">id</span><span class="op">)</span><span class="op">.</span><span class="nam">alias</span><span class="op">(</span><span class="str">"eventCount"</span><span class="op">)</span><span class="op">)</span>&nbsp;</span><span class="r"></span></p>
-    <p class="mis mis2 show_mis"><span class="n"><a id="t288" href="#t288">288</a></span><span class="t">        <span class="op">.</span><span class="nam">join</span><span class="op">(</span><span class="nam">Event</span><span class="op">,</span> <span class="nam">on</span><span class="op">=</span><span class="op">(</span><span class="nam">Program</span><span class="op">.</span><span class="nam">id</span> <span class="op">==</span> <span class="nam">Event</span><span class="op">.</span><span class="nam">program_id</span><span class="op">)</span><span class="op">)</span>&nbsp;</span><span class="r"></span></p>
-    <p class="mis mis2 show_mis"><span class="n"><a id="t289" href="#t289">289</a></span><span class="t">        <span class="op">.</span><span class="nam">where</span><span class="op">(</span>&nbsp;</span><span class="r"></span></p>
-    <p class="mis mis2 show_mis"><span class="n"><a id="t290" href="#t290">290</a></span><span class="t">            <span class="op">(</span><span class="nam">Event</span><span class="op">.</span><span class="nam">term</span> <span class="op">==</span> <span class="nam">term</span><span class="op">)</span> <span class="op">&amp;</span>&nbsp;</span><span class="r"></span></p>
-    <p class="mis mis2 show_mis"><span class="n"><a id="t291" href="#t291">291</a></span><span class="t">            <span class="op">(</span><span class="nam">Event</span><span class="op">.</span><span class="nam">deletionDate</span><span class="op">.</span><span class="nam">is_null</span><span class="op">(</span><span class="key">True</span><span class="op">)</span><span class="op">)</span> <span class="op">&amp;</span>&nbsp;</span><span class="r"></span></p>
-    <p class="mis mis2 show_mis"><span class="n"><a id="t292" href="#t292">292</a></span><span class="t">            <span class="op">(</span><span class="nam">Event</span><span class="op">.</span><span class="nam">isService</span> <span class="op">==</span> <span class="key">True</span><span class="op">)</span> <span class="op">&amp;</span>&nbsp;</span><span class="r"></span></p>
-    <p class="mis mis2 show_mis"><span class="n"><a id="t293" href="#t293">293</a></span><span class="t">            <span class="op">(</span><span class="op">(</span><span class="nam">Event</span><span class="op">.</span><span class="nam">isLaborOnly</span> <span class="op">==</span> <span class="key">False</span><span class="op">)</span> <span class="op">|</span> <span class="nam">Event</span><span class="op">.</span><span class="nam">isLaborOnly</span><span class="op">.</span><span class="nam">is_null</span><span class="op">(</span><span class="key">True</span><span class="op">)</span><span class="op">)</span> <span class="op">&amp;</span>&nbsp;</span><span class="r"></span></p>
-    <p class="mis mis2 show_mis"><span class="n"><a id="t294" href="#t294">294</a></span><span class="t">            <span class="op">(</span><span class="op">(</span><span class="nam">Event</span><span class="op">.</span><span class="nam">startDate</span> <span class="op">&lt;</span> <span class="nam">currentTime</span><span class="op">)</span> <span class="op">|</span>&nbsp;</span><span class="r"></span></p>
-    <p class="mis mis2 show_mis"><span class="n"><a id="t295" href="#t295">295</a></span><span class="t">             <span class="op">(</span><span class="op">(</span><span class="nam">Event</span><span class="op">.</span><span class="nam">startDate</span> <span class="op">==</span> <span class="nam">currentTime</span><span class="op">)</span> <span class="op">&amp;</span> <span class="op">(</span><span class="nam">Event</span><span class="op">.</span><span class="nam">timeStart</span> <span class="op">&lt;=</span> <span class="nam">currentTime</span><span class="op">)</span><span class="op">)</span><span class="op">)</span> <span class="op">&amp;</span>&nbsp;</span><span class="r"></span></p>
-    <p class="mis mis2 show_mis"><span class="n"><a id="t296" href="#t296">296</a></span><span class="t">            <span class="op">(</span><span class="nam">Event</span><span class="op">.</span><span class="nam">isCanceled</span> <span class="op">==</span> <span class="key">False</span><span class="op">)</span>&nbsp;</span><span class="r"></span></p>
-    <p class="mis mis2 show_mis"><span class="n"><a id="t297" href="#t297">297</a></span><span class="t">        <span class="op">)</span>&nbsp;</span><span class="r"></span></p>
-    <p class="mis mis2 show_mis"><span class="n"><a id="t298" href="#t298">298</a></span><span class="t">        <span class="op">.</span><span class="nam">group_by</span><span class="op">(</span><span class="nam">Program</span><span class="op">.</span><span class="nam">id</span><span class="op">)</span>&nbsp;</span><span class="r"></span></p>
-    <p class="mis mis2 show_mis"><span class="n"><a id="t299" href="#t299">299</a></span><span class="t">    <span class="op">)</span>&nbsp;</span><span class="r"></span></p>
+    <p class="run"><span class="n"><a id="t285" href="#t285">285</a></span><span class="t">    <span class="nam">pastCount</span> <span class="op">=</span> <span class="op">(</span>&nbsp;</span><span class="r"></span></p>
+    <p class="run run2"><span class="n"><a id="t286" href="#t286">286</a></span><span class="t">        <span class="nam">Program</span>&nbsp;</span><span class="r"></span></p>
+    <p class="run run2"><span class="n"><a id="t287" href="#t287">287</a></span><span class="t">        <span class="op">.</span><span class="nam">select</span><span class="op">(</span><span class="nam">Program</span><span class="op">.</span><span class="nam">id</span><span class="op">,</span> <span class="nam">fn</span><span class="op">.</span><span class="nam">COUNT</span><span class="op">(</span><span class="nam">Event</span><span class="op">.</span><span class="nam">id</span><span class="op">)</span><span class="op">.</span><span class="nam">alias</span><span class="op">(</span><span class="str">"eventCount"</span><span class="op">)</span><span class="op">)</span>&nbsp;</span><span class="r"></span></p>
+    <p class="run run2"><span class="n"><a id="t288" href="#t288">288</a></span><span class="t">        <span class="op">.</span><span class="nam">join</span><span class="op">(</span><span class="nam">Event</span><span class="op">,</span> <span class="nam">on</span><span class="op">=</span><span class="op">(</span><span class="nam">Program</span><span class="op">.</span><span class="nam">id</span> <span class="op">==</span> <span class="nam">Event</span><span class="op">.</span><span class="nam">program_id</span><span class="op">)</span><span class="op">)</span>&nbsp;</span><span class="r"></span></p>
+    <p class="run run2"><span class="n"><a id="t289" href="#t289">289</a></span><span class="t">        <span class="op">.</span><span class="nam">where</span><span class="op">(</span>&nbsp;</span><span class="r"></span></p>
+    <p class="run run2"><span class="n"><a id="t290" href="#t290">290</a></span><span class="t">            <span class="op">(</span><span class="nam">Event</span><span class="op">.</span><span class="nam">term</span> <span class="op">==</span> <span class="nam">term</span><span class="op">)</span> <span class="op">&amp;</span>&nbsp;</span><span class="r"></span></p>
+    <p class="run run2"><span class="n"><a id="t291" href="#t291">291</a></span><span class="t">            <span class="op">(</span><span class="nam">Event</span><span class="op">.</span><span class="nam">deletionDate</span><span class="op">.</span><span class="nam">is_null</span><span class="op">(</span><span class="key">True</span><span class="op">)</span><span class="op">)</span> <span class="op">&amp;</span>&nbsp;</span><span class="r"></span></p>
+    <p class="run run2"><span class="n"><a id="t292" href="#t292">292</a></span><span class="t">            <span class="op">(</span><span class="nam">Event</span><span class="op">.</span><span class="nam">isService</span> <span class="op">==</span> <span class="key">True</span><span class="op">)</span> <span class="op">&amp;</span>&nbsp;</span><span class="r"></span></p>
+    <p class="run run2"><span class="n"><a id="t293" href="#t293">293</a></span><span class="t">            <span class="op">(</span><span class="op">(</span><span class="nam">Event</span><span class="op">.</span><span class="nam">isLaborOnly</span> <span class="op">==</span> <span class="key">False</span><span class="op">)</span> <span class="op">|</span> <span class="nam">Event</span><span class="op">.</span><span class="nam">isLaborOnly</span><span class="op">.</span><span class="nam">is_null</span><span class="op">(</span><span class="key">True</span><span class="op">)</span><span class="op">)</span> <span class="op">&amp;</span>&nbsp;</span><span class="r"></span></p>
+    <p class="run run2"><span class="n"><a id="t294" href="#t294">294</a></span><span class="t">            <span class="op">(</span><span class="op">(</span><span class="nam">Event</span><span class="op">.</span><span class="nam">startDate</span> <span class="op">&lt;</span> <span class="nam">currentTime</span><span class="op">)</span> <span class="op">|</span>&nbsp;</span><span class="r"></span></p>
+    <p class="run run2"><span class="n"><a id="t295" href="#t295">295</a></span><span class="t">             <span class="op">(</span><span class="op">(</span><span class="nam">Event</span><span class="op">.</span><span class="nam">startDate</span> <span class="op">==</span> <span class="nam">currentTime</span><span class="op">)</span> <span class="op">&amp;</span> <span class="op">(</span><span class="nam">Event</span><span class="op">.</span><span class="nam">timeStart</span> <span class="op">&lt;=</span> <span class="nam">currentTime</span><span class="op">)</span><span class="op">)</span><span class="op">)</span> <span class="op">&amp;</span>&nbsp;</span><span class="r"></span></p>
+    <p class="run run2"><span class="n"><a id="t296" href="#t296">296</a></span><span class="t">            <span class="op">(</span><span class="nam">Event</span><span class="op">.</span><span class="nam">isCanceled</span> <span class="op">==</span> <span class="key">False</span><span class="op">)</span>&nbsp;</span><span class="r"></span></p>
+    <p class="run run2"><span class="n"><a id="t297" href="#t297">297</a></span><span class="t">        <span class="op">)</span>&nbsp;</span><span class="r"></span></p>
+    <p class="run run2"><span class="n"><a id="t298" href="#t298">298</a></span><span class="t">        <span class="op">.</span><span class="nam">group_by</span><span class="op">(</span><span class="nam">Program</span><span class="op">.</span><span class="nam">id</span><span class="op">)</span>&nbsp;</span><span class="r"></span></p>
+    <p class="run run2"><span class="n"><a id="t299" href="#t299">299</a></span><span class="t">    <span class="op">)</span>&nbsp;</span><span class="r"></span></p>
     <p class="pln"><span class="n"><a id="t300" href="#t300">300</a></span><span class="t">&nbsp;</span><span class="r"></span></p>
-    <p class="mis show_mis"><span class="n"><a id="t301" href="#t301">301</a></span><span class="t">    <span class="nam">programCountDict</span> <span class="op">=</span> <span class="op">{</span><span class="op">}</span>&nbsp;</span><span class="r"></span></p>
-    <p class="mis show_mis"><span class="n"><a id="t302" href="#t302">302</a></span><span class="t">    <span class="key">for</span> <span class="nam">programCount</span> <span class="key">in</span> <span class="nam">pastCount</span><span class="op">:</span>&nbsp;</span><span class="r"></span></p>
-    <p class="mis show_mis"><span class="n"><a id="t303" href="#t303">303</a></span><span class="t">        <span class="nam">programCountDict</span><span class="op">[</span><span class="nam">programCount</span><span class="op">.</span><span class="nam">id</span><span class="op">]</span> <span class="op">=</span> <span class="nam">programCount</span><span class="op">.</span><span class="nam">eventCount</span>&nbsp;</span><span class="r"></span></p>
-    <p class="mis show_mis"><span class="n"><a id="t304" href="#t304">304</a></span><span class="t">    <span class="key">return</span> <span class="nam">programCountDict</span>&nbsp;</span><span class="r"></span></p>
+    <p class="run"><span class="n"><a id="t301" href="#t301">301</a></span><span class="t">    <span class="nam">programCountDict</span> <span class="op">=</span> <span class="op">{</span><span class="op">}</span>&nbsp;</span><span class="r"></span></p>
+    <p class="run"><span class="n"><a id="t302" href="#t302">302</a></span><span class="t">    <span class="key">for</span> <span class="nam">programCount</span> <span class="key">in</span> <span class="nam">pastCount</span><span class="op">:</span>&nbsp;</span><span class="r"></span></p>
+    <p class="run"><span class="n"><a id="t303" href="#t303">303</a></span><span class="t">        <span class="nam">programCountDict</span><span class="op">[</span><span class="nam">programCount</span><span class="op">.</span><span class="nam">id</span><span class="op">]</span> <span class="op">=</span> <span class="nam">programCount</span><span class="op">.</span><span class="nam">eventCount</span>&nbsp;</span><span class="r"></span></p>
+    <p class="run"><span class="n"><a id="t304" href="#t304">304</a></span><span class="t">    <span class="key">return</span> <span class="nam">programCountDict</span>&nbsp;</span><span class="r"></span></p>
     <p class="pln"><span class="n"><a id="t305" href="#t305">305</a></span><span class="t">&nbsp;</span><span class="r"></span></p>
     <p class="run"><span class="n"><a id="t306" href="#t306">306</a></span><span class="t"><span class="key">def</span> <span class="nam">getTrainingEvents</span><span class="op">(</span><span class="nam">term</span><span class="op">,</span> <span class="nam">user</span><span class="op">)</span><span class="op">:</span>&nbsp;</span><span class="r"></span></p>
     <p class="pln"><span class="n"><a id="t307" href="#t307">307</a></span><span class="t">    <span class="str">"""</span>&nbsp;</span><span class="r"></span></p>
@@ -821,7 +821,7 @@
             <a class="nav" href="z_074bda25efadd8bd_fileHandler_py.html">&#xbb; next</a>
             &nbsp; &nbsp; &nbsp;
             <a class="nav" href="https://coverage.readthedocs.io/en/7.10.2">coverage.py v7.10.2</a>,
-            created at 2025-12-24 17:49 +0000
+            created at 2025-12-24 18:40 +0000
         </p>
     </div>
 </footer>
