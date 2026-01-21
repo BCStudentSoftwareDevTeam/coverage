@@ -65,7 +65,7 @@
             <a id="nextFileLink" class="nav" href="z_074bda25efadd8bd_celtsLabor_py.html">&#xbb; next</a>
             &nbsp; &nbsp; &nbsp;
             <a class="nav" href="https://coverage.readthedocs.io/en/7.10.2">coverage.py v7.10.2</a>,
-            created at 2026-01-21 15:16 +0000
+            created at 2026-01-21 15:20 +0000
         </p>
         <aside class="hidden">
             <button type="button" class="button_next_chunk" data-shortcut="j"></button>
@@ -177,8 +177,8 @@
     <p class="pln"><span class="n"><a id="t95" href="#t95">95</a></span><span class="t">                <span class="key">else</span><span class="op">:</span>&nbsp;</span><span class="r"></span></p>
     <p class="mis show_mis"><span class="n"><a id="t96" href="#t96">96</a></span><span class="t">                    <span class="nam">certRequirementDates</span><span class="op">[</span><span class="nam">completedEvent</span><span class="op">[</span><span class="num">1</span><span class="op">]</span><span class="op">]</span><span class="op">.</span><span class="nam">append</span><span class="op">(</span><span class="nam">attendedEvent</span><span class="op">.</span><span class="nam">event</span><span class="op">.</span><span class="nam">startDate</span><span class="op">.</span><span class="nam">strftime</span><span class="op">(</span><span class="str">'%m/%d/%Y'</span><span class="op">)</span><span class="op">)</span>&nbsp;</span><span class="r"></span></p>
     <p class="pln"><span class="n"><a id="t97" href="#t97">97</a></span><span class="t">&nbsp;</span><span class="r"></span></p>
-    <p class="mis show_mis"><span class="n"><a id="t98" href="#t98">98</a></span><span class="t">        <span class="key">for</span> <span class="nam">key</span><span class="op">,</span> <span class="nam">value</span> <span class="key">in</span> <span class="nam">certRequirementDates</span><span class="op">.</span><span class="nam">items</span><span class="op">(</span><span class="op">)</span><span class="op">:</span>&nbsp;</span><span class="r"></span></p>
-    <p class="mis show_mis"><span class="n"><a id="t99" href="#t99">99</a></span><span class="t">            <span class="nam">worksheet</span><span class="op">.</span><span class="nam">write</span><span class="op">(</span><span class="nam">row</span><span class="op">,</span> <span class="nam">key</span><span class="op">,</span> <span class="str">", "</span><span class="op">.</span><span class="nam">join</span><span class="op">(</span><span class="nam">sorted</span><span class="op">(</span><span class="nam">value</span><span class="op">)</span><span class="op">)</span><span class="op">)</span>&nbsp;</span><span class="r"></span></p>
+    <p class="mis show_mis"><span class="n"><a id="t98" href="#t98">98</a></span><span class="t">        <span class="key">for</span> <span class="nam">tableIndex</span><span class="op">,</span> <span class="nam">dates</span> <span class="key">in</span> <span class="nam">certRequirementDates</span><span class="op">.</span><span class="nam">items</span><span class="op">(</span><span class="op">)</span><span class="op">:</span>&nbsp;</span><span class="r"></span></p>
+    <p class="mis show_mis"><span class="n"><a id="t99" href="#t99">99</a></span><span class="t">            <span class="nam">worksheet</span><span class="op">.</span><span class="nam">write</span><span class="op">(</span><span class="nam">row</span><span class="op">,</span> <span class="nam">tableIndex</span><span class="op">,</span> <span class="str">", "</span><span class="op">.</span><span class="nam">join</span><span class="op">(</span><span class="nam">sorted</span><span class="op">(</span><span class="nam">dates</span><span class="op">)</span><span class="op">)</span><span class="op">)</span>&nbsp;</span><span class="r"></span></p>
     <p class="mis show_mis"><span class="n"><a id="t100" href="#t100">100</a></span><span class="t">        <span class="nam">row</span> <span class="op">+=</span> <span class="num">1</span>&nbsp;</span><span class="r"></span></p>
     <p class="pln"><span class="n"><a id="t101" href="#t101">101</a></span><span class="t">&nbsp;</span><span class="r"></span></p>
     <p class="mis show_mis"><span class="n"><a id="t102" href="#t102">102</a></span><span class="t">    <span class="nam">workbook</span><span class="op">.</span><span class="nam">close</span><span class="op">(</span><span class="op">)</span>&nbsp;</span><span class="r"></span></p>
@@ -233,7 +233,7 @@
             <a class="nav" href="z_074bda25efadd8bd_celtsLabor_py.html">&#xbb; next</a>
             &nbsp; &nbsp; &nbsp;
             <a class="nav" href="https://coverage.readthedocs.io/en/7.10.2">coverage.py v7.10.2</a>,
-            created at 2026-01-21 15:16 +0000
+            created at 2026-01-21 15:20 +0000
         </p>
     </div>
 </footer>
