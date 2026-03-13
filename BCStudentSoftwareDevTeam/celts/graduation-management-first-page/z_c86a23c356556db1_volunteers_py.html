@@ -54,9 +54,9 @@
             </div>
         </aside>
         <h2>
-            <span class="text">154 statements &nbsp;</span>
+            <span class="text">153 statements &nbsp;</span>
             <button type="button" class="run button_toggle_run" value="run" data-shortcut="r" title="Toggle lines run">41<span class="text"> run</span></button>
-            <button type="button" class="mis show_mis button_toggle_mis" value="mis" data-shortcut="m" title="Toggle lines missing">113<span class="text"> missing</span></button>
+            <button type="button" class="mis show_mis button_toggle_mis" value="mis" data-shortcut="m" title="Toggle lines missing">112<span class="text"> missing</span></button>
             <button type="button" class="exc show_exc button_toggle_exc" value="exc" data-shortcut="x" title="Toggle lines excluded">0<span class="text"> excluded</span></button>
         </h2>
         <p class="text">
@@ -65,7 +65,7 @@
             <a id="nextFileLink" class="nav" href="z_82713a9719f5b640___init___py.html">&#xbb; next</a>
             &nbsp; &nbsp; &nbsp;
             <a class="nav" href="https://coverage.readthedocs.io/en/7.10.2">coverage.py v7.10.2</a>,
-            created at 2026-03-13 14:25 +0000
+            created at 2026-03-13 14:29 +0000
         </p>
         <aside class="hidden">
             <button type="button" class="button_next_chunk" data-shortcut="j"></button>
@@ -197,12 +197,12 @@
     <p class="pln"><span class="n"><a id="t115" href="#t115">115</a></span><span class="t">&nbsp;</span><span class="r"></span></p>
     <p class="mis show_mis"><span class="n"><a id="t116" href="#t116">116</a></span><span class="t">    <span class="nam">waitlistUser</span> <span class="op">=</span> <span class="nam">list</span><span class="op">(</span><span class="nam">set</span><span class="op">(</span><span class="op">[</span><span class="nam">obj</span> <span class="key">for</span> <span class="nam">obj</span> <span class="key">in</span> <span class="nam">eventRsvpData</span> <span class="key">if</span> <span class="nam">obj</span><span class="op">.</span><span class="nam">rsvpWaitlist</span><span class="op">]</span><span class="op">)</span><span class="op">)</span>&nbsp;</span><span class="r"></span></p>
     <p class="mis show_mis"><span class="n"><a id="t117" href="#t117">117</a></span><span class="t">    <span class="nam">rsvpUser</span> <span class="op">=</span> <span class="nam">list</span><span class="op">(</span><span class="nam">set</span><span class="op">(</span><span class="op">[</span><span class="nam">obj</span> <span class="key">for</span> <span class="nam">obj</span> <span class="key">in</span> <span class="nam">eventRsvpData</span> <span class="key">if</span> <span class="key">not</span> <span class="nam">obj</span><span class="op">.</span><span class="nam">rsvpWaitlist</span> <span class="op">]</span><span class="op">)</span><span class="op">)</span>&nbsp;</span><span class="r"></span></p>
-    <p class="mis show_mis"><span class="n"><a id="t118" href="#t118">118</a></span><span class="t">    <span class="nam">attendedUser</span> <span class="op">=</span> <span class="nam">list</span><span class="op">(</span><span class="nam">set</span><span class="op">(</span><span class="op">[</span><span class="nam">obj</span> <span class="key">for</span> <span class="nam">obj</span> <span class="key">in</span> <span class="nam">eventParticipantData</span> <span class="key">if</span> <span class="key">not</span> <span class="nam">obj</span><span class="op">.</span><span class="nam">rsvpWaitlist</span><span class="op">]</span><span class="op">)</span><span class="op">)</span>&nbsp;</span><span class="r"></span></p>
+    <p class="pln"><span class="n"><a id="t118" href="#t118">118</a></span><span class="t">&nbsp;</span><span class="r"></span></p>
     <p class="pln"><span class="n"><a id="t119" href="#t119">119</a></span><span class="t">&nbsp;</span><span class="r"></span></p>
     <p class="mis show_mis"><span class="n"><a id="t120" href="#t120">120</a></span><span class="t">    <span class="key">return</span> <span class="nam">render_template</span><span class="op">(</span><span class="str">"/events/volunteerDetails.html"</span><span class="op">,</span>&nbsp;</span><span class="r"></span></p>
     <p class="mis mis2 show_mis"><span class="n"><a id="t121" href="#t121">121</a></span><span class="t">                            <span class="nam">waitlistUser</span> <span class="op">=</span> <span class="nam">waitlistUser</span><span class="op">,</span>&nbsp;</span><span class="r"></span></p>
-    <p class="mis mis2 show_mis"><span class="n"><a id="t122" href="#t122">122</a></span><span class="t">                            <span class="nam">rsvpUser</span> <span class="op">=</span> <span class="nam">rsvpUser</span><span class="op">,</span>&nbsp;</span><span class="r"></span></p>
-    <p class="mis mis2 show_mis"><span class="n"><a id="t123" href="#t123">123</a></span><span class="t">                            <span class="nam">attendedUser</span> <span class="op">=</span> <span class="nam">attendedUser</span><span class="op">,</span>&nbsp;</span><span class="r"></span></p>
+    <p class="mis mis2 show_mis"><span class="n"><a id="t122" href="#t122">122</a></span><span class="t">                            <span class="nam">attendedUser</span> <span class="op">=</span> <span class="nam">eventParticipantData</span><span class="op">,</span>&nbsp;</span><span class="r"></span></p>
+    <p class="mis mis2 show_mis"><span class="n"><a id="t123" href="#t123">123</a></span><span class="t">                            <span class="nam">rsvpUser</span> <span class="op">=</span> <span class="nam">rsvpUser</span><span class="op">,</span>&nbsp;</span><span class="r"></span></p>
     <p class="mis mis2 show_mis"><span class="n"><a id="t124" href="#t124">124</a></span><span class="t">                            <span class="nam">event</span> <span class="op">=</span> <span class="nam">event</span><span class="op">)</span>&nbsp;</span><span class="r"></span></p>
     <p class="pln"><span class="n"><a id="t125" href="#t125">125</a></span><span class="t">&nbsp;</span><span class="r"></span></p>
     <p class="pln"><span class="n"><a id="t126" href="#t126">126</a></span><span class="t">&nbsp;</span><span class="r"></span></p>
@@ -324,7 +324,7 @@
             <a class="nav" href="z_82713a9719f5b640___init___py.html">&#xbb; next</a>
             &nbsp; &nbsp; &nbsp;
             <a class="nav" href="https://coverage.readthedocs.io/en/7.10.2">coverage.py v7.10.2</a>,
-            created at 2026-03-13 14:25 +0000
+            created at 2026-03-13 14:29 +0000
         </p>
     </div>
 </footer>
