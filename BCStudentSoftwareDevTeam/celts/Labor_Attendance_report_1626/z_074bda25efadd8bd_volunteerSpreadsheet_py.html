@@ -65,7 +65,7 @@
             <a id="nextFileLink" class="nav" href="z_074bda25efadd8bd_volunteers_py.html">&#xbb; next</a>
             &nbsp; &nbsp; &nbsp;
             <a class="nav" href="https://coverage.readthedocs.io/en/7.10.2">coverage.py v7.10.2</a>,
-            created at 2026-03-31 22:36 +0000
+            created at 2026-03-31 22:48 +0000
         </p>
         <aside class="hidden">
             <button type="button" class="button_next_chunk" data-shortcut="j"></button>
@@ -323,7 +323,7 @@
     <p class="run"><span class="n"><a id="t241" href="#t241">241</a></span><span class="t">    <span class="nam">CLTerm</span> <span class="op">=</span> <span class="nam">Term</span><span class="op">.</span><span class="nam">alias</span><span class="op">(</span><span class="op">)</span>&nbsp;</span><span class="r"></span></p>
     <p class="run"><span class="n"><a id="t242" href="#t242">242</a></span><span class="t">    <span class="nam">laborMembers</span> <span class="op">=</span> <span class="op">(</span>&nbsp;</span><span class="r"></span></p>
     <p class="run run2"><span class="n"><a id="t243" href="#t243">243</a></span><span class="t">        <span class="nam">CeltsLabor</span>&nbsp;</span><span class="r"></span></p>
-    <p class="run run2"><span class="n"><a id="t244" href="#t244">244</a></span><span class="t">        <span class="op">.</span><span class="nam">select</span><span class="op">(</span><span class="nam">CeltsLabor</span><span class="op">.</span><span class="nam">user_id</span><span class="op">)</span>&nbsp;</span><span class="r"></span></p>
+    <p class="run run2"><span class="n"><a id="t244" href="#t244">244</a></span><span class="t">        <span class="op">.</span><span class="nam">select</span><span class="op">(</span><span class="nam">fn</span><span class="op">.</span><span class="nam">DISTINCT</span><span class="op">(</span><span class="nam">CeltsLabor</span><span class="op">.</span><span class="nam">user_id</span><span class="op">)</span><span class="op">)</span>&nbsp;</span><span class="r"></span></p>
     <p class="run run2"><span class="n"><a id="t245" href="#t245">245</a></span><span class="t">        <span class="op">.</span><span class="nam">join</span><span class="op">(</span><span class="nam">CLTerm</span><span class="op">,</span> <span class="nam">on</span><span class="op">=</span><span class="op">(</span><span class="nam">CeltsLabor</span><span class="op">.</span><span class="nam">term</span> <span class="op">==</span> <span class="nam">CLTerm</span><span class="op">.</span><span class="nam">id</span><span class="op">)</span><span class="op">)</span>&nbsp;</span><span class="r"></span></p>
     <p class="run run2"><span class="n"><a id="t246" href="#t246">246</a></span><span class="t">        <span class="op">.</span><span class="nam">where</span><span class="op">(</span>&nbsp;</span><span class="r"></span></p>
     <p class="run run2"><span class="n"><a id="t247" href="#t247">247</a></span><span class="t">            <span class="op">(</span><span class="nam">CeltsLabor</span><span class="op">.</span><span class="nam">term</span> <span class="op">==</span> <span class="nam">term</span><span class="op">)</span> <span class="op">|</span>&nbsp;</span><span class="r"></span></p>
@@ -420,7 +420,7 @@
             <a class="nav" href="z_074bda25efadd8bd_volunteers_py.html">&#xbb; next</a>
             &nbsp; &nbsp; &nbsp;
             <a class="nav" href="https://coverage.readthedocs.io/en/7.10.2">coverage.py v7.10.2</a>,
-            created at 2026-03-31 22:36 +0000
+            created at 2026-03-31 22:48 +0000
         </p>
     </div>
 </footer>
