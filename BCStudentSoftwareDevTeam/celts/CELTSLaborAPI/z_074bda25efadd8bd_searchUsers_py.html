@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    <title>Coverage for app/logic/searchUsers.py: 90%</title>
+    <title>Coverage for app/logic/searchUsers.py: 91%</title>
     <link rel="icon" sizes="32x32" href="favicon_32_cb_58284776.png">
     <link rel="stylesheet" href="style_cb_6b508a39.css" type="text/css">
     <script src="coverage_html_cb_6fb7b396.js" defer></script>
@@ -12,7 +12,7 @@
     <div class="content">
         <h1>
             <span class="text">Coverage for </span><b>app/logic/searchUsers.py</b>:
-            <span class="pc_cov">90%</span>
+            <span class="pc_cov">91%</span>
         </h1>
         <aside id="help_panel_wrapper">
             <input id="help_panel_state" type="checkbox">
@@ -54,8 +54,8 @@
             </div>
         </aside>
         <h2>
-            <span class="text">30 statements &nbsp;</span>
-            <button type="button" class="run button_toggle_run" value="run" data-shortcut="r" title="Toggle lines run">27<span class="text"> run</span></button>
+            <span class="text">32 statements &nbsp;</span>
+            <button type="button" class="run button_toggle_run" value="run" data-shortcut="r" title="Toggle lines run">29<span class="text"> run</span></button>
             <button type="button" class="mis show_mis button_toggle_mis" value="mis" data-shortcut="m" title="Toggle lines missing">3<span class="text"> missing</span></button>
             <button type="button" class="exc show_exc button_toggle_exc" value="exc" data-shortcut="x" title="Toggle lines excluded">0<span class="text"> excluded</span></button>
         </h2>
@@ -65,7 +65,7 @@
             <a id="nextFileLink" class="nav" href="z_074bda25efadd8bd_serviceLearningCourses_py.html">&#xbb; next</a>
             &nbsp; &nbsp; &nbsp;
             <a class="nav" href="https://coverage.readthedocs.io/en/7.10.2">coverage.py v7.10.2</a>,
-            created at 2026-09-07 19:24 +0000
+            created at 2026-09-09 17:43 +0000
         </p>
         <aside class="hidden">
             <button type="button" class="button_next_chunk" data-shortcut="j"></button>
@@ -113,22 +113,24 @@
     <p class="mis show_mis"><span class="n"><a id="t31" href="#t31">31</a></span><span class="t">        <span class="nam">userWhere</span> <span class="op">=</span> <span class="op">(</span><span class="nam">User</span><span class="op">.</span><span class="nam">isCeltsOperationsTeam</span><span class="op">)</span>&nbsp;</span><span class="r"></span></p>
     <p class="run"><span class="n"><a id="t32" href="#t32">32</a></span><span class="t">    <span class="key">elif</span> <span class="nam">category</span> <span class="op">==</span> <span class="str">"celtsLinkAdmin"</span><span class="op">:</span>&nbsp;</span><span class="r"></span></p>
     <p class="run"><span class="n"><a id="t33" href="#t33">33</a></span><span class="t">        <span class="nam">userWhere</span> <span class="op">=</span> <span class="op">(</span><span class="nam">User</span><span class="op">.</span><span class="nam">isFaculty</span> <span class="op">|</span> <span class="nam">User</span><span class="op">.</span><span class="nam">isStaff</span> <span class="op">|</span> <span class="nam">User</span><span class="op">.</span><span class="nam">isCeltsStudentStaff</span> <span class="op">|</span> <span class="nam">User</span><span class="op">.</span><span class="nam">isCeltsOperationsTeam</span><span class="op">)</span>&nbsp;</span><span class="r"></span></p>
-    <p class="run"><span class="n"><a id="t34" href="#t34">34</a></span><span class="t">    <span class="key">elif</span> <span class="nam">category</span> <span class="op">==</span> <span class="str">"all"</span><span class="op">:</span>&nbsp;</span><span class="r"></span></p>
-    <p class="mis show_mis"><span class="n"><a id="t35" href="#t35">35</a></span><span class="t">        <span class="nam">userWhere</span> <span class="op">=</span> <span class="op">(</span><span class="key">True</span><span class="op">)</span>&nbsp;</span><span class="r"></span></p>
-    <p class="pln"><span class="n"><a id="t36" href="#t36">36</a></span><span class="t">    <span class="key">else</span><span class="op">:</span>&nbsp;</span><span class="r"></span></p>
-    <p class="run"><span class="n"><a id="t37" href="#t37">37</a></span><span class="t">        <span class="nam">userWhere</span> <span class="op">=</span> <span class="op">(</span><span class="nam">User</span><span class="op">.</span><span class="nam">isStudent</span><span class="op">)</span>&nbsp;</span><span class="r"></span></p>
-    <p class="pln"><span class="n"><a id="t38" href="#t38">38</a></span><span class="t">&nbsp;</span><span class="r"></span></p>
-    <p class="run"><span class="n"><a id="t39" href="#t39">39</a></span><span class="t">    <span class="nam">fullSearchText</span> <span class="op">=</span> <span class="str">" "</span><span class="op">.</span><span class="nam">join</span><span class="op">(</span><span class="nam">splitSearch</span><span class="op">)</span>&nbsp;</span><span class="r"></span></p>
-    <p class="pln"><span class="n"><a id="t40" href="#t40">40</a></span><span class="t">    <span class="com"># Combine into query</span>&nbsp;</span><span class="r"></span></p>
-    <p class="run"><span class="n"><a id="t41" href="#t41">41</a></span><span class="t">    <span class="nam">searchResults</span> <span class="op">=</span> <span class="nam">User</span><span class="op">.</span><span class="nam">select</span><span class="op">(</span><span class="op">)</span><span class="op">.</span><span class="nam">where</span><span class="op">(</span><span class="nam">searchWhere</span><span class="op">,</span> <span class="nam">userWhere</span><span class="op">)</span><span class="op">.</span><span class="nam">order_by</span><span class="op">(</span>&nbsp;</span><span class="r"></span></p>
-    <p class="run run2"><span class="n"><a id="t42" href="#t42">42</a></span><span class="t">        <span class="nam">fn</span><span class="op">.</span><span class="nam">CONCAT</span><span class="op">(</span><span class="nam">User</span><span class="op">.</span><span class="nam">firstName</span><span class="op">,</span> <span class="str">" "</span><span class="op">,</span> <span class="nam">User</span><span class="op">.</span><span class="nam">lastName</span><span class="op">)</span><span class="op">.</span><span class="nam">contains</span><span class="op">(</span><span class="nam">fullSearchText</span><span class="op">)</span><span class="op">.</span><span class="nam">desc</span><span class="op">(</span><span class="op">)</span><span class="op">,</span>&nbsp;</span><span class="r"></span></p>
-    <p class="run run2"><span class="n"><a id="t43" href="#t43">43</a></span><span class="t">        <span class="nam">User</span><span class="op">.</span><span class="nam">firstName</span><span class="op">.</span><span class="nam">startswith</span><span class="op">(</span><span class="nam">fullSearchText</span><span class="op">)</span><span class="op">.</span><span class="nam">desc</span><span class="op">(</span><span class="op">)</span><span class="op">,</span>&nbsp;</span><span class="r"></span></p>
-    <p class="run run2"><span class="n"><a id="t44" href="#t44">44</a></span><span class="t">        <span class="nam">User</span><span class="op">.</span><span class="nam">lastName</span><span class="op">.</span><span class="nam">startswith</span><span class="op">(</span><span class="nam">fullSearchText</span><span class="op">)</span><span class="op">.</span><span class="nam">desc</span><span class="op">(</span><span class="op">)</span><span class="op">,</span>&nbsp;</span><span class="r"></span></p>
-    <p class="run run2"><span class="n"><a id="t45" href="#t45">45</a></span><span class="t">        <span class="nam">User</span><span class="op">.</span><span class="nam">lastName</span><span class="op">,</span>&nbsp;</span><span class="r"></span></p>
-    <p class="run run2"><span class="n"><a id="t46" href="#t46">46</a></span><span class="t">        <span class="nam">User</span><span class="op">.</span><span class="nam">firstName</span>&nbsp;</span><span class="r"></span></p>
-    <p class="run run2"><span class="n"><a id="t47" href="#t47">47</a></span><span class="t">    <span class="op">)</span>&nbsp;</span><span class="r"></span></p>
-    <p class="pln"><span class="n"><a id="t48" href="#t48">48</a></span><span class="t">&nbsp;</span><span class="r"></span></p>
-    <p class="run"><span class="n"><a id="t49" href="#t49">49</a></span><span class="t">    <span class="key">return</span> <span class="op">{</span> <span class="nam">user</span><span class="op">.</span><span class="nam">username</span> <span class="op">:</span> <span class="nam">model_to_dict</span><span class="op">(</span><span class="nam">user</span><span class="op">)</span> <span class="key">for</span> <span class="nam">user</span> <span class="key">in</span> <span class="nam">searchResults</span> <span class="op">}</span>&nbsp;</span><span class="r"></span></p>
+    <p class="run"><span class="n"><a id="t34" href="#t34">34</a></span><span class="t">    <span class="key">elif</span> <span class="nam">category</span> <span class="op">==</span> <span class="str">"currentStudents"</span><span class="op">:</span>&nbsp;</span><span class="r"></span></p>
+    <p class="run"><span class="n"><a id="t35" href="#t35">35</a></span><span class="t">        <span class="nam">userWhere</span> <span class="op">=</span> <span class="op">(</span><span class="nam">User</span><span class="op">.</span><span class="nam">rawClassLevel</span><span class="op">.</span><span class="nam">in_</span><span class="op">(</span><span class="op">[</span><span class="str">"Freshman"</span><span class="op">,</span> <span class="str">"Sophomore"</span><span class="op">,</span> <span class="str">"Junior"</span><span class="op">,</span> <span class="str">"Senior"</span><span class="op">]</span><span class="op">)</span><span class="op">)</span>&nbsp;</span><span class="r"></span></p>
+    <p class="run"><span class="n"><a id="t36" href="#t36">36</a></span><span class="t">    <span class="key">elif</span> <span class="nam">category</span> <span class="op">==</span> <span class="str">"all"</span><span class="op">:</span>&nbsp;</span><span class="r"></span></p>
+    <p class="mis show_mis"><span class="n"><a id="t37" href="#t37">37</a></span><span class="t">        <span class="nam">userWhere</span> <span class="op">=</span> <span class="op">(</span><span class="key">True</span><span class="op">)</span>&nbsp;</span><span class="r"></span></p>
+    <p class="pln"><span class="n"><a id="t38" href="#t38">38</a></span><span class="t">    <span class="key">else</span><span class="op">:</span>&nbsp;</span><span class="r"></span></p>
+    <p class="run"><span class="n"><a id="t39" href="#t39">39</a></span><span class="t">        <span class="nam">userWhere</span> <span class="op">=</span> <span class="op">(</span><span class="nam">User</span><span class="op">.</span><span class="nam">isStudent</span><span class="op">)</span>&nbsp;</span><span class="r"></span></p>
+    <p class="pln"><span class="n"><a id="t40" href="#t40">40</a></span><span class="t">&nbsp;</span><span class="r"></span></p>
+    <p class="run"><span class="n"><a id="t41" href="#t41">41</a></span><span class="t">    <span class="nam">fullSearchText</span> <span class="op">=</span> <span class="str">" "</span><span class="op">.</span><span class="nam">join</span><span class="op">(</span><span class="nam">splitSearch</span><span class="op">)</span>&nbsp;</span><span class="r"></span></p>
+    <p class="pln"><span class="n"><a id="t42" href="#t42">42</a></span><span class="t">    <span class="com"># Combine into query</span>&nbsp;</span><span class="r"></span></p>
+    <p class="run"><span class="n"><a id="t43" href="#t43">43</a></span><span class="t">    <span class="nam">searchResults</span> <span class="op">=</span> <span class="nam">User</span><span class="op">.</span><span class="nam">select</span><span class="op">(</span><span class="op">)</span><span class="op">.</span><span class="nam">where</span><span class="op">(</span><span class="nam">searchWhere</span><span class="op">,</span> <span class="nam">userWhere</span><span class="op">)</span><span class="op">.</span><span class="nam">order_by</span><span class="op">(</span>&nbsp;</span><span class="r"></span></p>
+    <p class="run run2"><span class="n"><a id="t44" href="#t44">44</a></span><span class="t">        <span class="nam">fn</span><span class="op">.</span><span class="nam">CONCAT</span><span class="op">(</span><span class="nam">User</span><span class="op">.</span><span class="nam">firstName</span><span class="op">,</span> <span class="str">" "</span><span class="op">,</span> <span class="nam">User</span><span class="op">.</span><span class="nam">lastName</span><span class="op">)</span><span class="op">.</span><span class="nam">contains</span><span class="op">(</span><span class="nam">fullSearchText</span><span class="op">)</span><span class="op">.</span><span class="nam">desc</span><span class="op">(</span><span class="op">)</span><span class="op">,</span>&nbsp;</span><span class="r"></span></p>
+    <p class="run run2"><span class="n"><a id="t45" href="#t45">45</a></span><span class="t">        <span class="nam">User</span><span class="op">.</span><span class="nam">firstName</span><span class="op">.</span><span class="nam">startswith</span><span class="op">(</span><span class="nam">fullSearchText</span><span class="op">)</span><span class="op">.</span><span class="nam">desc</span><span class="op">(</span><span class="op">)</span><span class="op">,</span>&nbsp;</span><span class="r"></span></p>
+    <p class="run run2"><span class="n"><a id="t46" href="#t46">46</a></span><span class="t">        <span class="nam">User</span><span class="op">.</span><span class="nam">lastName</span><span class="op">.</span><span class="nam">startswith</span><span class="op">(</span><span class="nam">fullSearchText</span><span class="op">)</span><span class="op">.</span><span class="nam">desc</span><span class="op">(</span><span class="op">)</span><span class="op">,</span>&nbsp;</span><span class="r"></span></p>
+    <p class="run run2"><span class="n"><a id="t47" href="#t47">47</a></span><span class="t">        <span class="nam">User</span><span class="op">.</span><span class="nam">lastName</span><span class="op">,</span>&nbsp;</span><span class="r"></span></p>
+    <p class="run run2"><span class="n"><a id="t48" href="#t48">48</a></span><span class="t">        <span class="nam">User</span><span class="op">.</span><span class="nam">firstName</span>&nbsp;</span><span class="r"></span></p>
+    <p class="run run2"><span class="n"><a id="t49" href="#t49">49</a></span><span class="t">    <span class="op">)</span>&nbsp;</span><span class="r"></span></p>
+    <p class="pln"><span class="n"><a id="t50" href="#t50">50</a></span><span class="t">&nbsp;</span><span class="r"></span></p>
+    <p class="run"><span class="n"><a id="t51" href="#t51">51</a></span><span class="t">    <span class="key">return</span> <span class="op">{</span> <span class="nam">user</span><span class="op">.</span><span class="nam">username</span> <span class="op">:</span> <span class="nam">model_to_dict</span><span class="op">(</span><span class="nam">user</span><span class="op">)</span> <span class="key">for</span> <span class="nam">user</span> <span class="key">in</span> <span class="nam">searchResults</span> <span class="op">}</span>&nbsp;</span><span class="r"></span></p>
 </main>
 <footer>
     <div class="content">
@@ -138,7 +140,7 @@
             <a class="nav" href="z_074bda25efadd8bd_serviceLearningCourses_py.html">&#xbb; next</a>
             &nbsp; &nbsp; &nbsp;
             <a class="nav" href="https://coverage.readthedocs.io/en/7.10.2">coverage.py v7.10.2</a>,
-            created at 2026-09-07 19:24 +0000
+            created at 2026-09-09 17:43 +0000
         </p>
     </div>
 </footer>
