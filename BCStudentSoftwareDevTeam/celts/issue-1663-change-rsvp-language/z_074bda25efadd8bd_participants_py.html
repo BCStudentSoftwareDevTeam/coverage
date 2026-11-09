@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    <title>Coverage for app/logic/participants.py: 58%</title>
+    <title>Coverage for app/logic/participants.py: 55%</title>
     <link rel="icon" sizes="32x32" href="favicon_32_cb_58284776.png">
     <link rel="stylesheet" href="style_cb_6b508a39.css" type="text/css">
     <script src="coverage_html_cb_6fb7b396.js" defer></script>
@@ -12,7 +12,7 @@
     <div class="content">
         <h1>
             <span class="text">Coverage for </span><b>app/logic/participants.py</b>:
-            <span class="pc_cov">58%</span>
+            <span class="pc_cov">55%</span>
         </h1>
         <aside id="help_panel_wrapper">
             <input id="help_panel_state" type="checkbox">
@@ -54,9 +54,9 @@
             </div>
         </aside>
         <h2>
-            <span class="text">175 statements &nbsp;</span>
-            <button type="button" class="run button_toggle_run" value="run" data-shortcut="r" title="Toggle lines run">101<span class="text"> run</span></button>
-            <button type="button" class="mis show_mis button_toggle_mis" value="mis" data-shortcut="m" title="Toggle lines missing">74<span class="text"> missing</span></button>
+            <span class="text">186 statements &nbsp;</span>
+            <button type="button" class="run button_toggle_run" value="run" data-shortcut="r" title="Toggle lines run">102<span class="text"> run</span></button>
+            <button type="button" class="mis show_mis button_toggle_mis" value="mis" data-shortcut="m" title="Toggle lines missing">84<span class="text"> missing</span></button>
             <button type="button" class="exc show_exc button_toggle_exc" value="exc" data-shortcut="x" title="Toggle lines excluded">0<span class="text"> excluded</span></button>
         </h2>
         <p class="text">
@@ -65,7 +65,7 @@
             <a id="nextFileLink" class="nav" href="z_074bda25efadd8bd_searchUsers_py.html">&#xbb; next</a>
             &nbsp; &nbsp; &nbsp;
             <a class="nav" href="https://coverage.readthedocs.io/en/7.10.2">coverage.py v7.10.2</a>,
-            created at 2026-10-19 19:17 +0000
+            created at 2026-11-09 20:46 +0000
         </p>
         <aside class="hidden">
             <button type="button" class="button_next_chunk" data-shortcut="j"></button>
@@ -431,6 +431,36 @@
     <p class="mis show_mis"><span class="n"><a id="t349" href="#t349">349</a></span><span class="t">    <span class="nam">attended</span> <span class="op">=</span> <span class="nam">attended</span><span class="op">[</span><span class="op">-</span><span class="num">1</span><span class="op">]</span> <span class="key">if</span> <span class="nam">len</span><span class="op">(</span><span class="nam">attended</span><span class="op">)</span> <span class="op">></span> <span class="num">1</span> <span class="key">else</span> <span class="nam">attended</span><span class="op">[</span><span class="num">0</span><span class="op">]</span>&nbsp;</span><span class="r"></span></p>
     <p class="mis show_mis"><span class="n"><a id="t350" href="#t350">350</a></span><span class="t">    <span class="key">return</span> <span class="nam">attended</span><span class="op">.</span><span class="nam">event</span>&nbsp;</span><span class="r"></span></p>
     <p class="pln"><span class="n"><a id="t351" href="#t351">351</a></span><span class="t">&nbsp;</span><span class="r"></span></p>
+    <p class="run"><span class="n"><a id="t352" href="#t352">352</a></span><span class="t"><span class="key">def</span> <span class="nam">attendedRequiredTrainings</span><span class="op">(</span><span class="nam">participant</span><span class="op">,</span> <span class="nam">event</span><span class="op">,</span> <span class="nam">term</span><span class="op">)</span><span class="op">:</span>&nbsp;</span><span class="r"></span></p>
+    <p class="pln"><span class="n"><a id="t353" href="#t353">353</a></span><span class="t">    <span class="str">"""</span>&nbsp;</span><span class="r"></span></p>
+    <p class="pln"><span class="n"><a id="t354" href="#t354">354</a></span><span class="t"><span class="str">    Checks whether a student has attended all required trainings for an event. </span>&nbsp;</span><span class="r"></span></p>
+    <p class="pln"><span class="n"><a id="t355" href="#t355">355</a></span><span class="t"><span class="str">    """</span>&nbsp;</span><span class="r"></span></p>
+    <p class="pln"><span class="n"><a id="t356" href="#t356">356</a></span><span class="t">&nbsp;</span><span class="r"></span></p>
+    <p class="mis show_mis"><span class="n"><a id="t357" href="#t357">357</a></span><span class="t">    <span class="nam">participationStatus</span> <span class="op">=</span> <span class="nam">getParticipationStatusForTrainings</span><span class="op">(</span><span class="nam">event</span><span class="op">.</span><span class="nam">program</span><span class="op">,</span> <span class="op">[</span><span class="nam">participant</span><span class="op">]</span><span class="op">,</span> <span class="nam">term</span><span class="op">,</span> <span class="key">False</span><span class="op">)</span>&nbsp;</span><span class="r"></span></p>
+    <p class="pln"><span class="n"><a id="t358" href="#t358">358</a></span><span class="t">&nbsp;</span><span class="r"></span></p>
+    <p class="pln"><span class="n"><a id="t359" href="#t359">359</a></span><span class="t">    <span class="com"># Converting a participationStatus dictionary into a list turns it into a 3-layered list. </span>&nbsp;</span><span class="r"></span></p>
+    <p class="pln"><span class="n"><a id="t360" href="#t360">360</a></span><span class="t">    <span class="com"># Since there is only one user, we will remove one of the list's layers.</span>&nbsp;</span><span class="r"></span></p>
+    <p class="mis show_mis"><span class="n"><a id="t361" href="#t361">361</a></span><span class="t">    <span class="nam">trainings</span> <span class="op">=</span> <span class="op">[</span><span class="nam">training</span> <span class="key">for</span> <span class="nam">users</span> <span class="key">in</span> <span class="nam">list</span><span class="op">(</span><span class="nam">participationStatus</span><span class="op">.</span><span class="nam">values</span><span class="op">(</span><span class="op">)</span><span class="op">)</span> <span class="key">for</span> <span class="nam">training</span> <span class="key">in</span> <span class="nam">users</span><span class="op">]</span>&nbsp;</span><span class="r"></span></p>
+    <p class="pln"><span class="n"><a id="t362" href="#t362">362</a></span><span class="t">&nbsp;</span><span class="r"></span></p>
+    <p class="pln"><span class="n"><a id="t363" href="#t363">363</a></span><span class="t">    <span class="com"># Separating the trainings list into three categories based on the type of training</span>&nbsp;</span><span class="r"></span></p>
+    <p class="mis show_mis"><span class="n"><a id="t364" href="#t364">364</a></span><span class="t">    <span class="nam">allVolunteerTrainings</span> <span class="op">=</span> <span class="op">[</span><span class="nam">training</span> <span class="key">for</span> <span class="nam">training</span> <span class="key">in</span> <span class="nam">trainings</span> <span class="key">if</span> <span class="nam">training</span><span class="op">[</span><span class="num">0</span><span class="op">]</span><span class="op">.</span><span class="nam">isAllVolunteerTraining</span><span class="op">]</span>&nbsp;</span><span class="r"></span></p>
+    <p class="mis show_mis"><span class="n"><a id="t365" href="#t365">365</a></span><span class="t">    <span class="nam">allCeltsTrainings</span> <span class="op">=</span> <span class="op">[</span><span class="nam">training</span> <span class="key">for</span> <span class="nam">training</span> <span class="key">in</span> <span class="nam">trainings</span> <span class="key">if</span> <span class="nam">training</span><span class="op">[</span><span class="num">0</span><span class="op">]</span><span class="op">.</span><span class="nam">isCeltsTraining</span><span class="op">]</span>&nbsp;</span><span class="r"></span></p>
+    <p class="mis show_mis"><span class="n"><a id="t366" href="#t366">366</a></span><span class="t">    <span class="nam">programTrainings</span> <span class="op">=</span> <span class="op">[</span><span class="nam">training</span> <span class="key">for</span> <span class="nam">training</span> <span class="key">in</span> <span class="nam">trainings</span> <span class="key">if</span> <span class="op">(</span><span class="nam">training</span><span class="op">[</span><span class="num">0</span><span class="op">]</span><span class="op">.</span><span class="nam">isTraining</span> <span class="key">and</span> <span class="nam">training</span><span class="op">[</span><span class="num">0</span><span class="op">]</span><span class="op">.</span><span class="nam">program</span> <span class="op">==</span> <span class="nam">event</span><span class="op">.</span><span class="nam">program</span> <span class="key">and</span> <span class="nam">training</span><span class="op">[</span><span class="num">0</span><span class="op">]</span><span class="op">.</span><span class="nam">term</span> <span class="op">==</span> <span class="nam">term</span><span class="op">)</span><span class="op">]</span>&nbsp;</span><span class="r"></span></p>
+    <p class="pln"><span class="n"><a id="t367" href="#t367">367</a></span><span class="t">&nbsp;</span><span class="r"></span></p>
+    <p class="pln"><span class="n"><a id="t368" href="#t368">368</a></span><span class="t">    <span class="com"># Checking whether the participant has attended AT LEAST ONE event from each training category</span>&nbsp;</span><span class="r"></span></p>
+    <p class="mis show_mis"><span class="n"><a id="t369" href="#t369">369</a></span><span class="t">    <span class="nam">allVolunteerAttendance</span> <span class="op">=</span> <span class="nam">any</span><span class="op">(</span><span class="op">[</span><span class="nam">training</span><span class="op">[</span><span class="num">1</span><span class="op">]</span> <span class="key">for</span> <span class="nam">training</span> <span class="key">in</span> <span class="nam">allVolunteerTrainings</span><span class="op">]</span><span class="op">)</span>&nbsp;</span><span class="r"></span></p>
+    <p class="mis show_mis"><span class="n"><a id="t370" href="#t370">370</a></span><span class="t">    <span class="nam">allCeltsAttendance</span> <span class="op">=</span> <span class="nam">any</span><span class="op">(</span><span class="op">[</span><span class="nam">training</span><span class="op">[</span><span class="num">1</span><span class="op">]</span> <span class="key">for</span> <span class="nam">training</span> <span class="key">in</span> <span class="nam">allCeltsTrainings</span><span class="op">]</span><span class="op">)</span>&nbsp;</span><span class="r"></span></p>
+    <p class="mis show_mis"><span class="n"><a id="t371" href="#t371">371</a></span><span class="t">    <span class="nam">programTrainingAttendance</span> <span class="op">=</span> <span class="nam">any</span><span class="op">(</span><span class="op">[</span><span class="nam">training</span><span class="op">[</span><span class="num">1</span><span class="op">]</span> <span class="key">for</span> <span class="nam">training</span> <span class="key">in</span> <span class="nam">programTrainings</span><span class="op">]</span><span class="op">)</span>&nbsp;</span><span class="r"></span></p>
+    <p class="pln"><span class="n"><a id="t372" href="#t372">372</a></span><span class="t">&nbsp;</span><span class="r"></span></p>
+    <p class="pln"><span class="n"><a id="t373" href="#t373">373</a></span><span class="t">    <span class="com"># The conditions below can be false only if the event requires a training, </span>&nbsp;</span><span class="r"></span></p>
+    <p class="pln"><span class="n"><a id="t374" href="#t374">374</a></span><span class="t">    <span class="com"># but the user has not attended any. </span>&nbsp;</span><span class="r"></span></p>
+    <p class="mis show_mis"><span class="n"><a id="t375" href="#t375">375</a></span><span class="t">    <span class="nam">attendedTrainings</span> <span class="op">=</span> <span class="nam">all</span><span class="op">(</span><span class="op">[</span>&nbsp;</span><span class="r"></span></p>
+    <p class="mis mis2 show_mis"><span class="n"><a id="t376" href="#t376">376</a></span><span class="t">        <span class="key">not</span> <span class="nam">event</span><span class="op">.</span><span class="nam">requiresAllVolunteerTraining</span> <span class="key">or</span> <span class="nam">allVolunteerAttendance</span><span class="op">,</span>&nbsp;</span><span class="r"></span></p>
+    <p class="mis mis2 show_mis"><span class="n"><a id="t377" href="#t377">377</a></span><span class="t">        <span class="key">not</span> <span class="nam">event</span><span class="op">.</span><span class="nam">requiresAllCeltsTraining</span> <span class="key">or</span> <span class="nam">allCeltsAttendance</span><span class="op">,</span>&nbsp;</span><span class="r"></span></p>
+    <p class="mis mis2 show_mis"><span class="n"><a id="t378" href="#t378">378</a></span><span class="t">        <span class="key">not</span> <span class="nam">event</span><span class="op">.</span><span class="nam">requiresProgramTraining</span> <span class="key">or</span> <span class="nam">programTrainingAttendance</span>&nbsp;</span><span class="r"></span></p>
+    <p class="mis mis2 show_mis"><span class="n"><a id="t379" href="#t379">379</a></span><span class="t">        <span class="op">]</span><span class="op">)</span>&nbsp;</span><span class="r"></span></p>
+    <p class="pln"><span class="n"><a id="t380" href="#t380">380</a></span><span class="t">&nbsp;</span><span class="r"></span></p>
+    <p class="mis show_mis"><span class="n"><a id="t381" href="#t381">381</a></span><span class="t">    <span class="key">return</span> <span class="nam">attendedTrainings</span>&nbsp;</span><span class="r"></span></p>
 </main>
 <footer>
     <div class="content">
@@ -440,7 +470,7 @@
             <a class="nav" href="z_074bda25efadd8bd_searchUsers_py.html">&#xbb; next</a>
             &nbsp; &nbsp; &nbsp;
             <a class="nav" href="https://coverage.readthedocs.io/en/7.10.2">coverage.py v7.10.2</a>,
-            created at 2026-10-19 19:17 +0000
+            created at 2026-11-09 20:46 +0000
         </p>
     </div>
 </footer>
